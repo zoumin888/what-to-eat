@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>今天吃啥？</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fdfcfb 100%);
+  min-height: 100vh;
+  color: #333;
+  -webkit-tap-highlight-color: transparent;
+}
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin: 20px 0 8px;
+  color: #e74c3c;
+}
+.subtitle {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+/* 菜系筛选 */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.filter-btn {
+  padding: 6px 14px;
+  border: 2px solid #e74c3c;
+  border-radius: 20px;
+  background: white;
+  color: #e74c3c;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-btn.active {
+  background: #e74c3c;
+  color: white;
+}
+/* 主按钮 */
+.main-btn {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 32px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(231,76,60,0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+  animation: pulse 2s infinite;
+}
+.main-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 10px rgba(231,76,60,0.3);
+  animation: none;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+/* 菜品卡片 */
+.dish-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  display: none;
+}
+.dish-card.show {
+  display: block;
+  animation: slideUp 0.3s ease;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.dish-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.dish-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+.fav-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.2s;
+}
+.fav-btn:active { transform: scale(1.3); }
+.fav-btn.active { animation: heartBeat 0.3s; }
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+}
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.tag {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.tag-cuisine { background: #fff3e0; color: #e65100; }
+.tag-difficulty { background: #e8f5e9; color: #2e7d32; }
+.tag-time { background: #e3f2fd; color: #1565c0; }
+.section-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  margin: 16px 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ingredients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.ingredient {
+  background: #f5f5f5;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #555;
+}
+.steps-list {
+  counter-reset: step;
+  list-style: none;
+}
+.steps-list li {
+  counter-increment: step;
+  padding: 8px 0 8px 36px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  border-bottom: 1px solid #f0f0f0;
+}
+.steps-list li:last-child { border-bottom: none; }
+.steps-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e74c3c;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 换一个按钮 */
+.change-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: 2px dashed #e74c3c;
+  border-radius: 12px;
+  background: none;
+  color: #e74c3c;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.change-btn:active {
+  background: #e74c3c;
+  color: white;
+  border-style: solid;
+}
+/* 收藏列表 */
+.fav-section {
+  margin-top: 32px;
+}
+.fav-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.fav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.fav-item {
+  background: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.15s;
+}
+.fav-item:active { transform: scale(0.95); }
+.fav-empty {
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>今天吃啥？</h1>
+  <p class="subtitle">小熊妹妹的美食随机推荐</p>
+
+  <div class="filter-bar" id="filterBar"></div>
+
+  <button class="main-btn" id="mainBtn" onclick="randomDish()">开吃！</button>
+
+  <div class="dish-card" id="dishCard">
+    <div class="dish-header">
+      <span class="dish-name" id="dishName"></span>
+      <button class="fav-btn" id="favBtn" onclick="toggleFav()">🤍</button>
+    </div>
+    <div class="tags" id="tags"></div>
+    <div class="section-title">🥘 食材</div>
+    <div class="ingredients-list" id="ingredients"></div>
+    <div class="section-title">👨‍🍳 做法</div>
+    <ol class="steps-list" id="steps"></ol>
+    <button class="change-btn" onclick="randomDish()">换一个 ➜</button>
+  </div>
+
+  <div class="fav-section" id="favSection">
+    <div class="fav-title">❤️ 我的收藏</div>
+    <div class="fav-list" id="favList"></div>
+  </div>
+</div>
+
+<script>
+const dishes = [
+  // 广西菜
+  { name: "酸笋炒牛肉", cuisine: "广西", difficulty: "简单", time: "15分钟",
+    ingredients: ["牛肉250g", "酸笋100g", "辣椒", "蒜", "生抽", "淀粉"],
+    steps: ["牛肉切薄片，加生抽、淀粉腌10分钟", "酸笋切片，辣椒切段", "热油爆香蒜末和辣椒", "大火快炒牛肉至变色盛出", "下酸笋翻炒出香，倒回牛肉炒匀", "加盐调味出锅"] },
+  { name: "柠檬鸭", cuisine: "广西", difficulty: "中等", time: "45分钟",
+    ingredients: ["鸭肉半只", "咸柠檬2个", "酸梅3颗", "姜", "蒜", "辣椒", "生抽", "老抽"],
+    steps: ["鸭肉切块焯水去腥", "少油煎鸭肉至微黄", "加姜片、蒜、辣椒爆香", "放入咸柠檬和酸梅", "加生抽、老抽和适量水", "大火烧开转小火焖30分钟", "大火收汁出锅"] },
+  { name: "酸豆角炒肉末", cuisine: "广西", difficulty: "简单", time: "10分钟",
+    ingredients: ["酸豆角150g", "猪肉末200g", "辣椒", "蒜", "生抽", "糖"],
+    steps: ["酸豆角切小段，辣椒切圈", "热油炒肉末至变色", "加蒜末辣椒爆香", "倒入酸豆角翻炒2分钟", "加少许糖提鲜，出锅"] },
+  { name: "螺蛳粉", cuisine: "广西", difficulty: "简单", time: "20分钟",
+    ingredients: ["螺蛳粉1包", "酸笋", "腐竹", "花生", "酸豆角", "青菜"],
+    steps: ["米粉冷水泡软", "烧水煮粉至软烂捞出", "螺蛳汤料加水煮开", "放入米粉和配菜", "加酸笋、腐竹、花生、酸豆角", "开吃！"] },
+  { name: "啤酒鱼", cuisine: "广西", difficulty: "中等", time: "30分钟",
+    ingredients: ["草鱼1条", "啤酒1罐", "番茄2个", "青椒", "姜", "蒜", "生抽"],
+    steps: ["鱼处理干净划几刀，抹盐腌10分钟", "热油煎鱼两面金黄盛出", "爆香姜蒜，加番茄炒出汁", "倒入啤酒，放回鱼", "加生抽，中火焖15分钟", "加青椒，大火收汁"] },
+  { name: "荔浦芋扣肉", cuisine: "广西", difficulty: "较难", time: "90分钟",
+    ingredients: ["五花肉500g", "荔浦芋头1个", "腐乳2块", "生抽", "老抽", "糖", "蜂蜜"],
+    steps: ["五花肉整块煮熟，皮抹老抽蜂蜜", "热油炸肉皮至金黄，切厚片", "芋头切厚片炸至表面微黄", "腐乳捣碎加生抽、糖调酱汁", "一片肉一片芋头码碗，浇酱汁", "上锅蒸1.5小时", "倒扣出锅"] },
+  // 川菜
+  { name: "回锅肉", cuisine: "川菜", difficulty: "简单", time: "20分钟",
+    ingredients: ["五花肉300g", "青蒜", "豆瓣酱", "甜面酱", "姜", "料酒"],
+    steps: ["五花肉整块煮熟切薄片", "青蒜切段", "热锅少油煸肉片至卷曲出油", "推到一边，下豆瓣酱炒出红油", "加甜面酱翻炒", "下青蒜大火快炒出锅"] },
+  { name: "麻婆豆腐", cuisine: "川菜", difficulty: "简单", time: "15分钟",
+    ingredients: ["嫩豆腐1块", "猪肉末100g", "豆瓣酱", "花椒粉", "辣椒面", "葱", "淀粉"],
+    steps: ["豆腐切小块焯水去豆腥", "热油炒肉末变色", "加豆瓣酱炒出红油", "加水烧开，放入豆腐", "小火煮3分钟入味", "勾芡撒花椒粉葱花出锅"] },
+  { name: "水煮牛肉", cuisine: "川菜", difficulty: "中等", time: "25分钟",
+    ingredients: ["牛肉250g", "豆芽", "生菜", "豆瓣酱", "干辣椒", "花椒", "蒜", "淀粉"],
+    steps: ["牛肉切薄片加淀粉腌制", "豆芽生菜焯水铺碗底", "热油炒豆瓣酱出红油加水烧开", "下牛肉片快速烫熟捞出铺菜上", "撒干辣椒、花椒、蒜末", "热油浇上滋啦一声"] },
+  { name: "宫保鸡丁", cuisine: "川菜", difficulty: "简单", time: "15分钟",
+    ingredients: ["鸡胸肉250g", "花生米", "干辣椒", "花椒", "葱", "姜", "醋", "糖", "生抽"],
+    steps: ["鸡肉切丁加生抽淀粉腌制", "调碗汁：醋、糖、生抽、淀粉", "热油炒花生米盛出", "爆香干辣椒花椒葱姜", "下鸡丁炒变色", "倒入碗汁翻炒，加花生米出锅"] },
+  // 湘菜
+  { name: "辣椒炒肉", cuisine: "湘菜", difficulty: "简单", time: "10分钟",
+    ingredients: ["五花肉250g", "青辣椒4个", "豆豉", "蒜", "生抽"],
+    steps: ["五花肉切薄片，辣椒切滚刀块", "热锅不放油，先煸辣椒至虎皮盛出", "下五花肉煸出油", "加豆豉蒜末爆香", "倒回辣椒翻炒", "加生抽调味出锅"] },
+  { name: "小炒黄牛肉", cuisine: "湘菜", difficulty: "简单", time: "15分钟",
+    ingredients: ["黄牛肉250g", "小米辣", "香菜", "蒜", "生抽", "淀粉"],
+    steps: ["牛肉切薄片腌制10分钟", "小米辣切圈，香菜切段", "热油大火爆炒牛肉至变色盛出", "爆香蒜末小米辣", "倒回牛肉加香菜翻炒", "出锅"] },
+  { name: "剁椒鱼头", cuisine: "湘菜", difficulty: "中等", time: "25分钟",
+    ingredients: ["鱼头1个", "剁椒", "姜", "蒜", "葱", "蒸鱼豉油", "料酒"],
+    steps: ["鱼头洗净抹料酒和盐腌10分钟", "盘底铺姜片，放上鱼头", "铺满剁椒和蒜末", "水开后上锅蒸12分钟", "淋蒸鱼豉油，撒葱花", "热油浇上"] },
+  // 粤菜
+  { name: "豉油鸡", cuisine: "粤菜", difficulty: "中等", time: "40分钟",
+    ingredients: ["鸡半只", "生抽", "老抽", "冰糖", "姜", "葱", "料酒"],
+    steps: ["鸡洗净擦干", "热油煎鸡皮至金黄", "加姜片葱段爆香", "倒入生抽、老抽、冰糖、料酒和适量水", "中火焖煮30分钟，中途翻面", "大火收汁，斩块上桌"] },
+  { name: "梅菜扣肉", cuisine: "粤菜", difficulty: "较难", time: "90分钟",
+    ingredients: ["五花肉500g", "梅菜干100g", "生抽", "老抽", "糖", "料酒"],
+    steps: ["五花肉煮熟，皮抹老抽油炸至金黄", "切厚片，加生抽老抽糖腌制", "梅菜泡发洗净切碎炒香", "肉片皮朝下码碗，铺梅菜", "上锅蒸1.5小时", "倒扣出锅"] },
+  { name: "白切鸡", cuisine: "粤菜", difficulty: "中等", time: "40分钟",
+    ingredients: ["三黄鸡1只", "姜", "葱", "香油", "生抽", "沙姜粉"],
+    steps: ["鸡洗净，锅中水加姜片葱结烧开", "提鸡入水三次，再完全浸入", "小火浸煮20分钟，关火焖10分钟", "捞出过冰水", "斩块装盘", "蘸料：姜蓉+葱油+盐 或 沙姜+生抽"] },
+  // 家常菜
+  { name: "可乐鸡翅", cuisine: "家常", difficulty: "简单", time: "25分钟",
+    ingredients: ["鸡翅8个", "可乐1罐", "生抽", "姜", "料酒"],
+    steps: ["鸡翅划两刀，焯水捞出", "少油煎至两面金黄", "加姜片、料酒", "倒入可乐没过鸡翅", "加生抽，大火烧开转小火15分钟", "大火收汁出锅"] },
+  { name: "番茄炒蛋", cuisine: "家常", difficulty: "简单", time: "8分钟",
+    ingredients: ["鸡蛋3个", "番茄2个", "葱", "糖", "盐"],
+    steps: ["鸡蛋打散，番茄切块", "热油炒蛋盛出", "再加油炒番茄出汁", "加少许糖和盐", "倒回鸡蛋翻炒", "撒葱花出锅"] },
+  { name: "红烧排骨", cuisine: "家常", difficulty: "中等", time: "40分钟",
+    ingredients: ["排骨500g", "冰糖", "生抽", "老抽", "姜", "八角", "料酒"],
+    steps: ["排骨焯水去血沫", "少油炒冰糖至焦糖色", "下排骨翻炒上色", "加姜、八角、料酒、生抽、老抽", "加水没过排骨，大火烧开", "小火炖30分钟，大火收汁"] },
+  { name: "糖醋里脊", cuisine: "家常", difficulty: "中等", time: "20分钟",
+    ingredients: ["猪里脊300g", "番茄酱", "醋", "糖", "淀粉", "鸡蛋"],
+    steps: ["里脊切条，加盐和蛋液腌制", "裹淀粉，下油锅炸至金黄捞出", "复炸一次更酥脆", "调汁：番茄酱+醋+糖+少许水", "热油炒汁至冒泡", "倒入炸好的里脊翻炒裹汁"] },
+  { name: "蒜苔炒肉丝", cuisine: "家常", difficulty: "简单", time: "15分钟",
+    ingredients: ["猪肉200g", "蒜苔200g", "生抽", "淀粉", "姜"],
+    steps: ["猪肉切丝加生抽淀粉腌制", "蒜苔切段", "热油炒肉丝变色盛出", "再炒蒜苔至断生", "倒回肉丝翻炒", "加盐调味出锅"] },
+  { name: "土豆炖牛肉", cuisine: "家常", difficulty: "中等", time: "50分钟",
+    ingredients: ["牛肉400g", "土豆2个", "胡萝卜1根", "姜", "八角", "生抽", "老抽"],
+    steps: ["牛肉切块焯水", "热油炒牛肉上色，加姜八角", "加生抽老抽和适量水", "大火烧开转小火炖30分钟", "加土豆胡萝卜块继续炖15分钟", "加盐调味出锅"] },
+  { name: "酸菜鱼", cuisine: "川菜", difficulty: "中等", time: "30分钟",
+    ingredients: ["草鱼1条", "酸菜1包", "干辣椒", "花椒", "姜", "蒜", "蛋清", "淀粉"],
+    steps: ["鱼片加蛋清淀粉腌制", "酸菜切段炒香", "加水煮开，先煮鱼头鱼骨", "捞出鱼骨，下鱼片烫熟", "连汤倒入碗中", "撒干辣椒花椒蒜末，热油浇上"] },
+  { name: "黄焖鸡", cuisine: "家常", difficulty: "简单", time: "30分钟",
+    ingredients: ["鸡腿3个", "香菇", "青椒", "姜", "蒜", "生抽", "老抽", "糖"],
+    steps: ["鸡腿切块焯水", "热油炒糖色下鸡块翻炒", "加姜蒜、生抽老抽", "加香菇和适量水", "大火烧开转小火焖20分钟", "加青椒大火收汁"] },
+  { name: "辣子鸡", cuisine: "川菜", difficulty: "中等", time: "25分钟",
+    ingredients: ["鸡腿3个", "干辣椒大量", "花椒", "姜", "蒜", "白芝麻", "淀粉"],
+    steps: ["鸡腿去骨切块腌制", "裹淀粉炸至金黄酥脆", "少油爆香大量干辣椒和花椒", "下姜蒜爆香", "倒入炸鸡块翻炒", "撒白芝麻出锅"] },
+  { name: "蒜蓉粉丝蒸虾", cuisine: "粤菜", difficulty: "简单", time: "15分钟",
+    ingredients: ["大虾10只", "粉丝1把", "蒜", "生抽", "葱", "油"],
+    steps: ["粉丝泡软铺盘底", "虾开背去虾线摆粉丝上", "蒜蓉用油炒香", "蒜蓉铺虾上，淋生抽", "水开蒸6分钟", "撒葱花浇热油"] },
+  { name: "酸汤肥牛", cuisine: "家常", difficulty: "简单", time: "15分钟",
+    ingredients: ["肥牛卷250g", "金针菇", "黄灯笼椒酱", "醋", "姜", "蒜", "小米辣"],
+    steps: ["金针菇焯水铺碗底", "肥牛焯水去血沫", "热油炒香黄灯笼椒酱和姜蒜", "加水煮开，加醋调味", "下肥牛煮30秒捞出铺金针菇上", "倒汤汁，撒小米辣"] },
+  { name: "干锅花菜", cuisine: "湘菜", difficulty: "简单", time: "15分钟",
+    ingredients: ["花菜1个", "五花肉100g", "干辣椒", "蒜", "生抽", "豆瓣酱"],
+    steps: ["花菜掰小朵，五花肉切薄片", "花菜过油或干煸至微焦盛出", "煸五花肉出油", "加豆瓣酱、干辣椒、蒜爆香", "倒回花菜大火翻炒", "加生抽调味出锅"] },
+  { name: "葱油拌面", cuisine: "家常", difficulty: "简单", time: "10分钟",
+    ingredients: ["面条200g", "小葱1把", "生抽", "老抽", "糖", "油"],
+    steps: ["小葱切段", "油中小火炸葱至焦黄捞出", "葱油加生抽、老抽、糖煮开", "面条煮熟捞出", "浇上葱油酱汁拌匀", "撒葱花开吃"] },
+  { name: "蚝油生菜", cuisine: "粤菜", difficulty: "简单", time: "5分钟",
+    ingredients: ["生菜1把", "蚝油", "蒜", "糖", "淀粉"],
+    steps: ["生菜焯水10秒捞出摆盘", "热油爆香蒜末", "加蚝油、少许糖和水煮开", "勾薄芡", "浇在生菜上"] },
+  { name: "鱼香肉丝", cuisine: "川菜", difficulty: "中等", time: "15分钟",
+    ingredients: ["猪里脊250g", "木耳", "胡萝卜", "青椒", "豆瓣酱", "醋", "糖", "泡椒"],
+    steps: ["肉切丝腌制，木耳泡发，胡萝卜青椒切丝", "调碗汁：醋、糖、生抽、淀粉", "热油炒肉丝变色盛出", "爆香豆瓣酱和泡椒", "下配菜翻炒", "倒回肉丝，淋入碗汁翻炒出锅"] },
+  { name: "口水鸡", cuisine: "川菜", difficulty: "中等", time: "30分钟",
+    ingredients: ["鸡腿2个", "花生碎", "芝麻", "辣椒油", "花椒油", "生抽", "醋", "蒜", "糖"],
+    steps: ["鸡腿煮熟过冰水", "斩块摆盘", "调汁：辣椒油+花椒油+生抽+醋+蒜末+糖", "浇汁在鸡块上", "撒花生碎和芝麻"] },
+  { name: "香菇滑鸡", cuisine: "粤菜", difficulty: "简单", time: "20分钟",
+    ingredients: ["鸡腿2个", "香菇6朵", "姜", "葱", "生抽", "蚝油", "淀粉"],
+    steps: ["鸡腿去骨切块腌制", "香菇切片", "热油爆香姜片", "下鸡块炒至变色", "加香菇翻炒", "加蚝油生抽和少许水焖5分钟", "撒葱花出锅"] },
+];
+
+const cuisines = ["全部", ...new Set(dishes.map(d => d.cuisine))];
+let currentCuisine = "全部";
+let currentDish = null;
+let favorites = JSON.parse(localStorage.getItem("favDishes") || "[]");
+
+// 初始化筛选栏
+function initFilters() {
+  const bar = document.getElementById("filterBar");
+  bar.innerHTML = cuisines.map(c =>
+    `<button class="filter-btn${c === currentCuisine ? ' active' : ''}" onclick="setCuisine('${c}')">${c}</button>`
+  ).join("");
+}
+
+function setCuisine(c) {
+  currentCuisine = c;
+  initFilters();
+  randomDish();
+}
+
+function getFilteredDishes() {
+  return currentCuisine === "全部" ? dishes : dishes.filter(d => d.cuisine === currentCuisine);
+}
+
+function randomDish() {
+  const pool = getFilteredDishes();
+  if (pool.length === 0) return;
+  let dish;
+  do {
+    dish = pool[Math.floor(Math.random() * pool.length)];
+  } while (pool.length > 1 && dish === currentDish);
+  currentDish = dish;
+  renderDish();
+}
+
+function renderDish() {
+  const card = document.getElementById("dishCard");
+  const d = currentDish;
+  document.getElementById("dishName").textContent = d.name;
+  document.getElementById("tags").innerHTML =
+    `<span class="tag tag-cuisine">${d.cuisine}</span>` +
+    `<span class="tag tag-difficulty">${d.difficulty}</span>` +
+    `<span class="tag tag-time">${d.time}</span>`;
+  document.getElementById("ingredients").innerHTML =
+    d.ingredients.map(i => `<span class="ingredient">${i}</span>`).join("");
+  document.getElementById("steps").innerHTML =
+    d.steps.map(s => `<li>${s}</li>`).join("");
+  updateFavBtn();
+  card.classList.remove("show");
+  void card.offsetWidth;
+  card.classList.add("show");
+}
+
+function updateFavBtn() {
+  const btn = document.getElementById("favBtn");
+  const isFav = favorites.includes(currentDish.name);
+  btn.textContent = isFav ? "❤️" : "🤍";
+  btn.classList.toggle("active", isFav);
+}
+
+function toggleFav() {
+  const name = currentDish.name;
+  const idx = favorites.indexOf(name);
+  if (idx > -1) {
+    favorites.splice(idx, 1);
+  } else {
+    favorites.push(name);
+  }
+  localStorage.setItem("favDishes", JSON.stringify(favorites));
+  updateFavBtn();
+  renderFavList();
+}
+
+function renderFavList() {
+  const list = document.getElementById("favList");
+  if (favorites.length === 0) {
+    list.innerHTML = '<div class="fav-empty">还没有收藏哦，点击 ❤️ 收藏喜欢的菜</div>';
+    return;
+  }
+  list.innerHTML = favorites.map(name => {
+    const d = dishes.find(x => x.name === name);
+    return d ? `<span class="fav-item" onclick="showFavDish('${name}')">${d.name}</span>` : "";
+  }).join("");
+}
+
+function showFavDish(name) {
+  currentDish = dishes.find(d => d.name === name);
+  if (currentDish) renderDish();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+initFilters();
+renderFavList();
+</script>
+</body>
+</html>
