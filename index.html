@@ -93,21 +93,18 @@ body::before{
 .dish-image-wrap{
   position:relative;overflow:hidden;height:200px;
   display:flex;align-items:center;justify-content:center;
-  flex-direction:column;gap:4px;
 }
 .dish-image-wrap .bg-grad{
   position:absolute;inset:0;z-index:0;
 }
-.dish-image-emoji{
-  font-size:72px;z-index:1;
-  filter:drop-shadow(0 4px 12px rgba(0,0,0,0.3));
-  animation:emojiPop .5s cubic-bezier(.16,1,.3,1);
-}
-@keyframes emojiPop{from{transform:scale(0) rotate(-20deg);opacity:0}to{transform:scale(1) rotate(0);opacity:1}}
 .dish-image-name{
-  font-size:18px;font-weight:700;color:#fff;z-index:1;
-  text-shadow:0 2px 8px rgba(0,0,0,0.4);
+  position:relative;z-index:1;
+  font-size:36px;font-weight:800;color:#fff;
+  text-shadow:0 2px 12px rgba(0,0,0,0.5),0 0 40px rgba(0,0,0,0.2);
+  letter-spacing:6px;
+  animation:namePop .5s cubic-bezier(.16,1,.3,1);
 }
+@keyframes namePop{from{transform:scale(0.5);opacity:0}to{transform:scale(1);opacity:1}}
 .dish-body{padding:20px}
 .dish-header{
   display:flex;align-items:center;justify-content:space-between;
@@ -201,7 +198,6 @@ body::before{
   <div class="dish-card" id="dishCard">
     <div class="dish-image-wrap" id="dishImageWrap">
       <div class="bg-grad" id="dishBgGrad"></div>
-      <div class="dish-image-emoji" id="dishEmoji"></div>
       <div class="dish-image-name" id="dishImageName"></div>
     </div>
     <div class="dish-body">
@@ -327,100 +323,100 @@ const dishes=[
 ];
 
 const dishVisuals={
-  "酸笋炒牛肉":{emoji:"🥩",grad:"linear-gradient(135deg,#ff6b35,#f7931e)"},
-  "柠檬鸭":{emoji:"🦆",grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
-  "酸豆角炒肉末":{emoji:"🫑",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "螺蛳粉":{emoji:"🍜",grad:"linear-gradient(135deg,#ff6b6b,#ee5a24)"},
-  "啤酒鱼":{emoji:"🐟",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "荔浦芋扣肉":{emoji:"🥘",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "横县鱼生":{emoji:"🍣",grad:"linear-gradient(135deg,#43cea2,#185a9d)"},
-  "老友粉":{emoji:"🍝",grad:"linear-gradient(135deg,#eb3349,#f45c43)"},
-  "白果炖老鸭":{emoji:"🍲",grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
-  "钦州大蚝":{emoji:"🦪",grad:"linear-gradient(135deg,#2193b0,#6dd5ed)"},
-  "回锅肉":{emoji:"🥓",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "麻婆豆腐":{emoji:"🧊",grad:"linear-gradient(135deg,#e44d26,#f16529)"},
-  "水煮牛肉":{emoji:"🌶️",grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
-  "宫保鸡丁":{emoji:"🍗",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "鱼香肉丝":{emoji:"🥩",grad:"linear-gradient(135deg,#e44d26,#f16529)"},
-  "辣子鸡":{emoji:"🔥",grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
-  "口水鸡":{emoji:"🐓",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "毛血旺":{emoji:"🍲",grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
-  "酸菜鱼":{emoji:"🐠",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "粉蒸肉":{emoji:"🥩",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "夫妻肺片":{emoji:"🥩",grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
-  "蒜泥白肉":{emoji:"🧄",grad:"linear-gradient(135deg,#f5f7fa,#c3cfe2)"},
-  "干煸肥肠":{emoji:"🌶️",grad:"linear-gradient(135deg,#e44d26,#f16529)"},
-  "蚂蚁上树":{emoji:"🍜",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "辣椒炒肉":{emoji:"🌶️",grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
-  "小炒黄牛肉":{emoji:"🥩",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "剁椒鱼头":{emoji:"🐟",grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
-  "干锅花菜":{emoji:"🥦",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "湘西外婆菜":{emoji:"🥬",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "口味虾":{emoji:"🦞",grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
-  "湖南红烧肉":{emoji:"🥩",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "金钱蛋":{emoji:"🍳",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "豉油鸡":{emoji:"🍗",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "梅菜扣肉":{emoji:"🥩",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "白切鸡":{emoji:"🍗",grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
-  "蒜蓉粉丝蒸虾":{emoji:"🦐",grad:"linear-gradient(135deg,#2193b0,#6dd5ed)"},
-  "蚝油生菜":{emoji:"🥬",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "香菇滑鸡":{emoji:"🍄",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "菠萝咕噜肉":{emoji:"🍍",grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
-  "煲仔饭":{emoji:"🍚",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "清蒸鲈鱼":{emoji:"🐟",grad:"linear-gradient(135deg,#2193b0,#6dd5ed)"},
-  "叉烧":{emoji:"🥩",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "可乐鸡翅":{emoji:"🍗",grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
-  "番茄炒蛋":{emoji:"🍅",grad:"linear-gradient(135deg,#e44d26,#f16529)"},
-  "红烧排骨":{emoji:"🍖",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "糖醋里脊":{emoji:"🥩",grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
-  "蒜苔炒肉丝":{emoji:"🥢",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "土豆炖牛肉":{emoji:"🥔",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "黄焖鸡":{emoji:"🍗",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "酸汤肥牛":{emoji:"🍲",grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
-  "葱油拌面":{emoji:"🍜",grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
-  "红烧肉":{emoji:"🥩",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "青椒肉丝":{emoji:"🫑",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "木须肉":{emoji:"🥚",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "地三鲜":{emoji:"🍆",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "干炸丸子":{emoji:"🧆",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "锅包肉":{emoji:"🥩",grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
-  "汽锅鸡":{emoji:"🍲",grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
-  "过桥米线":{emoji:"🍜",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "贵州酸汤鱼":{emoji:"🐟",grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
-  "洋芋焖饭":{emoji:"🥔",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "折耳根炒腊肉":{emoji:"🌿",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "东北锅包肉":{emoji:"🥩",grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
-  "小鸡炖蘑菇":{emoji:"🍄",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "猪肉炖粉条":{emoji:"🍲",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "溜肉段":{emoji:"🥩",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "杀猪菜":{emoji:"🍲",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "糖醋鲤鱼":{emoji:"🐟",grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
-  "九转大肠":{emoji:"🥘",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "葱烧海参":{emoji:"🦑",grad:"linear-gradient(135deg,#2193b0,#6dd5ed)"},
-  "油焖大虾":{emoji:"🦐",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "四喜丸子":{emoji:"🧆",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "臭鳜鱼":{emoji:"🐟",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "毛豆腐":{emoji:"🧀",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "大盘鸡":{emoji:"🍗",grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
-  "羊肉泡馍":{emoji:"🫓",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "手抓羊肉":{emoji:"🍖",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "biangbiang面":{emoji:"🍜",grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
-  "东坡肉":{emoji:"🥩",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "西湖醋鱼":{emoji:"🐟",grad:"linear-gradient(135deg,#2193b0,#6dd5ed)"},
-  "龙井虾仁":{emoji:"🍵",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "红烧狮子头":{emoji:"🧆",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "糖醋排骨":{emoji:"🍖",grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
-  "南京盐水鸭":{emoji:"🦆",grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
-  "凉拌木耳":{emoji:"🍄",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "凉拌口水鸡":{emoji:"🍗",grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
-  "凉拌黄瓜":{emoji:"🥒",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "凉拌皮蛋豆腐":{emoji:"🥚",grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
-  "凉拌蒜泥白肉":{emoji:"🧄",grad:"linear-gradient(135deg,#f5f7fa,#c3cfe2)"},
-  "凉拌牛肉":{emoji:"🥩",grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
-  "酸辣凤爪":{emoji:"🐔",grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
-  "凉拌夫妻肺片":{emoji:"🥩",grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
-  "凉拌藕片":{emoji:"🌿",grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
-  "白切猪手":{emoji:"🐷",grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
+  "酸笋炒牛肉":{grad:"linear-gradient(135deg,#ff6b35,#f7931e)"},
+  "柠檬鸭":{grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
+  "酸豆角炒肉末":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "螺蛳粉":{grad:"linear-gradient(135deg,#ff6b6b,#ee5a24)"},
+  "啤酒鱼":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "荔浦芋扣肉":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "横县鱼生":{grad:"linear-gradient(135deg,#43cea2,#185a9d)"},
+  "老友粉":{grad:"linear-gradient(135deg,#eb3349,#f45c43)"},
+  "白果炖老鸭":{grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
+  "钦州大蚝":{grad:"linear-gradient(135deg,#2193b0,#6dd5ed)"},
+  "回锅肉":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "麻婆豆腐":{grad:"linear-gradient(135deg,#e44d26,#f16529)"},
+  "水煮牛肉":{grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
+  "宫保鸡丁":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "鱼香肉丝":{grad:"linear-gradient(135deg,#e44d26,#f16529)"},
+  "辣子鸡":{grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
+  "口水鸡":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "毛血旺":{grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
+  "酸菜鱼":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "粉蒸肉":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "夫妻肺片":{grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
+  "蒜泥白肉":{grad:"linear-gradient(135deg,#f5f7fa,#c3cfe2)"},
+  "干煸肥肠":{grad:"linear-gradient(135deg,#e44d26,#f16529)"},
+  "蚂蚁上树":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "辣椒炒肉":{grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
+  "小炒黄牛肉":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "剁椒鱼头":{grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
+  "干锅花菜":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "湘西外婆菜":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "口味虾":{grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
+  "湖南红烧肉":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "金钱蛋":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "豉油鸡":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "梅菜扣肉":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "白切鸡":{grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
+  "蒜蓉粉丝蒸虾":{grad:"linear-gradient(135deg,#2193b0,#6dd5ed)"},
+  "蚝油生菜":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "香菇滑鸡":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "菠萝咕噜肉":{grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
+  "煲仔饭":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "清蒸鲈鱼":{grad:"linear-gradient(135deg,#2193b0,#6dd5ed)"},
+  "叉烧":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "可乐鸡翅":{grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
+  "番茄炒蛋":{grad:"linear-gradient(135deg,#e44d26,#f16529)"},
+  "红烧排骨":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "糖醋里脊":{grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
+  "蒜苔炒肉丝":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "土豆炖牛肉":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "黄焖鸡":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "酸汤肥牛":{grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
+  "葱油拌面":{grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
+  "红烧肉":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "青椒肉丝":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "木须肉":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "地三鲜":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "干炸丸子":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "锅包肉":{grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
+  "汽锅鸡":{grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
+  "过桥米线":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "贵州酸汤鱼":{grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
+  "洋芋焖饭":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "折耳根炒腊肉":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "东北锅包肉":{grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
+  "小鸡炖蘑菇":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "猪肉炖粉条":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "溜肉段":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "杀猪菜":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "糖醋鲤鱼":{grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
+  "九转大肠":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "葱烧海参":{grad:"linear-gradient(135deg,#2193b0,#6dd5ed)"},
+  "油焖大虾":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "四喜丸子":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "臭鳜鱼":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "毛豆腐":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "大盘鸡":{grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
+  "羊肉泡馍":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "手抓羊肉":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "biangbiang面":{grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
+  "东坡肉":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "西湖醋鱼":{grad:"linear-gradient(135deg,#2193b0,#6dd5ed)"},
+  "龙井虾仁":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "红烧狮子头":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "糖醋排骨":{grad:"linear-gradient(135deg,#f9d423,#ff4e50)"},
+  "南京盐水鸭":{grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
+  "凉拌木耳":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "凉拌口水鸡":{grad:"linear-gradient(135deg,#f7971e,#ffd200)"},
+  "凉拌黄瓜":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "凉拌皮蛋豆腐":{grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
+  "凉拌蒜泥白肉":{grad:"linear-gradient(135deg,#f5f7fa,#c3cfe2)"},
+  "凉拌牛肉":{grad:"linear-gradient(135deg,#c94b4b,#4b134f)"},
+  "酸辣凤爪":{grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
+  "凉拌夫妻肺片":{grad:"linear-gradient(135deg,#cb2d3e,#ef473a)"},
+  "凉拌藕片":{grad:"linear-gradient(135deg,#56ab2f,#a8e063)"},
+  "白切猪手":{grad:"linear-gradient(135deg,#ffe259,#ffa751)"},
 };
 
 const cuisines=["全部",...new Set(dishes.map(d=>d.cuisine))];
@@ -457,9 +453,8 @@ function randomDish(){
 
 function renderDish(){
   const card=document.getElementById("dishCard"),d=currentDish;
-  const vis=dishVisuals[d.name]||{emoji:"🍽️",grad:"linear-gradient(135deg,#667eea,#764ba2)"};
+  const vis=dishVisuals[d.name]||{grad:"linear-gradient(135deg,#667eea,#764ba2)"};
   document.getElementById("dishBgGrad").style.background=vis.grad;
-  document.getElementById("dishEmoji").textContent=vis.emoji;
   document.getElementById("dishImageName").textContent=d.name;
   document.getElementById("dishName").textContent=d.name;
   document.getElementById("tags").innerHTML=
