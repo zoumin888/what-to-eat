@@ -30,7 +30,6 @@ h1 {
   font-size: 14px;
   margin-bottom: 24px;
 }
-/* 菜系筛选 */
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -52,7 +51,6 @@ h1 {
   background: #e74c3c;
   color: white;
 }
-/* 主按钮 */
 .main-btn {
   display: block;
   width: 160px;
@@ -78,11 +76,10 @@ h1 {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.03); }
 }
-/* 菜品卡片 */
 .dish-card {
   background: white;
   border-radius: 16px;
-  padding: 24px 20px;
+  overflow: hidden;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   display: none;
 }
@@ -93,6 +90,16 @@ h1 {
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+.dish-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  background: #f0f0f0;
+}
+.dish-body {
+  padding: 20px;
 }
 .dish-header {
   display: flex;
@@ -186,7 +193,6 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-/* 换一个按钮 */
 .change-btn {
   display: block;
   width: 100%;
@@ -205,18 +211,12 @@ h1 {
   color: white;
   border-style: solid;
 }
-/* 收藏列表 */
-.fav-section {
-  margin-top: 32px;
-}
+.fav-section { margin-top: 32px; }
 .fav-title {
   font-size: 18px;
   font-weight: bold;
   color: #2c3e50;
   margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
 }
 .fav-list {
   display: flex;
@@ -240,142 +240,341 @@ h1 {
   text-align: center;
   padding: 16px;
 }
+.counter {
+  text-align: center;
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 8px;
+}
 </style>
 </head>
 <body>
 <div class="container">
   <h1>今天吃啥？</h1>
   <p class="subtitle">小熊妹妹的美食随机推荐</p>
-
   <div class="filter-bar" id="filterBar"></div>
-
   <button class="main-btn" id="mainBtn" onclick="randomDish()">开吃！</button>
-
   <div class="dish-card" id="dishCard">
-    <div class="dish-header">
-      <span class="dish-name" id="dishName"></span>
-      <button class="fav-btn" id="favBtn" onclick="toggleFav()">🤍</button>
+    <img class="dish-image" id="dishImage" src="" alt="菜品图片" onerror="this.style.display='none'">
+    <div class="dish-body">
+      <div class="dish-header">
+        <span class="dish-name" id="dishName"></span>
+        <button class="fav-btn" id="favBtn" onclick="toggleFav()">🤍</button>
+      </div>
+      <div class="tags" id="tags"></div>
+      <div class="section-title">🥘 食材</div>
+      <div class="ingredients-list" id="ingredients"></div>
+      <div class="section-title">👨‍🍳 做法</div>
+      <ol class="steps-list" id="steps"></ol>
+      <button class="change-btn" onclick="randomDish()">换一个 ➜</button>
     </div>
-    <div class="tags" id="tags"></div>
-    <div class="section-title">🥘 食材</div>
-    <div class="ingredients-list" id="ingredients"></div>
-    <div class="section-title">👨‍🍳 做法</div>
-    <ol class="steps-list" id="steps"></ol>
-    <button class="change-btn" onclick="randomDish()">换一个 ➜</button>
   </div>
-
   <div class="fav-section" id="favSection">
     <div class="fav-title">❤️ 我的收藏</div>
     <div class="fav-list" id="favList"></div>
   </div>
+  <p class="counter" id="counter"></p>
 </div>
 
 <script>
 const dishes = [
-  // 广西菜
-  { name: "酸笋炒牛肉", cuisine: "广西", difficulty: "简单", time: "15分钟",
-    ingredients: ["牛肉250g", "酸笋100g", "辣椒", "蒜", "生抽", "淀粉"],
-    steps: ["牛肉切薄片，加生抽、淀粉腌10分钟", "酸笋切片，辣椒切段", "热油爆香蒜末和辣椒", "大火快炒牛肉至变色盛出", "下酸笋翻炒出香，倒回牛肉炒匀", "加盐调味出锅"] },
-  { name: "柠檬鸭", cuisine: "广西", difficulty: "中等", time: "45分钟",
-    ingredients: ["鸭肉半只", "咸柠檬2个", "酸梅3颗", "姜", "蒜", "辣椒", "生抽", "老抽"],
-    steps: ["鸭肉切块焯水去腥", "少油煎鸭肉至微黄", "加姜片、蒜、辣椒爆香", "放入咸柠檬和酸梅", "加生抽、老抽和适量水", "大火烧开转小火焖30分钟", "大火收汁出锅"] },
-  { name: "酸豆角炒肉末", cuisine: "广西", difficulty: "简单", time: "10分钟",
-    ingredients: ["酸豆角150g", "猪肉末200g", "辣椒", "蒜", "生抽", "糖"],
-    steps: ["酸豆角切小段，辣椒切圈", "热油炒肉末至变色", "加蒜末辣椒爆香", "倒入酸豆角翻炒2分钟", "加少许糖提鲜，出锅"] },
-  { name: "螺蛳粉", cuisine: "广西", difficulty: "简单", time: "20分钟",
-    ingredients: ["螺蛳粉1包", "酸笋", "腐竹", "花生", "酸豆角", "青菜"],
-    steps: ["米粉冷水泡软", "烧水煮粉至软烂捞出", "螺蛳汤料加水煮开", "放入米粉和配菜", "加酸笋、腐竹、花生、酸豆角", "开吃！"] },
-  { name: "啤酒鱼", cuisine: "广西", difficulty: "中等", time: "30分钟",
-    ingredients: ["草鱼1条", "啤酒1罐", "番茄2个", "青椒", "姜", "蒜", "生抽"],
-    steps: ["鱼处理干净划几刀，抹盐腌10分钟", "热油煎鱼两面金黄盛出", "爆香姜蒜，加番茄炒出汁", "倒入啤酒，放回鱼", "加生抽，中火焖15分钟", "加青椒，大火收汁"] },
-  { name: "荔浦芋扣肉", cuisine: "广西", difficulty: "较难", time: "90分钟",
-    ingredients: ["五花肉500g", "荔浦芋头1个", "腐乳2块", "生抽", "老抽", "糖", "蜂蜜"],
-    steps: ["五花肉整块煮熟，皮抹老抽蜂蜜", "热油炸肉皮至金黄，切厚片", "芋头切厚片炸至表面微黄", "腐乳捣碎加生抽、糖调酱汁", "一片肉一片芋头码碗，浇酱汁", "上锅蒸1.5小时", "倒扣出锅"] },
-  // 川菜
-  { name: "回锅肉", cuisine: "川菜", difficulty: "简单", time: "20分钟",
-    ingredients: ["五花肉300g", "青蒜", "豆瓣酱", "甜面酱", "姜", "料酒"],
-    steps: ["五花肉整块煮熟切薄片", "青蒜切段", "热锅少油煸肉片至卷曲出油", "推到一边，下豆瓣酱炒出红油", "加甜面酱翻炒", "下青蒜大火快炒出锅"] },
-  { name: "麻婆豆腐", cuisine: "川菜", difficulty: "简单", time: "15分钟",
-    ingredients: ["嫩豆腐1块", "猪肉末100g", "豆瓣酱", "花椒粉", "辣椒面", "葱", "淀粉"],
-    steps: ["豆腐切小块焯水去豆腥", "热油炒肉末变色", "加豆瓣酱炒出红油", "加水烧开，放入豆腐", "小火煮3分钟入味", "勾芡撒花椒粉葱花出锅"] },
-  { name: "水煮牛肉", cuisine: "川菜", difficulty: "中等", time: "25分钟",
-    ingredients: ["牛肉250g", "豆芽", "生菜", "豆瓣酱", "干辣椒", "花椒", "蒜", "淀粉"],
-    steps: ["牛肉切薄片加淀粉腌制", "豆芽生菜焯水铺碗底", "热油炒豆瓣酱出红油加水烧开", "下牛肉片快速烫熟捞出铺菜上", "撒干辣椒、花椒、蒜末", "热油浇上滋啦一声"] },
-  { name: "宫保鸡丁", cuisine: "川菜", difficulty: "简单", time: "15分钟",
-    ingredients: ["鸡胸肉250g", "花生米", "干辣椒", "花椒", "葱", "姜", "醋", "糖", "生抽"],
-    steps: ["鸡肉切丁加生抽淀粉腌制", "调碗汁：醋、糖、生抽、淀粉", "热油炒花生米盛出", "爆香干辣椒花椒葱姜", "下鸡丁炒变色", "倒入碗汁翻炒，加花生米出锅"] },
-  // 湘菜
-  { name: "辣椒炒肉", cuisine: "湘菜", difficulty: "简单", time: "10分钟",
-    ingredients: ["五花肉250g", "青辣椒4个", "豆豉", "蒜", "生抽"],
-    steps: ["五花肉切薄片，辣椒切滚刀块", "热锅不放油，先煸辣椒至虎皮盛出", "下五花肉煸出油", "加豆豉蒜末爆香", "倒回辣椒翻炒", "加生抽调味出锅"] },
-  { name: "小炒黄牛肉", cuisine: "湘菜", difficulty: "简单", time: "15分钟",
-    ingredients: ["黄牛肉250g", "小米辣", "香菜", "蒜", "生抽", "淀粉"],
-    steps: ["牛肉切薄片腌制10分钟", "小米辣切圈，香菜切段", "热油大火爆炒牛肉至变色盛出", "爆香蒜末小米辣", "倒回牛肉加香菜翻炒", "出锅"] },
-  { name: "剁椒鱼头", cuisine: "湘菜", difficulty: "中等", time: "25分钟",
-    ingredients: ["鱼头1个", "剁椒", "姜", "蒜", "葱", "蒸鱼豉油", "料酒"],
-    steps: ["鱼头洗净抹料酒和盐腌10分钟", "盘底铺姜片，放上鱼头", "铺满剁椒和蒜末", "水开后上锅蒸12分钟", "淋蒸鱼豉油，撒葱花", "热油浇上"] },
-  // 粤菜
-  { name: "豉油鸡", cuisine: "粤菜", difficulty: "中等", time: "40分钟",
-    ingredients: ["鸡半只", "生抽", "老抽", "冰糖", "姜", "葱", "料酒"],
-    steps: ["鸡洗净擦干", "热油煎鸡皮至金黄", "加姜片葱段爆香", "倒入生抽、老抽、冰糖、料酒和适量水", "中火焖煮30分钟，中途翻面", "大火收汁，斩块上桌"] },
-  { name: "梅菜扣肉", cuisine: "粤菜", difficulty: "较难", time: "90分钟",
-    ingredients: ["五花肉500g", "梅菜干100g", "生抽", "老抽", "糖", "料酒"],
-    steps: ["五花肉煮熟，皮抹老抽油炸至金黄", "切厚片，加生抽老抽糖腌制", "梅菜泡发洗净切碎炒香", "肉片皮朝下码碗，铺梅菜", "上锅蒸1.5小时", "倒扣出锅"] },
-  { name: "白切鸡", cuisine: "粤菜", difficulty: "中等", time: "40分钟",
-    ingredients: ["三黄鸡1只", "姜", "葱", "香油", "生抽", "沙姜粉"],
-    steps: ["鸡洗净，锅中水加姜片葱结烧开", "提鸡入水三次，再完全浸入", "小火浸煮20分钟，关火焖10分钟", "捞出过冰水", "斩块装盘", "蘸料：姜蓉+葱油+盐 或 沙姜+生抽"] },
-  // 家常菜
-  { name: "可乐鸡翅", cuisine: "家常", difficulty: "简单", time: "25分钟",
-    ingredients: ["鸡翅8个", "可乐1罐", "生抽", "姜", "料酒"],
-    steps: ["鸡翅划两刀，焯水捞出", "少油煎至两面金黄", "加姜片、料酒", "倒入可乐没过鸡翅", "加生抽，大火烧开转小火15分钟", "大火收汁出锅"] },
-  { name: "番茄炒蛋", cuisine: "家常", difficulty: "简单", time: "8分钟",
-    ingredients: ["鸡蛋3个", "番茄2个", "葱", "糖", "盐"],
-    steps: ["鸡蛋打散，番茄切块", "热油炒蛋盛出", "再加油炒番茄出汁", "加少许糖和盐", "倒回鸡蛋翻炒", "撒葱花出锅"] },
-  { name: "红烧排骨", cuisine: "家常", difficulty: "中等", time: "40分钟",
-    ingredients: ["排骨500g", "冰糖", "生抽", "老抽", "姜", "八角", "料酒"],
-    steps: ["排骨焯水去血沫", "少油炒冰糖至焦糖色", "下排骨翻炒上色", "加姜、八角、料酒、生抽、老抽", "加水没过排骨，大火烧开", "小火炖30分钟，大火收汁"] },
-  { name: "糖醋里脊", cuisine: "家常", difficulty: "中等", time: "20分钟",
-    ingredients: ["猪里脊300g", "番茄酱", "醋", "糖", "淀粉", "鸡蛋"],
-    steps: ["里脊切条，加盐和蛋液腌制", "裹淀粉，下油锅炸至金黄捞出", "复炸一次更酥脆", "调汁：番茄酱+醋+糖+少许水", "热油炒汁至冒泡", "倒入炸好的里脊翻炒裹汁"] },
-  { name: "蒜苔炒肉丝", cuisine: "家常", difficulty: "简单", time: "15分钟",
-    ingredients: ["猪肉200g", "蒜苔200g", "生抽", "淀粉", "姜"],
-    steps: ["猪肉切丝加生抽淀粉腌制", "蒜苔切段", "热油炒肉丝变色盛出", "再炒蒜苔至断生", "倒回肉丝翻炒", "加盐调味出锅"] },
-  { name: "土豆炖牛肉", cuisine: "家常", difficulty: "中等", time: "50分钟",
-    ingredients: ["牛肉400g", "土豆2个", "胡萝卜1根", "姜", "八角", "生抽", "老抽"],
-    steps: ["牛肉切块焯水", "热油炒牛肉上色，加姜八角", "加生抽老抽和适量水", "大火烧开转小火炖30分钟", "加土豆胡萝卜块继续炖15分钟", "加盐调味出锅"] },
-  { name: "酸菜鱼", cuisine: "川菜", difficulty: "中等", time: "30分钟",
-    ingredients: ["草鱼1条", "酸菜1包", "干辣椒", "花椒", "姜", "蒜", "蛋清", "淀粉"],
-    steps: ["鱼片加蛋清淀粉腌制", "酸菜切段炒香", "加水煮开，先煮鱼头鱼骨", "捞出鱼骨，下鱼片烫熟", "连汤倒入碗中", "撒干辣椒花椒蒜末，热油浇上"] },
-  { name: "黄焖鸡", cuisine: "家常", difficulty: "简单", time: "30分钟",
-    ingredients: ["鸡腿3个", "香菇", "青椒", "姜", "蒜", "生抽", "老抽", "糖"],
-    steps: ["鸡腿切块焯水", "热油炒糖色下鸡块翻炒", "加姜蒜、生抽老抽", "加香菇和适量水", "大火烧开转小火焖20分钟", "加青椒大火收汁"] },
-  { name: "辣子鸡", cuisine: "川菜", difficulty: "中等", time: "25分钟",
-    ingredients: ["鸡腿3个", "干辣椒大量", "花椒", "姜", "蒜", "白芝麻", "淀粉"],
-    steps: ["鸡腿去骨切块腌制", "裹淀粉炸至金黄酥脆", "少油爆香大量干辣椒和花椒", "下姜蒜爆香", "倒入炸鸡块翻炒", "撒白芝麻出锅"] },
-  { name: "蒜蓉粉丝蒸虾", cuisine: "粤菜", difficulty: "简单", time: "15分钟",
-    ingredients: ["大虾10只", "粉丝1把", "蒜", "生抽", "葱", "油"],
-    steps: ["粉丝泡软铺盘底", "虾开背去虾线摆粉丝上", "蒜蓉用油炒香", "蒜蓉铺虾上，淋生抽", "水开蒸6分钟", "撒葱花浇热油"] },
-  { name: "酸汤肥牛", cuisine: "家常", difficulty: "简单", time: "15分钟",
-    ingredients: ["肥牛卷250g", "金针菇", "黄灯笼椒酱", "醋", "姜", "蒜", "小米辣"],
-    steps: ["金针菇焯水铺碗底", "肥牛焯水去血沫", "热油炒香黄灯笼椒酱和姜蒜", "加水煮开，加醋调味", "下肥牛煮30秒捞出铺金针菇上", "倒汤汁，撒小米辣"] },
-  { name: "干锅花菜", cuisine: "湘菜", difficulty: "简单", time: "15分钟",
-    ingredients: ["花菜1个", "五花肉100g", "干辣椒", "蒜", "生抽", "豆瓣酱"],
-    steps: ["花菜掰小朵，五花肉切薄片", "花菜过油或干煸至微焦盛出", "煸五花肉出油", "加豆瓣酱、干辣椒、蒜爆香", "倒回花菜大火翻炒", "加生抽调味出锅"] },
-  { name: "葱油拌面", cuisine: "家常", difficulty: "简单", time: "10分钟",
-    ingredients: ["面条200g", "小葱1把", "生抽", "老抽", "糖", "油"],
-    steps: ["小葱切段", "油中小火炸葱至焦黄捞出", "葱油加生抽、老抽、糖煮开", "面条煮熟捞出", "浇上葱油酱汁拌匀", "撒葱花开吃"] },
-  { name: "蚝油生菜", cuisine: "粤菜", difficulty: "简单", time: "5分钟",
-    ingredients: ["生菜1把", "蚝油", "蒜", "糖", "淀粉"],
-    steps: ["生菜焯水10秒捞出摆盘", "热油爆香蒜末", "加蚝油、少许糖和水煮开", "勾薄芡", "浇在生菜上"] },
-  { name: "鱼香肉丝", cuisine: "川菜", difficulty: "中等", time: "15分钟",
-    ingredients: ["猪里脊250g", "木耳", "胡萝卜", "青椒", "豆瓣酱", "醋", "糖", "泡椒"],
-    steps: ["肉切丝腌制，木耳泡发，胡萝卜青椒切丝", "调碗汁：醋、糖、生抽、淀粉", "热油炒肉丝变色盛出", "爆香豆瓣酱和泡椒", "下配菜翻炒", "倒回肉丝，淋入碗汁翻炒出锅"] },
-  { name: "口水鸡", cuisine: "川菜", difficulty: "中等", time: "30分钟",
-    ingredients: ["鸡腿2个", "花生碎", "芝麻", "辣椒油", "花椒油", "生抽", "醋", "蒜", "糖"],
-    steps: ["鸡腿煮熟过冰水", "斩块摆盘", "调汁：辣椒油+花椒油+生抽+醋+蒜末+糖", "浇汁在鸡块上", "撒花生碎和芝麻"] },
-  { name: "香菇滑鸡", cuisine: "粤菜", difficulty: "简单", time: "20分钟",
-    ingredients: ["鸡腿2个", "香菇6朵", "姜", "葱", "生抽", "蚝油", "淀粉"],
-    steps: ["鸡腿去骨切块腌制", "香菇切片", "热油爆香姜片", "下鸡块炒至变色", "加香菇翻炒", "加蚝油生抽和少许水焖5分钟", "撒葱花出锅"] },
+  // ===== 广西菜 =====
+  { name:"酸笋炒牛肉", cuisine:"广西", difficulty:"简单", time:"15分钟", img:"suan_sun_niu_rou",
+    ingredients:["牛肉250g","酸笋100g","辣椒","蒜","生抽","淀粉"],
+    steps:["牛肉切薄片，加生抽、淀粉腌10分钟","酸笋切片，辣椒切段","热油爆香蒜末和辣椒","大火快炒牛肉至变色盛出","下酸笋翻炒出香，倒回牛肉炒匀","加盐调味出锅"]},
+  { name:"柠檬鸭", cuisine:"广西", difficulty:"中等", time:"45分钟", img:"ning_meng_ya",
+    ingredients:["鸭肉半只","咸柠檬2个","酸梅3颗","姜","蒜","辣椒","生抽","老抽"],
+    steps:["鸭肉切块焯水去腥","少油煎鸭肉至微黄","加姜片、蒜、辣椒爆香","放入咸柠檬和酸梅","加生抽、老抽和适量水","大火烧开转小火焖30分钟","大火收汁出锅"]},
+  { name:"酸豆角炒肉末", cuisine:"广西", difficulty:"简单", time:"10分钟", img:"suan_dou_jiao_rou_mo",
+    ingredients:["酸豆角150g","猪肉末200g","辣椒","蒜","生抽","糖"],
+    steps:["酸豆角切小段，辣椒切圈","热油炒肉末至变色","加蒜末辣椒爆香","倒入酸豆角翻炒2分钟","加少许糖提鲜，出锅"]},
+  { name:"螺蛳粉", cuisine:"广西", difficulty:"简单", time:"20分钟", img:"luo_si_fen",
+    ingredients:["螺蛳粉1包","酸笋","腐竹","花生","酸豆角","青菜"],
+    steps:["米粉冷水泡软","烧水煮粉至软烂捞出","螺蛳汤料加水煮开","放入米粉和配菜","加酸笋、腐竹、花生、酸豆角","开吃！"]},
+  { name:"啤酒鱼", cuisine:"广西", difficulty:"中等", time:"30分钟", img:"pi_jiu_yu",
+    ingredients:["草鱼1条","啤酒1罐","番茄2个","青椒","姜","蒜","生抽"],
+    steps:["鱼处理干净划几刀，抹盐腌10分钟","热油煎鱼两面金黄盛出","爆香姜蒜，加番茄炒出汁","倒入啤酒，放回鱼","加生抽，中火焖15分钟","加青椒，大火收汁"]},
+  { name:"荔浦芋扣肉", cuisine:"广西", difficulty:"较难", time:"90分钟", img:"li_pu_yu_kou_rou",
+    ingredients:["五花肉500g","荔浦芋头1个","腐乳2块","生抽","老抽","糖","蜂蜜"],
+    steps:["五花肉整块煮熟，皮抹老抽蜂蜜","热油炸肉皮至金黄，切厚片","芋头切厚片炸至表面微黄","腐乳捣碎加生抽、糖调酱汁","一片肉一片芋头码碗，浇酱汁","上锅蒸1.5小时","倒扣出锅"]},
+  { name:"横县鱼生", cuisine:"广西", difficulty:"中等", time:"20分钟", img:"heng_xian_yu_sheng",
+    ingredients:["草鱼1条","花生碎","芝麻","紫苏","香菜","柠檬","蒜","姜","酱油","花生油"],
+    steps:["草鱼取肉去皮切薄片","鱼片冰水浸泡至脆","花生碎、芝麻、紫苏丝、香菜末备好","蒜末、姜丝、辣椒丝备好","鱼片捞出沥水摆盘","配调料蘸食"]},
+  { name:"老友粉", cuisine:"广西", difficulty:"简单", time:"15分钟", img:"lao_you_fen",
+    ingredients:["切粉1份","猪肉末","酸笋","豆豉","番茄","辣椒","蒜","醋"],
+    steps:["热油爆香蒜末豆豉辣椒","下肉末炒散","加番茄炒出汁","加酸笋翻炒","加水煮开，加醋调味","下切粉煮熟出锅"]},
+  { name:"白果炖老鸭", cuisine:"广西", difficulty:"中等", time:"90分钟", img:"bai_guo_dun_lao_ya",
+    ingredients:["老鸭半只","白果20颗","姜","枸杞","盐"],
+    steps:["老鸭切块焯水","白果去壳去芯","砂锅加水和鸭块姜片","大火烧开转小火炖1小时","加白果继续炖30分钟","加盐和枸杞调味"]},
+  { name:"钦州大蚝", cuisine:"广西", difficulty:"简单", time:"10分钟", img:"qin_zhou_da_hao",
+    ingredients:["生蚝12只","蒜","小米辣","粉丝","生抽","蚝油"],
+    steps:["生蚝刷洗干净","蒜蓉用油炒香，加生抽蚝油调味","粉丝泡软铺在生蚝上","浇上蒜蓉酱","水开蒸5分钟","撒小米辣和葱花"]},
+  // ===== 川菜 =====
+  { name:"回锅肉", cuisine:"川菜", difficulty:"简单", time:"20分钟", img:"hui_guo_rou",
+    ingredients:["五花肉300g","青蒜","豆瓣酱","甜面酱","姜","料酒"],
+    steps:["五花肉整块煮熟切薄片","青蒜切段","热锅少油煸肉片至卷曲出油","推到一边，下豆瓣酱炒出红油","加甜面酱翻炒","下青蒜大火快炒出锅"]},
+  { name:"麻婆豆腐", cuisine:"川菜", difficulty:"简单", time:"15分钟", img:"ma_po_dou_fu",
+    ingredients:["嫩豆腐1块","猪肉末100g","豆瓣酱","花椒粉","辣椒面","葱","淀粉"],
+    steps:["豆腐切小块焯水去豆腥","热油炒肉末变色","加豆瓣酱炒出红油","加水烧开，放入豆腐","小火煮3分钟入味","勾芡撒花椒粉葱花出锅"]},
+  { name:"水煮牛肉", cuisine:"川菜", difficulty:"中等", time:"25分钟", img:"shui_zhu_niu_rou",
+    ingredients:["牛肉250g","豆芽","生菜","豆瓣酱","干辣椒","花椒","蒜","淀粉"],
+    steps:["牛肉切薄片加淀粉腌制","豆芽生菜焯水铺碗底","热油炒豆瓣酱出红油加水烧开","下牛肉片快速烫熟捞出铺菜上","撒干辣椒、花椒、蒜末","热油浇上滋啦一声"]},
+  { name:"宫保鸡丁", cuisine:"川菜", difficulty:"简单", time:"15分钟", img:"gong_bao_ji_ding",
+    ingredients:["鸡胸肉250g","花生米","干辣椒","花椒","葱","姜","醋","糖","生抽"],
+    steps:["鸡肉切丁加生抽淀粉腌制","调碗汁：醋、糖、生抽、淀粉","热油炒花生米盛出","爆香干辣椒花椒葱姜","下鸡丁炒变色","倒入碗汁翻炒，加花生米出锅"]},
+  { name:"鱼香肉丝", cuisine:"川菜", difficulty:"中等", time:"15分钟", img:"yu_xiang_rou_si",
+    ingredients:["猪里脊250g","木耳","胡萝卜","青椒","豆瓣酱","醋","糖","泡椒"],
+    steps:["肉切丝腌制，木耳泡发，胡萝卜青椒切丝","调碗汁：醋、糖、生抽、淀粉","热油炒肉丝变色盛出","爆香豆瓣酱和泡椒","下配菜翻炒","倒回肉丝，淋入碗汁翻炒出锅"]},
+  { name:"辣子鸡", cuisine:"川菜", difficulty:"中等", time:"25分钟", img:"la_zi_ji",
+    ingredients:["鸡腿3个","干辣椒大量","花椒","姜","蒜","白芝麻","淀粉"],
+    steps:["鸡腿去骨切块腌制","裹淀粉炸至金黄酥脆","少油爆香大量干辣椒和花椒","下姜蒜爆香","倒入炸鸡块翻炒","撒白芝麻出锅"]},
+  { name:"口水鸡", cuisine:"川菜", difficulty:"中等", time:"30分钟", img:"kou_shui_ji",
+    ingredients:["鸡腿2个","花生碎","芝麻","辣椒油","花椒油","生抽","醋","蒜","糖"],
+    steps:["鸡腿煮熟过冰水","斩块摆盘","调汁：辣椒油+花椒油+生抽+醋+蒜末+糖","浇汁在鸡块上","撒花生碎和芝麻"]},
+  { name:"毛血旺", cuisine:"川菜", difficulty:"较难", time:"40分钟", img:"mao_xue_wang",
+    ingredients:["鸭血1块","毛肚","黄喉","午餐肉","豆芽","莴笋","豆瓣酱","火锅底料","干辣椒","花椒"],
+    steps:["豆芽莴笋焯水铺碗底","热油炒豆瓣酱和火锅底料","加水烧开，下鸭血午餐肉煮5分钟","下毛肚黄喉烫30秒","连汤倒入碗中","撒干辣椒花椒蒜末，热油浇上"]},
+  { name:"酸菜鱼", cuisine:"川菜", difficulty:"中等", time:"30分钟", img:"suan_cai_yu",
+    ingredients:["草鱼1条","酸菜1包","干辣椒","花椒","姜","蒜","蛋清","淀粉"],
+    steps:["鱼片加蛋清淀粉腌制","酸菜切段炒香","加水煮开，先煮鱼头鱼骨","捞出鱼骨，下鱼片烫熟","连汤倒入碗中","撒干辣椒花椒蒜末，热油浇上"]},
+  { name:"粉蒸肉", cuisine:"川菜", difficulty:"中等", time:"60分钟", img:"fen_zheng_rou",
+    ingredients:["五花肉300g","蒸肉米粉","红薯1个","豆瓣酱","姜末","料酒","生抽"],
+    steps:["五花肉切薄片加豆瓣酱姜末料酒腌制","拌入蒸肉米粉","红薯切块铺碗底","肉片码在红薯上","上锅大火蒸1小时","出锅撒葱花"]},
+  { name:"夫妻肺片", cuisine:"川菜", difficulty:"中等", time:"40分钟", img:"fu_qi_fei_pian",
+    ingredients:["牛肉","牛杂","花生碎","芝麻","辣椒油","花椒油","生抽","醋","糖","香菜"],
+    steps:["牛肉牛杂煮熟切薄片","调汁：辣椒油+花椒油+生抽+醋+糖","肉片摆盘","浇上调汁","撒花生碎、芝麻、香菜"]},
+  { name:"蒜泥白肉", cuisine:"川菜", difficulty:"简单", time:"20分钟", img:"suan_ni_bai_rou",
+    ingredients:["五花肉300g","蒜","辣椒油","生抽","醋","糖","黄瓜"],
+    steps:["五花肉整块煮熟","切薄片","黄瓜切丝垫底，肉片摆盘","蒜泥加辣椒油生抽醋糖调汁","浇在白肉上"]},
+  { name:"干煸肥肠", cuisine:"川菜", difficulty:"中等", time:"30分钟", img:"gan_bian_fei_chang",
+    ingredients:["肥肠500g","干辣椒","花椒","洋葱","青椒","姜","蒜","豆瓣酱"],
+    steps:["肥肠用面粉醋反复搓洗干净","加姜料酒煮熟切小段","少油煸炒肥肠至微焦出油","爆香干辣椒花椒姜蒜","加豆瓣酱和洋葱青椒翻炒","出锅"]},
+  { name:"蚂蚁上树", cuisine:"川菜", difficulty:"简单", time:"15分钟", img:"ma_yi_shang_shu",
+    ingredients:["粉丝2把","猪肉末100g","豆瓣酱","姜","蒜","葱","生抽"],
+    steps:["粉丝泡软","热油炒肉末变色","加豆瓣酱姜蒜炒香","加适量水和生抽","放入粉丝煮至收汁","撒葱花出锅"]},
+  // ===== 湘菜 =====
+  { name:"辣椒炒肉", cuisine:"湘菜", difficulty:"简单", time:"10分钟", img:"la_jiao_chao_rou",
+    ingredients:["五花肉250g","青辣椒4个","豆豉","蒜","生抽"],
+    steps:["五花肉切薄片，辣椒切滚刀块","热锅不放油，先煸辣椒至虎皮盛出","下五花肉煸出油","加豆豉蒜末爆香","倒回辣椒翻炒","加生抽调味出锅"]},
+  { name:"小炒黄牛肉", cuisine:"湘菜", difficulty:"简单", time:"15分钟", img:"xiao_chao_huang_niu_rou",
+    ingredients:["黄牛肉250g","小米辣","香菜","蒜","生抽","淀粉"],
+    steps:["牛肉切薄片腌制10分钟","小米辣切圈，香菜切段","热油大火爆炒牛肉至变色盛出","爆香蒜末小米辣","倒回牛肉加香菜翻炒","出锅"]},
+  { name:"剁椒鱼头", cuisine:"湘菜", difficulty:"中等", time:"25分钟", img:"duo_jiao_yu_tou",
+    ingredients:["鱼头1个","剁椒","姜","蒜","葱","蒸鱼豉油","料酒"],
+    steps:["鱼头洗净抹料酒和盐腌10分钟","盘底铺姜片，放上鱼头","铺满剁椒和蒜末","水开后上锅蒸12分钟","淋蒸鱼豉油，撒葱花","热油浇上"]},
+  { name:"干锅花菜", cuisine:"湘菜", difficulty:"简单", time:"15分钟", img:"gan_guo_hua_cai",
+    ingredients:["花菜1个","五花肉100g","干辣椒","蒜","生抽","豆瓣酱"],
+    steps:["花菜掰小朵，五花肉切薄片","花菜过油或干煸至微焦盛出","煸五花肉出油","加豆瓣酱、干辣椒、蒜爆香","倒回花菜大火翻炒","加生抽调味出锅"]},
+  { name:"湘西外婆菜", cuisine:"湘菜", difficulty:"简单", time:"10分钟", img:"xiang_xi_wai_po_cai",
+    ingredients:["外婆菜1包","肉末100g","干辣椒","蒜","鸡蛋2个"],
+    steps:["鸡蛋炒散盛出","热油炒肉末变色","加蒜末干辣椒爆香","倒入外婆菜翻炒","倒入鸡蛋翻炒","出锅配米饭"]},
+  { name:"口味虾", cuisine:"湘菜", difficulty:"中等", time:"25分钟", img:"kou_wei_xia",
+    ingredients:["小龙虾2斤","紫苏","啤酒1罐","姜","蒜","干辣椒","豆瓣酱","八角","桂皮"],
+    steps:["小龙虾刷洗干净去虾线","热油爆香姜蒜干辣椒八角桂皮","加豆瓣酱炒出红油","下小龙虾翻炒至变红","倒入啤酒和紫苏","大火烧开焖15分钟，收汁"]},
+  { name:"湖南红烧肉", cuisine:"湘菜", difficulty:"中等", time:"60分钟", img:"hu_nan_hong_shao_rou",
+    ingredients:["五花肉500g","冰糖","干辣椒","八角","桂皮","姜","料酒","生抽"],
+    steps:["五花肉切块焯水","少油炒冰糖至焦糖色","下肉块翻炒上色","加姜、八角、桂皮、干辣椒","加料酒生抽和适量水","小火炖45分钟，大火收汁"]},
+  { name:"金钱蛋", cuisine:"湘菜", difficulty:"简单", time:"15分钟", img:"jin_qian_dan",
+    ingredients:["鸡蛋5个","青辣椒","红辣椒","蒜","豆豉","生抽"],
+    steps:["鸡蛋煮熟去壳","切厚片（刀沾水防粘）","少油小火煎蛋片至两面金黄","爆香蒜末豆豉和辣椒","倒入蛋片翻炒","加生抽调味出锅"]},
+  // ===== 粤菜 =====
+  { name:"豉油鸡", cuisine:"粤菜", difficulty:"中等", time:"40分钟", img:"shi_you_ji",
+    ingredients:["鸡半只","生抽","老抽","冰糖","姜","葱","料酒"],
+    steps:["鸡洗净擦干","热油煎鸡皮至金黄","加姜片葱段爆香","倒入生抽、老抽、冰糖、料酒和适量水","中火焖煮30分钟，中途翻面","大火收汁，斩块上桌"]},
+  { name:"梅菜扣肉", cuisine:"粤菜", difficulty:"较难", time:"90分钟", img:"mei_cai_kou_rou",
+    ingredients:["五花肉500g","梅菜干100g","生抽","老抽","糖","料酒"],
+    steps:["五花肉煮熟，皮抹老抽油炸至金黄","切厚片，加生抽老抽糖腌制","梅菜泡发洗净切碎炒香","肉片皮朝下码碗，铺梅菜","上锅蒸1.5小时","倒扣出锅"]},
+  { name:"白切鸡", cuisine:"粤菜", difficulty:"中等", time:"40分钟", img:"bai_qie_ji",
+    ingredients:["三黄鸡1只","姜","葱","香油","生抽","沙姜粉"],
+    steps:["鸡洗净，锅中水加姜片葱结烧开","提鸡入水三次，再完全浸入","小火浸煮20分钟，关火焖10分钟","捞出过冰水","斩块装盘","蘸料：姜蓉+葱油+盐 或 沙姜+生抽"]},
+  { name:"蒜蓉粉丝蒸虾", cuisine:"粤菜", difficulty:"简单", time:"15分钟", img:"suan_rong_fen_si_zheng_xia",
+    ingredients:["大虾10只","粉丝1把","蒜","生抽","葱","油"],
+    steps:["粉丝泡软铺盘底","虾开背去虾线摆粉丝上","蒜蓉用油炒香","蒜蓉铺虾上，淋生抽","水开蒸6分钟","撒葱花浇热油"]},
+  { name:"蚝油生菜", cuisine:"粤菜", difficulty:"简单", time:"5分钟", img:"hao_you_sheng_cai",
+    ingredients:["生菜1把","蚝油","蒜","糖","淀粉"],
+    steps:["生菜焯水10秒捞出摆盘","热油爆香蒜末","加蚝油、少许糖和水煮开","勾薄芡","浇在生菜上"]},
+  { name:"香菇滑鸡", cuisine:"粤菜", difficulty:"简单", time:"20分钟", img:"xiang_gu_hua_ji",
+    ingredients:["鸡腿2个","香菇6朵","姜","葱","生抽","蚝油","淀粉"],
+    steps:["鸡腿去骨切块腌制","香菇切片","热油爆香姜片","下鸡块炒至变色","加香菇翻炒","加蚝油生抽和少许水焖5分钟","撒葱花出锅"]},
+  { name:"菠萝咕噜肉", cuisine:"粤菜", difficulty:"中等", time:"25分钟", img:"bo_luo_gu_lu_rou",
+    ingredients:["猪里脊300g","菠萝半个","青红椒","番茄酱","醋","糖","淀粉","鸡蛋"],
+    steps:["里脊切条腌制，裹蛋液淀粉","下油锅炸至金黄捞出，复炸一次","菠萝青红椒切块","调汁：番茄酱+醋+糖+少许水","热油炒配菜，倒入酱汁煮开","倒入炸肉翻炒裹汁"]},
+  { name:"煲仔饭", cuisine:"粤菜", difficulty:"中等", time:"40分钟", img:"bao_zai_fan",
+    ingredients:["大米1杯","腊肠2根","腊肉1块","鸡蛋1个","青菜","生抽","老抽","糖","香油"],
+    steps:["大米浸泡30分钟","砂锅刷油，加米和水","大火烧开后转小火","铺腊肠腊肉片，继续焖15分钟","打一个鸡蛋，加青菜焖5分钟","调汁：生抽+老抽+糖+香油，浇上拌匀"]},
+  { name:"清蒸鲈鱼", cuisine:"粤菜", difficulty:"简单", time:"15分钟", img:"qing_zheng_lu_yu",
+    ingredients:["鲈鱼1条","姜","葱","蒸鱼豉油","料酒"],
+    steps:["鱼处理干净，抹料酒和少许盐","盘底铺姜片葱段，放上鱼","水开上锅蒸8分钟","倒掉蒸出的汤汁，去掉姜葱","重新铺葱丝姜丝，淋蒸鱼豉油","热油浇上"]},
+  { name:"叉烧", cuisine:"粤菜", difficulty:"中等", time:"60分钟", img:"cha_shao",
+    ingredients:["猪梅花肉500g","叉烧酱3勺","蜂蜜","生抽","料酒","蒜"],
+    steps:["肉切长条加叉烧酱生抽料酒蒜末腌制4小时","烤箱200度烤20分钟","取出刷蜂蜜，翻面再烤15分钟","再刷一次蜂蜜烤5分钟至焦香","切片上桌"]},
+  // ===== 家常菜 =====
+  { name:"可乐鸡翅", cuisine:"家常", difficulty:"简单", time:"25分钟", img:"ke_le_ji_chi",
+    ingredients:["鸡翅8个","可乐1罐","生抽","姜","料酒"],
+    steps:["鸡翅划两刀，焯水捞出","少油煎至两面金黄","加姜片、料酒","倒入可乐没过鸡翅","加生抽，大火烧开转小火15分钟","大火收汁出锅"]},
+  { name:"番茄炒蛋", cuisine:"家常", difficulty:"简单", time:"8分钟", img:"fan_qie_chao_dan",
+    ingredients:["鸡蛋3个","番茄2个","葱","糖","盐"],
+    steps:["鸡蛋打散，番茄切块","热油炒蛋盛出","再加油炒番茄出汁","加少许糖和盐","倒回鸡蛋翻炒","撒葱花出锅"]},
+  { name:"红烧排骨", cuisine:"家常", difficulty:"中等", time:"40分钟", img:"hong_shao_pai_gu",
+    ingredients:["排骨500g","冰糖","生抽","老抽","姜","八角","料酒"],
+    steps:["排骨焯水去血沫","少油炒冰糖至焦糖色","下排骨翻炒上色","加姜、八角、料酒、生抽、老抽","加水没过排骨，大火烧开","小火炖30分钟，大火收汁"]},
+  { name:"糖醋里脊", cuisine:"家常", difficulty:"中等", time:"20分钟", img:"tang_cu_li_ji",
+    ingredients:["猪里脊300g","番茄酱","醋","糖","淀粉","鸡蛋"],
+    steps:["里脊切条，加盐和蛋液腌制","裹淀粉，下油锅炸至金黄捞出","复炸一次更酥脆","调汁：番茄酱+醋+糖+少许水","热油炒汁至冒泡","倒入炸好的里脊翻炒裹汁"]},
+  { name:"蒜苔炒肉丝", cuisine:"家常", difficulty:"简单", time:"15分钟", img:"suan_tai_chao_rou_si",
+    ingredients:["猪肉200g","蒜苔200g","生抽","淀粉","姜"],
+    steps:["猪肉切丝加生抽淀粉腌制","蒜苔切段","热油炒肉丝变色盛出","再炒蒜苔至断生","倒回肉丝翻炒","加盐调味出锅"]},
+  { name:"土豆炖牛肉", cuisine:"家常", difficulty:"中等", time:"50分钟", img:"tu_dou_dun_niu_rou",
+    ingredients:["牛肉400g","土豆2个","胡萝卜1根","姜","八角","生抽","老抽"],
+    steps:["牛肉切块焯水","热油炒牛肉上色，加姜八角","加生抽老抽和适量水","大火烧开转小火炖30分钟","加土豆胡萝卜块继续炖15分钟","加盐调味出锅"]},
+  { name:"黄焖鸡", cuisine:"家常", difficulty:"简单", time:"30分钟", img:"huang_men_ji",
+    ingredients:["鸡腿3个","香菇","青椒","姜","蒜","生抽","老抽","糖"],
+    steps:["鸡腿切块焯水","热油炒糖色下鸡块翻炒","加姜蒜、生抽老抽","加香菇和适量水","大火烧开转小火焖20分钟","加青椒大火收汁"]},
+  { name:"酸汤肥牛", cuisine:"家常", difficulty:"简单", time:"15分钟", img:"suan_tang_fei_niu",
+    ingredients:["肥牛卷250g","金针菇","黄灯笼椒酱","醋","姜","蒜","小米辣"],
+    steps:["金针菇焯水铺碗底","肥牛焯水去血沫","热油炒香黄灯笼椒酱和姜蒜","加水煮开，加醋调味","下肥牛煮30秒捞出铺金针菇上","倒汤汁，撒小米辣"]},
+  { name:"葱油拌面", cuisine:"家常", difficulty:"简单", time:"10分钟", img:"cong_you_ban_mian",
+    ingredients:["面条200g","小葱1把","生抽","老抽","糖","油"],
+    steps:["小葱切段","油中小火炸葱至焦黄捞出","葱油加生抽、老抽、糖煮开","面条煮熟捞出","浇上葱油酱汁拌匀","撒葱花开吃"]},
+  { name:"红烧肉", cuisine:"家常", difficulty:"中等", time:"60分钟", img:"hong_shao_rou",
+    ingredients:["五花肉500g","冰糖","姜","八角","桂皮","生抽","老抽","料酒"],
+    steps:["五花肉切块焯水","少油炒冰糖至焦糖色","下肉块翻炒上色","加姜、八角、桂皮、料酒","加生抽老抽和热水","小火炖50分钟，大火收汁"]},
+  { name:"青椒肉丝", cuisine:"家常", difficulty:"简单", time:"10分钟", img:"qing_jiao_rou_si",
+    ingredients:["猪里脊200g","青椒3个","姜","蒜","生抽","淀粉"],
+    steps:["肉切丝加生抽淀粉腌制","青椒切丝","热油炒肉丝变色盛出","再炒青椒至断生","倒回肉丝翻炒","加盐调味出锅"]},
+  { name:"木须肉", cuisine:"家常", difficulty:"简单", time:"12分钟", img:"mu_xu_rou",
+    ingredients:["猪肉150g","鸡蛋2个","木耳","黄瓜","黄花菜","葱","姜","生抽"],
+    steps:["肉切片腌制，鸡蛋炒散盛出","木耳黄花菜泡发","热油炒肉片变色","加葱姜木耳黄花菜翻炒","倒回鸡蛋，加黄瓜片翻炒","加生抽调味出锅"]},
+  { name:"地三鲜", cuisine:"家常", difficulty:"简单", time:"15分钟", img:"di_san_xian",
+    ingredients:["茄子1个","土豆1个","青椒2个","蒜","生抽","糖","淀粉"],
+    steps:["茄子土豆切滚刀块，青椒切块","土豆茄子分别过油炸至微黄","调汁：生抽+糖+淀粉+水","少油爆香蒜末","倒入三种菜翻炒","淋入调汁翻炒收汁"]},
+  { name:"干炸丸子", cuisine:"家常", difficulty:"中等", time:"20分钟", img:"gan_zha_wan_zi",
+    ingredients:["猪肉馅300g","馒头半个","鸡蛋1个","姜","葱","花椒面","淀粉"],
+    steps:["馒头泡水挤干","肉馅加馒头末、蛋液、葱姜末、花椒面搅拌","加淀粉搅打上劲","挤成丸子下油锅炸至定型捞出","油温升高复炸至金黄酥脆","配椒盐或甜面酱"]},
+  { name:"锅包肉", cuisine:"家常", difficulty:"中等", time:"25分钟", img:"guo_bao_rou",
+    ingredients:["猪里脊300g","胡萝卜","葱","姜","醋","糖","番茄酱","淀粉"],
+    steps:["里脊切厚片，加盐料酒腌制","裹水淀粉下锅炸至金黄捞出","复炸一次更酥脆","调汁：醋+糖+番茄酱+少许水","爆香葱姜胡萝卜丝","倒入酱汁和炸肉翻炒裹匀"]},
+  // ===== 云贵菜 =====
+  { name:"汽锅鸡", cuisine:"云南", difficulty:"中等", time:"120分钟", img:"qi_guo_ji",
+    ingredients:["土鸡半只","姜","枸杞","红枣","盐","虫草花"],
+    steps:["鸡切块焯水","放入汽锅，加姜片枸杞红枣","汽锅放在蒸锅上","大火蒸2小时，蒸汽凝水成汤","加盐调味","原汁原味上桌"]},
+  { name:"过桥米线", cuisine:"云南", difficulty:"中等", time:"30分钟", img:"guo_qiao_mi_xian",
+    ingredients:["米线1份","鸡肉片","猪肉片","鹌鹑蛋","韭菜","豆腐皮","鸡汤","油辣子"],
+    steps:["鸡汤煮滚保持沸腾","鸡肉片猪肉片切薄","先下生肉片到滚汤中烫熟","再下鹌鹑蛋韭菜豆腐皮","最后下米线","加油辣子调味"]},
+  { name:"贵州酸汤鱼", cuisine:"贵州", difficulty:"中等", time:"30分钟", img:"qian_suan_tang_yu",
+    ingredients:["草鱼1条","红酸汤","番茄2个","姜","蒜","木姜子","香菜","小米辣"],
+    steps:["鱼处理干净切块","热油炒香姜蒜和番茄","加红酸汤和木姜子","加水烧开，下鱼块","中火煮10分钟","撒香菜和小米辣"]},
+  { name:"洋芋焖饭", cuisine:"云南", difficulty:"简单", time:"30分钟", img:"yang_yu_men_fan",
+    ingredients:["大米1杯","土豆1个","火腿","豌豆","盐","猪油"],
+    steps:["大米浸泡30分钟","土豆切丁，火腿切丁","猪油炒土豆丁至微黄","加火腿丁和豌豆翻炒","加米和水，盐调味","大火烧开转小火焖至饭熟，锅巴形成"]},
+  { name:"折耳根炒腊肉", cuisine:"贵州", difficulty:"简单", time:"10分钟", img:"zhe_er_gen_chao_la_rou",
+    ingredients:["折耳根200g","腊肉150g","干辣椒","蒜","姜"],
+    steps:["腊肉煮10分钟切薄片","折耳根洗净切段","热油煸腊肉至透明出油","加干辣椒姜蒜爆香","下折耳根大火快炒","出锅"]},
+  // ===== 东北菜 =====
+  { name:"锅包肉", cuisine:"东北", difficulty:"中等", time:"25分钟", img:"dong_bei_guo_bao_rou",
+    ingredients:["猪里脊300g","胡萝卜丝","葱丝","姜丝","醋","糖","淀粉"],
+    steps:["里脊切厚片腌制","裹水淀粉炸至金黄捞出复炸","调汁：大量醋+糖+少许盐","爆香葱姜丝胡萝卜丝","倒入酱汁煮开","下炸肉翻炒裹汁出锅"]},
+  { name:"小鸡炖蘑菇", cuisine:"东北", difficulty:"中等", time:"50分钟", img:"xiao_ji_dun_mo_gu",
+    ingredients:["小鸡半只","榛蘑100g","粉条1把","姜","八角","生抽","老抽","料酒"],
+    steps:["榛蘑泡发洗净，粉条泡软","鸡块焯水","热油炒鸡块至变色","加姜八角料酒生抽老抽","加水和榛蘑，大火烧开小火炖30分钟","加粉条继续炖15分钟"]},
+  { name:"猪肉炖粉条", cuisine:"东北", difficulty:"简单", time:"40分钟", img:"zhu_rou_dun_fen_tiao",
+    ingredients:["五花肉300g","粉条1把","白菜","姜","八角","生抽","老抽"],
+    steps:["五花肉切块焯水","热油炒肉块至微黄","加姜八角生抽老抽和水","大火烧开小火炖20分钟","加白菜和粉条继续炖15分钟","加盐调味出锅"]},
+  { name:"地三鲜", cuisine:"东北", difficulty:"简单", time:"15分钟", img:"dong_bei_di_san_xian",
+    ingredients:["茄子1个","土豆1个","青椒2个","蒜","生抽","糖","淀粉"],
+    steps:["茄子土豆切滚刀块，青椒切块","分别过油炸至微黄","调汁：生抽+糖+淀粉+水","爆香蒜末","倒入三种菜翻炒","淋入调汁收汁出锅"]},
+  { name:"溜肉段", cuisine:"东北", difficulty:"中等", time:"20分钟", img:"liu_rou_duan",
+    ingredients:["猪里脊300g","青椒","胡萝卜","蒜","生抽","醋","糖","淀粉"],
+    steps:["里脊切小块腌制","裹淀粉糊炸至金黄酥脆","调汁：生抽+醋+糖+淀粉+水","爆香蒜和配菜","倒入酱汁煮开","下炸肉翻炒裹汁"]},
+  { name:"杀猪菜", cuisine:"东北", difficulty:"中等", time:"60分钟", img:"sha_zhu_cai",
+    ingredients:["酸菜1棵","五花肉300g","血肠1根","粉条1把","姜","八角"],
+    steps:["五花肉整块煮熟切薄片","酸菜切丝洗净挤干","砂锅铺酸菜，放五花肉和粉条","加煮肉汤和姜八角","大火烧开小火炖30分钟","加血肠片煮5分钟"]},
+  // ===== 鲁菜 =====
+  { name:"糖醋鲤鱼", cuisine:"鲁菜", difficulty:"中等", time:"25分钟", img:"tang_cu_li_yu",
+    ingredients:["鲤鱼1条","番茄酱","醋","糖","淀粉","姜","蒜"],
+    steps:["鱼处理干净划花刀","裹淀粉下油锅炸至金黄酥脆","调汁：番茄酱+醋+糖+少许水","热油炒姜蒜，倒入酱汁煮开","勾芡至浓稠","浇在鱼上"]},
+  { name:"九转大肠", cuisine:"鲁菜", difficulty:"较难", time:"40分钟", img:"jiu_zhuan_da_chang",
+    ingredients:["猪大肠500g","醋","糖","酱油","料酒","胡椒面","肉桂面","砂仁粉"],
+    steps:["大肠反复洗净煮熟切段","油炸至金黄","锅留底油加糖炒糖色","下大肠翻炒，加醋酱油料酒","小火焖至汤汁浓稠","撒胡椒面肉桂面砂仁粉出锅"]},
+  { name:"葱烧海参", cuisine:"鲁菜", difficulty:"较难", time:"30分钟", img:"cong_shao_hai_shen",
+    ingredients:["海参4根","大葱2根","姜","蚝油","生抽","糖","淀粉"],
+    steps:["海参泡发处理干净","大葱切长段，油炸至微黄","爆香姜片，加蚝油生抽糖和水","放入海参小火焖10分钟","勾芡，放入葱段","大火收汁出锅"]},
+  { name:"油焖大虾", cuisine:"鲁菜", difficulty:"简单", time:"15分钟", img:"you_men_da_xia",
+    ingredients:["大虾12只","姜","葱","番茄酱","生抽","糖","料酒"],
+    steps:["虾剪去虾须虾枪，挑虾线","热油煎虾至两面变红","加姜片葱段","加料酒生抽番茄酱糖","加少许水焖3分钟","大火收汁出锅"]},
+  { name:"四喜丸子", cuisine:"鲁菜", difficulty:"中等", time:"60分钟", img:"si_xi_wan_zi",
+    ingredients:["猪肉馅500g","荸荠4个","鸡蛋1个","姜","葱","生抽","老抽","料酒","淀粉"],
+    steps:["肉馅加荸荠末蛋液葱姜末搅拌上劲","团成大丸子","下油锅炸至表面金黄","砂锅加葱姜垫底，放入丸子","加生抽老抽料酒和水","大火烧开小火炖1小时"]},
+  // ===== 徽菜 =====
+  { name:"臭鳜鱼", cuisine:"徽菜", difficulty:"较难", time:"30分钟", img:"chou_gui_yu",
+    ingredients:["臭鳜鱼1条","五花肉末","笋丁","红辣椒","姜","蒜","料酒","酱油"],
+    steps:["臭鳜鱼洗净两面划刀","热油煎鱼两面微黄盛出","爆香姜蒜辣椒和肉末笋丁","加料酒酱油和水","放入鱼中火焖15分钟","大火收汁出锅"]},
+  { name:"毛豆腐", cuisine:"徽菜", difficulty:"简单", time:"10分钟", img:"mao_dou_fu",
+    ingredients:["毛豆腐8块","辣椒酱","蒜","葱","酱油"],
+    steps:["毛豆腐煎至两面金黄","爆香蒜末辣椒酱","加少许酱油和水","倒入毛豆腐轻轻翻炒","撒葱花出锅"]},
+  // ===== 西北菜 =====
+  { name:"大盘鸡", cuisine:"西北", difficulty:"中等", time:"40分钟", img:"da_pan_ji",
+    ingredients:["鸡1只","土豆2个","青椒","红椒","干辣椒","姜","蒜","豆瓣酱","八角","皮带面"],
+    steps:["鸡块焯水","热油炒糖色下鸡块翻炒","加姜蒜干辣椒八角豆瓣酱","加土豆和适量水","大火烧开小火炖25分钟","加青红椒，配煮好的皮带面"]},
+  { name:"羊肉泡馍", cuisine:"西北", difficulty:"中等", time:"60分钟", img:"yang_rou_pao_mo",
+    ingredients:["羊肉500g","馍2个","粉丝","木耳","姜","八角","桂皮","花椒","香菜"],
+    steps:["羊肉加姜八角桂皮花椒煮1小时","馍手掰成小粒","羊肉切片，粉丝木耳泡发","碗中放馍粒粉丝木耳","浇上滚烫的羊肉汤","摆上羊肉片，撒香菜"]},
+  { name:"手抓羊肉", cuisine:"西北", difficulty:"简单", time:"60分钟", img:"shou_zhua_yang_rou",
+    ingredients:["羊排1kg","姜","葱","花椒","盐","孜然","辣椒面"],
+    steps:["羊排冷水下锅焯水","换清水加姜葱花椒","大火烧开转小火煮50分钟","捞出沥干","撒盐、孜然、辣椒面","蘸蒜醋汁食用"]},
+  { name:"biangbiang面", cuisine:"西北", difficulty:"中等", time:"40分钟", img:"biang_biang_mian",
+    ingredients:["面粉300g","辣椒面","醋","生抽","葱","蒜","豆芽","青菜"],
+    steps:["面粉加盐和成面团醒30分钟","擀成长条面片","扯成宽面下锅煮熟","捞入碗中，放辣椒面蒜末葱花","烧滚油泼上去","加醋生抽拌匀，配焯豆芽青菜"]},
+  // ===== 江浙菜 =====
+  { name:"东坡肉", cuisine:"浙菜", difficulty:"中等", time:"90分钟", img:"dong_po_rou",
+    ingredients:["五花肉500g","姜","葱","料酒","生抽","老抽","冰糖"],
+    steps:["五花肉切块焯水","砂锅底铺葱姜","肉块皮朝下码放","加料酒生抽老抽冰糖","大火烧开转小火炖1小时","翻面再炖30分钟，收汁"]},
+  { name:"西湖醋鱼", cuisine:"浙菜", difficulty:"中等", time:"20分钟", img:"xi_hu_cu_yu",
+    ingredients:["草鱼1条","醋","糖","姜","料酒","酱油","淀粉"],
+    steps:["鱼处理干净剖开","锅中水加姜片料酒烧开","放入鱼煮至刚熟捞出","调汁：醋+糖+酱油+淀粉水","浇汁在鱼上","撒姜末"]},
+  { name:"龙井虾仁", cuisine:"浙菜", difficulty:"中等", time:"15分钟", img:"long_jing_xia_ren",
+    ingredients:["鲜虾仁250g","龙井茶叶1勺","鸡蛋清","淀粉","盐","料酒"],
+    steps:["虾仁加蛋清淀粉盐料酒腌制","龙井茶用热水泡开","热油滑炒虾仁至变色盛出","倒入茶叶和茶水","倒回虾仁翻炒","出锅"]},
+  { name:"红烧狮子头", cuisine:"苏菜", difficulty:"中等", time:"50分钟", img:"hong_shao_shi_zi_tou",
+    ingredients:["猪肉馅400g","荸荠4个","鸡蛋1个","姜","葱","生抽","老抽","冰糖","青菜"],
+    steps:["肉馅加荸荠末蛋液葱姜末搅拌上劲","团成大丸子","少油煎至表面定型","砂锅加生抽老抽冰糖和水","放入狮子头小火炖40分钟","配焯过的青菜"]},
+  { name:"糖醋排骨", cuisine:"浙菜", difficulty:"中等", time:"30分钟", img:"zhe_tang_cu_pai_gu",
+    ingredients:["排骨500g","醋","糖","生抽","料酒","姜","白芝麻"],
+    steps:["排骨焯水","热油煎排骨至微黄","加姜料酒生抽","加醋和糖","加适量水焖20分钟","大火收汁，撒白芝麻"]},
+  { name:"南京盐水鸭", cuisine:"苏菜", difficulty:"中等", time:"半天", img:"yan_shui_ya",
+    ingredients:["鸭半只","花椒","盐","姜","葱","料酒"],
+    steps:["花椒盐炒出香味","趁热抹在鸭肉内外腌4小时","清水浸泡1小时去多余盐分","冷水下锅加姜葱料酒","大火烧开转小火煮40分钟","捞出晾凉斩块"]},
+  // ===== 凉拌菜 =====
+  { name:"凉拌木耳", cuisine:"凉拌", difficulty:"简单", time:"10分钟", img:"liang_ban_mu_er",
+    ingredients:["木耳200g","洋葱","青红椒","蒜","醋","生抽","辣椒油","糖"],
+    steps:["木耳泡发焯水过凉","洋葱青红椒切丝","蒜末加醋生抽辣椒油糖调汁","所有材料拌匀","冷藏10分钟更爽口","装盘"]},
+  { name:"口水鸡", cuisine:"凉拌", difficulty:"中等", time:"30分钟", img:"kou_shui_ji_liang_ban",
+    ingredients:["鸡腿2个","花生碎","芝麻","辣椒油","花椒油","生抽","醋","蒜","糖","香菜"],
+    steps:["鸡腿煮熟过冰水","斩块摆盘","调汁：辣椒油+花椒油+生抽+醋+蒜末+糖","浇汁在鸡块上","撒花生碎芝麻和香菜"]},
+  { name:"凉拌黄瓜", cuisine:"凉拌", difficulty:"简单", time:"5分钟", img:"liang_ban_huang_gua",
+    ingredients:["黄瓜2根","蒜","醋","生抽","辣椒油","糖","花生碎"],
+    steps:["黄瓜拍碎切小段","加少许盐腌制5分钟挤干水分","蒜末加醋生抽辣椒油糖调汁","倒入黄瓜拌匀","撒花生碎","冷藏后更好吃"]},
+  { name:"凉拌皮蛋豆腐", cuisine:"凉拌", difficulty:"简单", time:"5分钟", img:"liang_ban_pi_dan_dou_fu",
+    ingredients:["内酯豆腐1盒","皮蛋2个","葱","蒜","生抽","醋","辣椒油","香油"],
+    steps:["豆腐倒扣盘中切片","皮蛋切瓣摆盘","蒜末加生抽醋辣椒油香油调汁","浇汁在豆腐皮蛋上","撒葱花"]},
+  { name:"蒜泥白肉", cuisine:"凉拌", difficulty:"简单", time:"20分钟", img:"suan_ni_bai_rou_liang_ban",
+    ingredients:["五花肉300g","蒜","辣椒油","生抽","醋","糖","黄瓜"],
+    steps:["五花肉整块煮熟","切薄片","黄瓜切丝垫底，肉片摆盘","蒜泥加辣椒油生抽醋糖调汁","浇在白肉上"]},
+  { name:"凉拌牛肉", cuisine:"凉拌", difficulty:"中等", time:"60分钟", img:"liang_ban_niu_rou",
+    ingredients:["牛腱子500g","姜","葱","八角","花椒","辣椒油","生抽","醋","花生碎","香菜"],
+    steps:["牛腱子加姜葱八角花椒煮1小时","捞出晾凉切片","辣椒油+生抽+醋+蒜末调汁","牛肉片摆盘","浇汁撒花生碎香菜"]},
+  { name:"酸辣凤爪", cuisine:"凉拌", difficulty:"中等", time:"半天", img:"suan_la_feng_zhua",
+    ingredients:["鸡爪500g","柠檬1个","小米辣","蒜","醋","生抽","糖","香菜"],
+    steps:["鸡爪剪指甲焯水煮熟","过冰水冲凉沥干","柠檬切片，小米辣切圈","所有调料混合，加鸡爪拌匀","冷藏4小时以上","期间翻动几次更入味"]},
+  { name:"夫妻肺片", cuisine:"凉拌", difficulty:"中等", time:"40分钟", img:"fu_qi_fei_pian_liang_ban",
+    ingredients:["牛肉","牛杂","花生碎","芝麻","辣椒油","花椒油","生抽","醋","糖","香菜"],
+    steps:["牛肉牛杂煮熟切薄片","调汁：辣椒油+花椒油+生抽+醋+糖","肉片摆盘","浇上调汁","撒花生碎、芝麻、香菜"]},
+  { name:"凉拌藕片", cuisine:"凉拌", difficulty:"简单", time:"10分钟", img:"liang_ban_ou_pian",
+    ingredients:["莲藕1节","蒜","干辣椒","醋","生抽","糖","花椒油"],
+    steps:["莲藕切薄片焯水1分钟","过凉水沥干","蒜末干辣椒段用热油浇香","加醋生抽糖花椒油调汁","倒入藕片拌匀","装盘"]},
+  { name:"白切猪手", cuisine:"凉拌", difficulty:"中等", time:"90分钟", img:"bai_qie_zhu_shou",
+    ingredients:["猪手1只","姜","葱","料酒","沙姜粉","生抽","花生油"],
+    steps:["猪手去毛洗净焯水","加姜葱料酒煮1小时至软烂","捞出过冰水","斩块摆盘","蘸料：沙姜粉+生抽+热花生油","蘸食"]},
 ];
 
 const cuisines = ["全部", ...new Set(dishes.map(d => d.cuisine))];
@@ -383,12 +582,17 @@ let currentCuisine = "全部";
 let currentDish = null;
 let favorites = JSON.parse(localStorage.getItem("favDishes") || "[]");
 
-// 初始化筛选栏
 function initFilters() {
   const bar = document.getElementById("filterBar");
   bar.innerHTML = cuisines.map(c =>
     `<button class="filter-btn${c === currentCuisine ? ' active' : ''}" onclick="setCuisine('${c}')">${c}</button>`
   ).join("");
+  updateCounter();
+}
+
+function updateCounter() {
+  const pool = getFilteredDishes();
+  document.getElementById("counter").textContent = `共 ${pool.length} 道菜`;
 }
 
 function setCuisine(c) {
@@ -399,6 +603,10 @@ function setCuisine(c) {
 
 function getFilteredDishes() {
   return currentCuisine === "全部" ? dishes : dishes.filter(d => d.cuisine === currentCuisine);
+}
+
+function getDishImage(dish) {
+  return `https://source.unsplash.com/420x250/?${encodeURIComponent(dish.name + ' chinese food')}`;
 }
 
 function randomDish() {
@@ -415,6 +623,10 @@ function randomDish() {
 function renderDish() {
   const card = document.getElementById("dishCard");
   const d = currentDish;
+  const img = document.getElementById("dishImage");
+  img.style.display = "block";
+  img.src = getDishImage(d);
+  img.alt = d.name;
   document.getElementById("dishName").textContent = d.name;
   document.getElementById("tags").innerHTML =
     `<span class="tag tag-cuisine">${d.cuisine}</span>` +
@@ -440,11 +652,8 @@ function updateFavBtn() {
 function toggleFav() {
   const name = currentDish.name;
   const idx = favorites.indexOf(name);
-  if (idx > -1) {
-    favorites.splice(idx, 1);
-  } else {
-    favorites.push(name);
-  }
+  if (idx > -1) favorites.splice(idx, 1);
+  else favorites.push(name);
   localStorage.setItem("favDishes", JSON.stringify(favorites));
   updateFavBtn();
   renderFavList();
