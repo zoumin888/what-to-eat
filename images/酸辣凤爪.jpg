@@ -1,0 +1,1131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！ &#8211; 云生信</title>
+<meta name='robots' content='max-image-preview:large' />
+<script>window._wca = window._wca || [];</script>
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//c0.wp.com' />
+<link rel='dns-prefetch' href='//i0.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="云生信 &raquo; Feed" href="http://www.biocloudservice.com/wordpress/?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="云生信 &raquo; 评论Feed" href="http://www.biocloudservice.com/wordpress/?feed=comments-rss2" />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.biocloudservice.com\/wordpress\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='https://c0.wp.com/c/6.2/wp-includes/css/dist/block-library/style.min.css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<style id='wp-block-library-theme-inline-css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<link rel='stylesheet' id='jetpack-videopress-video-block-view-css' href='http://www.biocloudservice.com/wordpress/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-videopress/build/block-editor/blocks/video/view.css?minify=false&#038;ver=34ae973733627b74a14e' media='all' />
+<link rel='stylesheet' id='mediaelement-css' href='https://c0.wp.com/c/6.2/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://c0.wp.com/c/6.2/wp-includes/js/mediaelement/wp-mediaelement.min.css' media='all' />
+<link rel='stylesheet' id='wc-blocks-vendors-style-css' href='https://c0.wp.com/p/woocommerce/7.1.2/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css' media='all' />
+<link rel='stylesheet' id='wc-blocks-style-css' href='https://c0.wp.com/p/woocommerce/7.1.2/packages/woocommerce-blocks/build/wc-blocks-style.css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://c0.wp.com/c/6.2/wp-includes/css/classic-themes.min.css' media='all' />
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='woocommerce-layout-css' href='https://c0.wp.com/p/woocommerce/7.1.2/assets/css/woocommerce-layout.css' media='all' />
+<style id='woocommerce-layout-inline-css'>
+
+	.infinite-scroll .woocommerce-pagination {
+		display: none;
+	}
+</style>
+<link rel='stylesheet' id='woocommerce-smallscreen-css' href='https://c0.wp.com/p/woocommerce/7.1.2/assets/css/woocommerce-smallscreen.css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css' href='https://c0.wp.com/p/woocommerce/7.1.2/assets/css/woocommerce.css' media='all' />
+<style id='woocommerce-inline-inline-css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='woo-alipay-main-style-css' href='http://www.biocloudservice.com/wordpress/wp-content/plugins/woo-alipay/css/main.css?ver=1692767130' media='all' />
+<link rel='stylesheet' id='safari-blog-css' href='http://www.biocloudservice.com/wordpress/wp-content/themes/safari-blog/style.css?ver=1.0.2' media='all' />
+<style id='safari-blog-inline-css'>
+body,.site-header{background:#f9f7f7;}
+:root { --site-title-color: #ba4400; }
+:root { --secondary-color: #33333; }
+:root { --primary-color: #ba4400; }
+:root { --light-color: #ffffff; }
+:root { --grey-color: #969aa5; }
+:root { --dark-color: #000000; }
+:root { --site-identity-font-family: Poppins; }
+:root { --primary-font: Arial; }
+:root { --secondary-font: Arial; }
+:root { --logo-size: 50px; }
+:root { --site-identity-font-size: 35px; }
+html,body{font-size:14px;}
+:root { --font-weight: 500; }
+:root { --line-height: 1.5; }
+:root { --container-width: 1500px; }
+</style>
+<link rel='stylesheet' id='google-fonts-css' href='https://fonts.googleapis.com/css?family=Arial%7CPoppins' media='all' />
+<link rel='stylesheet' id='pscrollbar-css' href='http://www.biocloudservice.com/wordpress/wp-content/plugins/quadmenu/assets/frontend/pscrollbar/perfect-scrollbar.min.css?ver=2.3.5' media='all' />
+<link rel='stylesheet' id='owlcarousel-css' href='http://www.biocloudservice.com/wordpress/wp-content/plugins/quadmenu/assets/frontend/owlcarousel/owl.carousel.min.css?ver=2.3.5' media='all' />
+<link rel='stylesheet' id='quadmenu-normalize-css' href='http://www.biocloudservice.com/wordpress/wp-content/plugins/quadmenu/assets/frontend/css/quadmenu-normalize.min.css?ver=2.3.5' media='all' />
+<link rel='stylesheet' id='quadmenu-widgets-css' href='http://www.biocloudservice.com/wordpress/wp-content/uploads/safari-blog/quadmenu-widgets.css?ver=1717395694' media='all' />
+<link rel='stylesheet' id='quadmenu-css' href='http://www.biocloudservice.com/wordpress/wp-content/plugins/quadmenu/assets/frontend/css/quadmenu.min.css?ver=2.3.5' media='all' />
+<link rel='stylesheet' id='quadmenu-locations-css' href='http://www.biocloudservice.com/wordpress/wp-content/uploads/safari-blog/quadmenu-locations.css?ver=1717395694' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://c0.wp.com/c/6.2/wp-includes/css/dashicons.min.css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css' href='https://c0.wp.com/p/jetpack/12.4.1/css/jetpack.css' media='all' />
+<script src='https://c0.wp.com/c/6.2/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+<script src='https://c0.wp.com/c/6.2/wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<script defer src='https://stats.wp.com/s-202624.js' id='woocommerce-analytics-js'></script>
+<link rel="https://api.w.org/" href="http://www.biocloudservice.com/wordpress/index.php?rest_route=/" /><link rel="alternate" type="application/json" href="http://www.biocloudservice.com/wordpress/index.php?rest_route=/wp/v2/posts/58223" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.biocloudservice.com/wordpress/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.biocloudservice.com/wordpress/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.2" />
+<meta name="generator" content="WooCommerce 7.1.2" />
+<link rel="canonical" href="http://www.biocloudservice.com/wordpress/?p=58223" />
+<link rel='shortlink' href='http://www.biocloudservice.com/wordpress/?p=58223' />
+<link rel="alternate" type="application/json+oembed" href="http://www.biocloudservice.com/wordpress/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=http%3A%2F%2Fwww.biocloudservice.com%2Fwordpress%2F%3Fp%3D58223" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.biocloudservice.com/wordpress/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=http%3A%2F%2Fwww.biocloudservice.com%2Fwordpress%2F%3Fp%3D58223&#038;format=xml" />
+	<style>img#wpstats{display:none}</style>
+			<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/01/cropped-IMG_3726-e1692832531849.jpg?fit=32%2C32" sizes="32x32" />
+<link rel="icon" href="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/01/cropped-IMG_3726-e1692832531849.jpg?fit=50%2C50" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/01/cropped-IMG_3726-e1692832531849.jpg?fit=50%2C50" />
+<meta name="msapplication-TileImage" content="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/01/cropped-IMG_3726-e1692832531849.jpg?fit=50%2C50" />
+</head>
+
+<body class="post-template-default single single-post postid-58223 single-format-standard wp-embed-responsive theme-safari-blog woocommerce-no-js tags-hidden author-hidden comment-hidden">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	
+		<header id="masthead" class="site-header sticky-header">
+
+
+	
+	<!-- top-bar -->
+	<div class="top-bar">
+		<div class="container">
+			<div class="top-wrapper">
+				<div class="top-search"><form role="search" method="get" class="search-form" action="http://www.biocloudservice.com/wordpress/">
+				<label>
+					<span class="screen-reader-text">搜索：</span>
+					<input type="search" class="search-field" placeholder="搜索&hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="搜索" />
+			</form></div>
+				
+
+
+
+	<!-- social links -->
+	<div class="social-links">
+		<ul class="list-group list-group-horizontal list-inline">
+
+			
+			
+			
+			
+			
+			
+			
+		</ul>
+	</div>
+	<!-- social links -->
+			</div>
+		</div>
+	</div>
+	<!-- top-bar -->
+
+
+
+	
+		<div class="header-wrapper">
+		<div class="container">
+			<div class="site-header-wrapper">
+				<div class="site-branding">
+					
+											
+						<div class="site-identity">
+
+							
+
+																				</div>
+					
+				</div><!-- .site-branding -->
+
+				<nav id="site-navigation" class="main-navigation">
+					<button id="nav-icon3" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+						
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+					</button>
+					<div class="menu-v1-container"><ul id="primary-menu" class="menu"><li id="menu-item-854" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-854"><a href="http://www.biocloudservice.com/wordpress/">首页</a></li>
+<li id="menu-item-12204" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12204"><a href="http://www.biocloudservice.com/wordpress/?cat=50">生信热点</a></li>
+<li id="menu-item-3804" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3804"><a href="http://www.biocloudservice.com/wordpress/?page_id=2">编程语言</a>
+<ul class="sub-menu">
+	<li id="menu-item-12202" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12202"><a href="http://www.biocloudservice.com/wordpress/?cat=47">R</a></li>
+	<li id="menu-item-12196" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12196"><a href="http://www.biocloudservice.com/wordpress/?cat=48">ubuntu</a></li>
+	<li id="menu-item-12198" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12198"><a href="http://www.biocloudservice.com/wordpress/?cat=46">perl</a></li>
+	<li id="menu-item-12197" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12197"><a href="http://www.biocloudservice.com/wordpress/?cat=51">python</a></li>
+	<li id="menu-item-12199" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12199"><a href="http://www.biocloudservice.com/wordpress/?cat=52">php</a></li>
+	<li id="menu-item-12207" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12207"><a href="http://www.biocloudservice.com/wordpress/?cat=53">mysql</a></li>
+</ul>
+</li>
+<li id="menu-item-12200" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12200"><a href="http://www.biocloudservice.com/wordpress/?cat=45">生信入门</a></li>
+<li id="menu-item-12203" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12203"><a href="http://www.biocloudservice.com/wordpress/?cat=49">软件工具</a></li>
+<li id="menu-item-1010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1010"><a href="http://www.biocloudservice.com/wordpress/?page_id=1009">在线工具</a>
+<ul class="sub-menu">
+	<li id="menu-item-1018" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1018"><a href="http://www.biocloudservice.com/home.html">云生信工具</a></li>
+	<li id="menu-item-1017" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1017"><a href="http://www.biocloudservice.com/meta/home.html">meta工具</a></li>
+	<li id="menu-item-1042" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1042"><a href="http://58.246.104.26:46028">单细胞分析</a></li>
+	<li id="menu-item-1445" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1445"><a href="http://www.biocloudservice.com:8080/">云生信银河分析平台</a></li>
+	<li id="menu-item-1555" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1555"><a href="http://58.246.104.26:8029">老照片修复</a></li>
+</ul>
+</li>
+<li id="menu-item-871" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children menu-item-871"><a href="http://www.biocloudservice.com/wordpress/?page_id=146">商店</a>
+<ul class="sub-menu">
+	<li id="menu-item-867" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-867"><a href="http://www.biocloudservice.com/wordpress/?page_id=132">Shop</a></li>
+	<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="http://www.biocloudservice.com/wordpress/?page_id=134">Checkout</a></li>
+	<li id="menu-item-205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205"><a href="http://www.biocloudservice.com/wordpress/?page_id=133">Cart</a></li>
+</ul>
+</li>
+<li id="menu-item-928" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-928"><a href="#lolmilogin#">Log In</a></li>
+<li id="menu-item-929" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-929"><a href="#lolmilogout#">Log Out</a></li>
+<li id="menu-item-60934" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60934"><a href="http://www.biocloudservice.com/wordpress//wp-login.php">注册</a></li>
+</ul></div>				</nav><!-- #site-navigation -->
+			</div>
+		</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div class="container"><ul id="breadcrumbs" class="breadcrumbs"><li class="item-home"><a class="bread-link bread-home" href="http://www.biocloudservice.com/wordpress" title="Home">Home</a></li><li class="separator separator-home"> &gt; </li><li class="item-cat"><a href="http://www.biocloudservice.com/wordpress/?cat=1">云生信学生物信息学</a></li><li class="separator"> &gt; </li><li class="item-current item-58223"><strong class="bread-current bread-58223" title="听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！">听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！</strong></li></ul></div>
+
+<div id="primary" class="inside-page content-area">
+    <div class="container">
+        <div class="main-wrapper">
+                <section class="page-section full-width-view">
+                    <div class="detail-content">
+
+                                                    
+
+
+<h1 class="page-title">听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！</h1>
+
+<div class="single-post">
+    
+
+
+<div class="post-content">
+
+    <div class="ihead info">
+        <ul class="list-inline">
+                         
+                                <li class="post-date"><i class="icon-calendar"></i> <a
+                    href="http://www.biocloudservice.com/wordpress/?m=20240616">2024-06-16</a>
+                </li>
+            
+            
+            </ul>
+
+
+                    
+        
+    </div>
+
+
+        
+         
+        
+
+
+    
+                
+
+    <article>
+        
+        <div class="inner-article-content">
+        <p><html><br />
+<head><br />
+<title></title><br />
+<meta charset="utf-8"><br />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover"></p>
+<style>
+*{margin:0;padding:0}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;line-height:1.6}img{z-index:999;position:relative;max-width:100%;margin:10px 0;}body{letter-spacing:.034em}h1,h2,h3,h4,h5,h6{font-weight:400;font-size:16px}a{color:#576b95;text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}td,th{word-wrap:break-word;padding:5px 10px;border:1px solid #DDD;}table{margin-bottom:10px;border-collapse:collapse;display:table;width:100%!important;}.appmsg_skin_default .rich_media_area_primary{background-color:#fff}.appmsg_skin_default .rich_media_area_primary .weui-loadmore_line .weui-loadmore__tips{background-color:#fff}.rich_media_area_primary{padding:20px 16px 12px;background-color:#fafafa}@media (max-width:375px){.rich_media_area_primary{padding:20px 60px 15px 60px}.rich_media_area_extra{padding:0 60px 21px 60px}}@media (min-width:1024px){.rich_media_area_primary_inner,.rich_media_area_extra_inner,body{max-width:677px;margin-left:auto;margin-right:auto}.rich_media_area_primary{padding-top:32px}}.rich_media{padding:20px;overflow:hidden;}.appmsg_skin_default .rich_media_area_primary{background-color:#fff}.appmsg_skin_default .rich_media_area_primary .weui-loadmore_line .weui-loadmore__tips{background-color:#fff}@media screen and (min-width:1024px){.rich_media_area_primary_inner,.rich_media_area_extra_inner{max-width:677px;margin-left:auto;margin-right:auto}.rich_media_area_primary{padding-top:32px}}.rich_media_content{overflow:hidden;color:#333;font-size:17px;word-wrap:break-word;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto;text-align:justify;position:relative;z-index:0}.rich_media_content *{max-width:100%!important;box-sizing:border-box!important;-webkit-box-sizing:border-box!important;word-wrap:break-word!important}.rich_media_content p{clear:both;min-height:1em}.rich_media_content em{font-style:italic}.rich_media_content fieldset{min-width:0}.rich_media_content .list-paddingleft-1,.rich_media_content .list-paddingleft-2,.rich_media_content .list-paddingleft-3{padding-left:2.2em}.rich_media_content .list-paddingleft-1 .list-paddingleft-2,.rich_media_content .list-paddingleft-2 .list-paddingleft-2,.rich_media_content .list-paddingleft-3 .list-paddingleft-2{padding-left:30px}.rich_media_content .list-paddingleft-1{padding-left:1.2em}.rich_media_content .list-paddingleft-3{padding-left:3.2em}.rich_media_content .code-snippet,.rich_media_content .code-snippet__fix{max-width:1000%!important}.rich_media_content .code-snippet *,.rich_media_content .code-snippet__fix *{max-width:1000%!important}.rich_media_title{font-size:22px;line-height:1.4;margin-bottom:13px;padding-bottom:13px;border-bottom:1px solid #e7e7eb;}@supports(-webkit-overflow-scrolling:touch){.rich_media_title{font-weight:700}}.rich_media_meta{display:inline-block;vertical-align:middle;padding:0 0 10px 0;font-size:15px;-webkit-tap-highlight-color:rgba(0,0,0,0)}.rich_media_meta.icon_appmsg_tag{margin-right:0px}.rich_media_meta.meta_tag_text{margin-right:0}.rich_media_meta_list em{font-style:normal}.rich_media_meta_text{color:#a5a5a5;}p{margin:0;}.msgBox{margin-top:20px;padding-top:20px;padding-left:50px;overflow:hidden;border-top:2px dashed #09a2ff;}.msg{padding-top:7px;clear:both;}.msgBody{float:right;width:100%;margin-left:55px;padding-bottom:15px;border-bottom:1px dashed #e0e0e0;}.userHeadImg{float:left;margin-left:-50px;}.userHeadImg img{width:40px;height:40px;margin-right:10px;border-radius:3px;}.userName{color:#888888;line-height:24px;font-size:14px;margin:5px 0 5px 0;height:24px;}.replyBody,.autherBody{color:#565656;font-size:15px;}.replyIcon{border-left:4px solid #33ab01;margin-right:5px;}.ad{text-decoration:none;color:#d6d4d4;font-size:12px;}.msgBodyReply{padding-top:5px;}.userName span{float:right;color:#afafaf;font-size:14px;}code{text-align:left;font-size:14px;display:block;white-space:pre;display:-webkit-box;display:-webkit-flex;display:flex;position:relative;}.code-snippet__fix{font-size:14px;margin:10px 0;display:block;color:#333;position:relative;background-color:rgba(0,0,0,0.03);border:1px solid #f0f0f0;border-radius:2px;display:-webkit-box;display:-webkit-flex;display:flex;padding-left:25px;line-height:26px}.code-snippet__fix code{text-align:left;font-size:14px;display:block;white-space:pre;display:-webkit-box;display:-webkit-flex;display:flex;position:relative;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace}.code-snippet__comment,.code-snippet__quote{color:#afafaf;font-style:italic}.code-snippet__keyword,.code-snippet__selector-tag,.code-snippet__subst{color:#ca7d37}.code-snippet__number,.code-snippet__literal,.code-snippet__variable,.code-snippet__template-variable,.code-snippet__tag .code-snippet__attr{color:#0e9ce5}.code-snippet__string,.code-snippet__doctag{color:#d14}.code-snippet__title,.code-snippet__section,.code-snippet__selector-id{color:#d14}.code-snippet__subst{font-weight:normal}.code-snippet__type,.code-snippet__class .code-snippet__title{color:#0e9ce5}.code-snippet__tag,.code-snippet__name,.code-snippet__attribute{color:#0e9ce5;font-weight:normal}.code-snippet__regexp,.code-snippet__link{color:#ca7d37}.code-snippet__symbol,.code-snippet__bullet{color:#d14}.code-snippet__built_in,.code-snippet__builtin-name{color:#ca7d37}.code-snippet__meta{color:#afafaf}.code-snippet__deletion{background:#fdd}.code-snippet__addition{background:#dfd}.code-snippet__emphasis{font-style:italic}.code-snippet__strong{font-weight:bold}.account_avatar{width:40px;height:40px;padding:0;}.account_info{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;padding:20px 0;align-items:center}.flex_bd{padding-left:14px;}.account_nickname{display:inline-block;vertical-align:middle;line-height:1.2;color:#576b95;font-size:14px}.account_desc{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1;color:rgba(0,0,0,0.3);font-size:14px;line-height:1.2;padding-top:.4em}.msg_source_url{text-align:left;word-break:break-all;margin-top:20px;}.msg_source_url a{padding-right:10px;}.msg_source_url .url_text{color:#a8a8a8;}.video-desc{font-size:14px;margin-top:15px;color:#6c6c6c;}.msg_source_url{text-align:left;}.original_primary_card_tips{color:rgba(0,0,0,0.3);line-height:1.4;font-size:15px;}.weui-flex__item{margin-bottom:20px;padding:20px 16px;margin-top:16px;line-height:1.4;align-items:center;background-color:#f7f7f7;border-radius:8px;position:relative;}.original_primary_desc{color:rgba(0,0,0,0.5);font-size:14px;padding-top:4px;width:auto;overflow:hidden;text-overflow:ellipsis;}.msgBodyReplyList{border-top:1px solid #e1e1e1;margin-top:10px;}.msgBodyReplyListTop{border-top:0;}.reply_like_num{float:right;font-size:14px;color:#c7c7c7;}.msgData{margin-top:20px;color:#626262;}.msgData span{font-size:14px;padding-right:15px;}.msgData .likes{float:right;padding-right:0;}.js_text_content p{font-size:18px;}.rich_media_meta_link{font-size:15px;}blockquote {padding-left: 10px;border-left: 3px solid #dbdbdb;color: rgba(0,0,0,0.5);font-size: 15px;padding-top: 4px;margin: 1em 0;}.video_iframe{width:500px;height:400px;}.blockquote_info{color:#b5b5b5;margin-top:10px;}#copyright_logo{color:#bdbdbd;}.rich_media_meta_list{margin-bottom:10px;}.reprint{background:#efefef;border-radius:5px;padding:8px;color:#1f1f1f;}.reprint a{word-break:break-all;}.topic{color:#8e8e8e;background:#f7f7f7;border-radius:5px;padding:10px 8px;}.topic a{padding-right:5px;}.topic p{margin-bottom:5px;}
+</style>
+<link href="https://www.juyifx.cn/config/css/wxArticle.css" rel="stylesheet"/>
+</head><script>
+var data={"mp":"生信果","title":"听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！","time":"2023-09-07 19:00:30","timeStamp":"1694084430"};
+</script><br />
+<body></p>
+<div class="rich_media">
+<h1 class="rich_media_title" id="activity-name"><a href="http://mp.weixin.qq.com/s?__biz=Mzg3OTg3MjQyNg==&#038;mid=2247492065&#038;idx=3&#038;sn=9ee17e05f1f4b8e34fc63534bad14666&#038;chksm=cf7f7124f808f8321f60a41206653149f41d6c767bf65d8c42909a656c02a68aecaf561364cf#rd" target="_blank" rel="noopener">听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！</a></h1>
+<div id="meta_content" class="rich_media_meta_list"><span class="rich_media_meta rich_media_meta_text">小图&nbsp;&nbsp;</span><span class="rich_media_meta rich_media_meta_nickname" id="profileBt"><a href="javascript:void(0);" class="wx_tap_link js_wx_tap_highlight weui-wa-hotarea" id="js_name">生信果&nbsp;&nbsp;</a></span><em id="publish_time" class="rich_media_meta rich_media_meta_text">2023-09-07 19:00:30</em></div>
+<p><content></p>
+<div class="reprint">
+<p>转自公众号：生信图<br /><a href="http://mp.weixin.qq.com/s?__biz=MzkxODUxNDgzNA==&#038;mid=2247484842&#038;idx=1&#038;sn=31983adde6a9dbeca752145768349898" target="_blank" title="阅读原文" rel="noopener">http://mp.weixin.qq.com/s?__biz=MzkxODUxNDgzNA==&#038;mid=2247484842&#038;idx=1&#038;sn=31983adde6a9dbeca752145768349898</a></p>
+</div>
+<section style="font-size: 16px;margin-bottom: 24px;">
+<section style="display: flex;flex-flow: row;margin: 10px 0%;text-align: left;justify-content: flex-start;" powered-by="xiumi.us">
+<section style="display: inline-block;vertical-align: bottom;width: 50%;background-color: rgb(242, 183, 183);margin-right: 3px;flex: 0 0 auto;align-self: flex-end;height: auto;padding: 3px 10px;">
+<section style="font-size: 17px;color: rgb(255, 255, 255);text-align: right;letter-spacing: 4px;" powered-by="xiumi.us">
+<p><strong>点击蓝字</strong></p>
+</section>
+</section>
+<section style="display: inline-block;vertical-align: top;width: auto;border-left: 4px solid rgb(242, 183, 183);border-bottom-left-radius: 0px;flex: 100 100 0%;align-self: stretch;height: auto;padding: 3px 10px;background-color: rgba(254, 245, 240, 0.8);">
+<section style="color: rgb(181, 126, 121);font-size: 17px;letter-spacing: 4px;" powered-by="xiumi.us">
+<p><strong>关注小图</strong></p>
+</section>
+</section>
+</section>
+<section style="font-size: 15px;line-height: 1.8;letter-spacing: 1px;" powered-by="xiumi.us">
+<p style="white-space: normal;">小伙伴在绘图的时候，经常会困惑，自己文章中的图片配色如何绘制才能显的高级。为什么顶级期刊配色都那么好看，小伙伴不要疑惑。这里小图给大家介绍一种SCI配色的R包ggsci，这个包很强大，提供了一系列的高质量的调色板，这个包的主要来源有SCI论文的期刊配色，还以一些可视化的数据库配色，还以我们经常看到的科幻电影中使用的配色，可谓是相当的多，跟着小图去学习吧！<br  /></p>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<section style="margin: 10px 0%;text-align: left;justify-content: flex-start;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: auto;vertical-align: top;border-left: 5px solid rgb(242, 203, 203);border-bottom-left-radius: 0px;padding-left: 9px;min-width: 10%;flex: 0 0 auto;height: auto;align-self: flex-start;">
+<section style="margin: 2px 0%;" powered-by="xiumi.us">
+<section style="color: rgb(110, 75, 36);line-height: 1.3;text-align: justify;letter-spacing: 1px;">
+<p style="white-space: normal;"><strong>我们先安装一下</strong></p>
+</section>
+</section>
+</section>
+</section>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer"><span class="code-snippet__meta">#install.packages(<span class="code-snippet__meta-string">"ggsci"</span>)</span></span></code><code><span class="code-snippet_outer">library(ggsci)</span></code></pre>
+</section>
+<section style="font-size: 15px;line-height: 1.8;letter-spacing: 1px;" powered-by="xiumi.us">
+<p style="white-space: normal;">ggsci中函数有很多，但是主要还是两种类型的函数：</p>
+<p style="white-space: normal;">一种是直接在绘图中使用既有期刊风格的颜色方案。<strong>比如：</strong></p>
+<p style="white-space: normal;">scale_color_palname()和scale_fill_palname()。而函数里的palnames指的是对应颜色风格的名字，例如：scale_color_npg()和scale_fill_npg()是nature风格的配色方案。</p>
+<p style="white-space: normal;">另一种是函数是展示对应颜色风格的颜色的代码，例如pal_npg(&#8220;nrc&#8221;, alpha = 0.7)(9)，表示获取名为 &#8220;nrc&#8221; 的颜色调色板的第9个颜色值，并且这个颜色的透明度设置为 0.7。</p>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" data-ratio="0.8079800498753117" data-s="300,640" src="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2024/06/1_yZmsfJQ2oMw0JhLNx14ibCOicOvkRw.png?w=640" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92enCFibrYwIDDSCkaRibSdjEDK72ByZmsfJQ2oMw0JhLNx14ibCOicOvkRw/640?wx_fmt=png'" data-type="png" data-w="802" style="vertical-align: middle;width: 100%;"  data-recalc-dims="1" /></section>
+</section>
+<section style="font-size: 15px;line-height: 1.8;letter-spacing: 1px;" powered-by="xiumi.us">
+<p style="white-space: normal;">上面是这个包主要的函数对应的风格颜色，我们就按照上述大致给小伙伴展示一下：</p>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<section style="display: flex;flex-flow: row;text-align: center;justify-content: center;margin-top: 10px;margin-bottom: 20px;" powered-by="xiumi.us">
+<section style="display: inline-block;vertical-align: top;width: auto;flex: 0 0 0%;align-self: stretch;height: auto;background-position: 0% 0%;background-repeat: repeat-y;background-size: 100%;background-attachment: scroll;background-image: url(&quot;https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92JNxSJhxCbgicpQpVrCobUHXibNPDfsn09zICec7OpDYU74YGoQWc7qOQ/640?wx_fmt=png&quot;);">
+<section style="" powered-by="xiumi.us">
+<section style="display: inline-block;width: 5px;height: 10px;vertical-align: top;overflow: hidden;"><svg viewbox="0 0 1 1" style="float:left;line-height:0;width:0;vertical-align:top;"></svg></section>
+</section>
+</section>
+<section style="display: inline-block;vertical-align: top;width: auto;flex: 0 0 auto;align-self: stretch;min-width: 10%;height: auto;background-color: rgb(254, 227, 229);box-shadow: rgb(0, 0, 0) 0px 0px 0px;">
+<section style="margin-right: 0%;margin-left: 0%;" powered-by="xiumi.us">
+<section style="color: rgb(84, 54, 54);padding-right: 10px;padding-left: 10px;text-align: justify;letter-spacing: 3px;">
+<p style="text-align: center;white-space: normal;"><strong>下面介绍这两类函数的使用并且绘制配色</strong><strong>方案的颜色可视化</strong></p>
+</section>
+</section>
+</section>
+<section style="display: inline-block;vertical-align: top;width: auto;flex: 0 0 0%;align-self: stretch;height: auto;background-position: 0% 0%;background-repeat: repeat-y;background-size: 100%;background-attachment: scroll;background-image: url(&quot;https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92hfyIPqeicq6C3fSCnHhn1Jj672JsvL2XYkOyb0jHyGooQqYtKcJVia4g/640?wx_fmt=png&quot;);">
+<section style="" powered-by="xiumi.us">
+<section style="display: inline-block;width: 5px;height: 10px;vertical-align: top;overflow: hidden;"><svg viewbox="0 0 1 1" style="float:left;line-height:0;width:0;vertical-align:top;"></svg></section>
+</section>
+</section>
+</section>
+<section style="margin: 10px 0%;text-align: left;justify-content: flex-start;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: auto;vertical-align: top;border-left: 5px solid rgb(242, 203, 203);border-bottom-left-radius: 0px;padding-left: 9px;min-width: 10%;flex: 0 0 auto;height: auto;align-self: flex-start;">
+<section style="margin: 2px 0%;" powered-by="xiumi.us">
+<section style="color: rgb(110, 75, 36);line-height: 1.3;text-align: justify;letter-spacing: 1px;">
+<p style="white-space: normal;"><strong>首先就是我们顶刊Nature配色风格</strong></p>
+</section>
+</section>
+</section>
+</section>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">library(scales) #我们这里使用scales用来展示颜色</span></code><code><span class="code-snippet_outer">## 自然出版集团 (Nature Publishing Group) 风格的颜色方案</span></code><code><span class="code-snippet_outer">mypal &lt;- pal_npg(<span class="code-snippet__string">"nrc"</span>, alpha = <span class="code-snippet__number">0.7</span>)(<span class="code-snippet__number">10</span>)</span></code><code><span class="code-snippet_outer"><span class="code-snippet__function">mypal</span></span></code><code><span class="code-snippet_outer">show_col(mypal,ncol = <span class="code-snippet__number">5</span>)</span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" data-ratio="0.41770186335403725" data-s="300,640" src="图片/生信果_2023-09-07_「转」听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！/2_vQz9wKBeYon0VgPqddBDpRxY9GctLg.png" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92DuYvzxZ7q37m3JicNfe91AFEjvQz9wKBeYon0VgPqddBDpRxY9GctLg/640?wx_fmt=png'" data-type="png" data-w="644" style="vertical-align: middle;width: 100%;"  /></section>
+</section>
+<section style="font-size: 15px;line-height: 1.8;letter-spacing: 1px;" powered-by="xiumi.us">
+<p style="white-space: normal;">小伙伴注意，这里alpha参数是调整颜色的透明度，上面展示的alpha = 0.7的配色风格，这个值可以根据需要自己调整。</p>
+<p style="white-space: normal;"><br  /></p>
+</section>
+<section style="margin: 10px 0%;text-align: left;justify-content: flex-start;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: auto;vertical-align: top;border-left: 5px solid rgb(242, 203, 203);border-bottom-left-radius: 0px;padding-left: 9px;min-width: 10%;flex: 0 0 auto;height: auto;align-self: flex-start;">
+<section style="margin: 2px 0%;" powered-by="xiumi.us">
+<section style="color: rgb(110, 75, 36);line-height: 1.3;text-align: justify;letter-spacing: 1px;">
+<p style="white-space: normal;"><strong>下面展示一下alpha = 1的NPG风格的颜色：</strong></p>
+</section>
+</section>
+</section>
+</section>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">## 自然出版集团 (Nature Publishing Group) 风格的颜色方案</span></code><code><span class="code-snippet_outer">mypal &lt;- pal_npg(<span class="code-snippet__string">"nrc"</span>, alpha = <span class="code-snippet__number">1</span>)(<span class="code-snippet__number">10</span>)</span></code><code><span class="code-snippet_outer"><span class="code-snippet__function">mypal</span></span></code><code><span class="code-snippet_outer">show_col(mypal,ncol = <span class="code-snippet__number">5</span>)</span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" data-ratio="0.41809672386895474" data-s="300,640" src="图片/生信果_2023-09-07_「转」听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！/3_Joic16RRibGALI0V5iauPniclicHXA.png" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92zOg6mk0qbD2Ksr6Y9whdGKbPBhgV4Joic16RRibGALI0V5iauPniclicHXA/640?wx_fmt=png'" data-type="png" data-w="641" style="vertical-align: middle;width: 100%;"  /></section>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<section style="margin: 10px 0%;text-align: left;justify-content: flex-start;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: auto;vertical-align: top;border-left: 5px solid rgb(242, 203, 203);border-bottom-left-radius: 0px;padding-left: 9px;min-width: 10%;flex: 0 0 auto;height: auto;align-self: flex-start;">
+<section style="margin: 2px 0%;" powered-by="xiumi.us">
+<section style="color: rgb(110, 75, 36);line-height: 1.3;text-align: justify;letter-spacing: 1px;">
+<p style="white-space: normal;"><strong>再来看一下</strong></p>
+</section>
+</section>
+</section>
+</section>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">## 美国科学促进会 (American Association <span class="code-snippet__keyword">for</span> the Advancement of Science) 风格的颜色方案。</span></code><code><span class="code-snippet_outer">mypal &lt;- pal_aaas(palette = c(<span class="code-snippet__string">"default"</span>), alpha = <span class="code-snippet__number">0.7</span>)(<span class="code-snippet__number">10</span>)</span></code><code><span class="code-snippet_outer"><span class="code-snippet__function">mypal</span></span></code><code><span class="code-snippet_outer"><span class="code-snippet__title">show_col</span><span class="code-snippet__params">(mypal,ncol = <span class="code-snippet__number">5</span>)</span></span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" data-ratio="0.4153605015673981" data-s="300,640" src="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2024/06/4_gsKXCq5v2bxcG47Re1dDRU67pRicFQ.png?w=640" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92QyTlaEicxGHroQO9vpQE5Y75NogsKXCq5v2bxcG47Re1dDRU67pRicFQ/640?wx_fmt=png'" data-type="png" data-w="638" style="vertical-align: middle;width: 100%;"  data-recalc-dims="1" /></section>
+</section>
+<section style="margin: 10px 0%;text-align: left;justify-content: flex-start;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: auto;vertical-align: top;border-left: 5px solid rgb(242, 203, 203);border-bottom-left-radius: 0px;padding-left: 9px;min-width: 10%;flex: 0 0 auto;height: auto;align-self: flex-start;">
+<section style="margin: 2px 0%;" powered-by="xiumi.us">
+<section style="color: rgb(110, 75, 36);line-height: 1.3;text-align: justify;letter-spacing: 1px;">
+<p style="white-space: normal;"><strong>后面看一下</strong></p>
+</section>
+</section>
+</section>
+</section>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">## 《新英格兰医学杂志》(The New England Journal of Medicine)风格的颜色方案。</span></code><code><span class="code-snippet_outer">mypal &lt;- pal_nejm(palette = c(<span class="code-snippet__string">"default"</span>), alpha = <span class="code-snippet__number">0.8</span>)(<span class="code-snippet__number">8</span>)</span></code><code><span class="code-snippet_outer"><span class="code-snippet__function">mypal</span></span></code><code><span class="code-snippet_outer"><span class="code-snippet__title">show_col</span><span class="code-snippet__params">(mypal,ncol = <span class="code-snippet__number">4</span>)</span></span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" data-ratio="0.5157728706624606" data-s="300,640" src="图片/生信果_2023-09-07_「转」听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！/5_rMU4zOh3T49xNqXEvNYZ0dm2k9SYnw.png" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92PlZZheicZNYUbyE0wyfKOGqiaGrMU4zOh3T49xNqXEvNYZ0dm2k9SYnw/640?wx_fmt=png'" data-type="png" data-w="634" style="vertical-align: middle;width: 100%;"  /></section>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<section style="margin: 10px 0%;text-align: left;justify-content: flex-start;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: auto;vertical-align: top;border-left: 5px solid rgb(242, 203, 203);border-bottom-left-radius: 0px;padding-left: 9px;min-width: 10%;flex: 0 0 auto;height: auto;align-self: flex-start;">
+<section style="margin: 2px 0%;" powered-by="xiumi.us">
+<section style="color: rgb(110, 75, 36);line-height: 1.3;text-align: justify;letter-spacing: 1px;">
+<p style="white-space: normal;"><strong>下面是我们熟悉的期刊</strong></p>
+</section>
+</section>
+</section>
+</section>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">## 《柳叶刀》(The Lancet)杂志风格的颜色方案。</span></code><code><span class="code-snippet_outer">mypal &lt;- pal_lancet(palette = c(<span class="code-snippet__string">"lanonc"</span>), alpha = <span class="code-snippet__number">0.8</span>)(<span class="code-snippet__number">9</span>)</span></code><code><span class="code-snippet_outer"><span class="code-snippet__function">mypal</span></span></code><code><span class="code-snippet_outer">show_col(mypal,ncol = <span class="code-snippet__number">3</span>)</span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" data-ratio="0.9938080495356038" data-s="300,640" src="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2024/06/6_p6cW2sZnBDZcQSx3jhY4HV8ia0Plow.png?w=640" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92bAgR4vukGcGLLySag0VLJUQSIp6cW2sZnBDZcQSx3jhY4HV8ia0Plow/640?wx_fmt=png'" data-type="png" data-w="646" style="vertical-align: middle;width: 100%;"  data-recalc-dims="1" /></section>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<section style="margin: 10px 0%;text-align: left;justify-content: flex-start;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: auto;vertical-align: top;border-left: 5px solid rgb(242, 203, 203);border-bottom-left-radius: 0px;padding-left: 9px;min-width: 10%;flex: 0 0 auto;height: auto;align-self: flex-start;">
+<section style="margin: 2px 0%;" powered-by="xiumi.us">
+<section style="color: rgb(110, 75, 36);line-height: 1.3;text-align: justify;letter-spacing: 1px;">
+<p style="white-space: normal;"><strong>下面</strong></p>
+</section>
+</section>
+</section>
+</section>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">## 《美国医学会杂志》(Journal of the American Medical Association)风格的颜色方案。</span></code><code><span class="code-snippet_outer">mypal &lt;- pal_jama(palette = c(<span class="code-snippet__string">"default"</span>), alpha = <span class="code-snippet__number">0.7</span>)(<span class="code-snippet__number">7</span>)</span></code><code><span class="code-snippet_outer"><span class="code-snippet__function">mypal</span></span></code><code><span class="code-snippet_outer">show_col(mypal,ncol = <span class="code-snippet__number">4</span>)</span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" data-ratio="0.5133858267716536" data-s="300,640" src="图片/生信果_2023-09-07_「转」听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！/7_4WxDhSPgZSiaDyrL9yAjvJTzjwibBA.png" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN928p0raLhVNGmib6OSicebDM6XH4hQ4WxDhSPgZSiaDyrL9yAjvJTzjwibBA/640?wx_fmt=png'" data-type="png" data-w="635" style="vertical-align: middle;width: 100%;"  /></section>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">## 临床肿瘤学杂志》(Journal of Clinical Oncology)风格的颜色方案。</span></code><code><span class="code-snippet_outer">mypal &lt;- pal_jco(palette = c(<span class="code-snippet__string">"default"</span>), alpha = <span class="code-snippet__number">0.7</span>)(<span class="code-snippet__number">10</span>)</span></code><code><span class="code-snippet_outer"><span class="code-snippet__function">mypal</span></span></code><code><span class="code-snippet_outer"><span class="code-snippet__title">show_col</span><span class="code-snippet__params">(mypal,ncol = <span class="code-snippet__number">5</span>)</span></span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" data-ratio="0.41304347826086957" data-s="300,640" src="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2024/06/8_InrpNNp1qWQicLd62c5D7uuNEvLIgQ.png?w=640" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92aHjOCicNQ4gWzt6Siawb7T6RJEDInrpNNp1qWQicLd62c5D7uuNEvLIgQ/640?wx_fmt=png'" data-type="png" data-w="644" style="vertical-align: middle;width: 100%;"  data-recalc-dims="1" /></section>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">## 加利福尼亚大学圣克鲁兹分校基因组浏览器风格的颜色方案。</span></code><code><span class="code-snippet_outer">mypal &lt;- pal_ucscgb(palette = c(<span class="code-snippet__string">"default"</span>), alpha = <span class="code-snippet__number">0.7</span>)(<span class="code-snippet__number">26</span>)</span></code><code><span class="code-snippet_outer"><span class="code-snippet__function">mypal</span></span></code><code><span class="code-snippet_outer">show_col(mypal,ncol = <span class="code-snippet__number">7</span>)</span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" class="rich_pages wxw-img" data-ratio="0.5768025078369906" data-s="300,640" src="图片/生信果_2023-09-07_「转」听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！/9_c0kT5iccBg539jlhePbSEPm2dobgDw.png" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92hZjgVfaGxejd3Yib33LaW3YUbicc0kT5iccBg539jlhePbSEPm2dobgDw/640?wx_fmt=png'" data-type="png" data-w="638" style="vertical-align: middle;width: 100%;"  /></section>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<section style="margin: 10px 0%;text-align: left;justify-content: flex-start;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: auto;vertical-align: top;border-left: 5px solid rgb(242, 203, 203);border-bottom-left-radius: 0px;padding-left: 9px;min-width: 10%;flex: 0 0 auto;height: auto;align-self: flex-start;">
+<section style="margin: 2px 0%;" powered-by="xiumi.us">
+<section style="color: rgb(110, 75, 36);line-height: 1.3;text-align: justify;letter-spacing: 1px;">
+<p style="white-space: normal;"><strong>来看一下</strong></p>
+</section>
+</section>
+</section>
+</section>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">## 星际迷航电影风格的颜色方案。</span></code><code><span class="code-snippet_outer">mypal &lt;- pal_startrek(palette = c(<span class="code-snippet__string">"uniform"</span>), alpha = <span class="code-snippet__number">0.7</span>)(<span class="code-snippet__number">7</span>)</span></code><code><span class="code-snippet_outer"><span class="code-snippet__function">mypal</span></span></code><code><span class="code-snippet_outer">show_col(mypal,ncol = <span class="code-snippet__number">4</span>)</span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" data-ratio="0.525" data-s="300,640" src="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2024/06/10_ALm2k3icvaaTibu1gKjoIWXnla3S2Q.png?w=640" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92o90Dbzl5SribtIhhcW8sXCPl1VlALm2k3icvaaTibu1gKjoIWXnla3S2Q/640?wx_fmt=png'" data-type="png" data-w="640" style="vertical-align: middle;width: 100%;"  data-recalc-dims="1" /></section>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">## Futurama电视剧风格的颜色方案。</span></code><code><span class="code-snippet_outer">mypal &lt;- pal_futurama(palette = c(<span class="code-snippet__string">"planetexpress"</span>), alpha = <span class="code-snippet__number">0.7</span>)(<span class="code-snippet__number">12</span>)</span></code><code><span class="code-snippet_outer"><span class="code-snippet__function">mypal</span></span></code><code><span class="code-snippet_outer"><span class="code-snippet__title">show_col</span><span class="code-snippet__params">(mypal,ncol = <span class="code-snippet__number">4</span>)</span></span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" class="rich_pages wxw-img" data-ratio="0.7368421052631579" data-s="300,640" src="图片/生信果_2023-09-07_「转」听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！/11_yLcm4HlFDc38uKyzEOxgYGPWBsFfPw.png" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92PGyS6uk0wBbq6FP79wu3N1MQyLcm4HlFDc38uKyzEOxgYGPWBsFfPw/640?wx_fmt=png'" data-type="png" data-w="646" style="vertical-align: middle;width: 100%;"  /></section>
+</section>
+<section style="font-size: 15px;line-height: 1.8;letter-spacing: 1px;" powered-by="xiumi.us">
+<p style="white-space: normal;">我们这里就不全部展示了，这么多的配色方案，一定有小伙伴喜欢的一种。</p>
+<p style="white-space: normal;"><br  /></p>
+<p style="white-space: normal;">如果有的小伙伴感觉调颜色很麻烦，ggsci这个包还提供了一种配色方案，就是<strong>自动配色</strong>，ggsci包也给出了绘图时自动配色的方式，就是<strong>scale_color_palname()</strong>和<strong>scale_fill_palname()</strong>函数。</p>
+<p style="white-space: normal;"><br  /></p>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<section style="display: flex;flex-flow: row;text-align: center;justify-content: center;margin-top: 10px;margin-bottom: 20px;" powered-by="xiumi.us">
+<section style="display: inline-block;vertical-align: top;width: auto;flex: 0 0 0%;align-self: stretch;height: auto;background-position: 0% 0%;background-repeat: repeat-y;background-size: 100%;background-attachment: scroll;background-image: url(&quot;https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92JNxSJhxCbgicpQpVrCobUHXibNPDfsn09zICec7OpDYU74YGoQWc7qOQ/640?wx_fmt=png&quot;);">
+<section style="" powered-by="xiumi.us">
+<section style="display: inline-block;width: 5px;height: 10px;vertical-align: top;overflow: hidden;"><svg viewbox="0 0 1 1" style="float:left;line-height:0;width:0;vertical-align:top;"></svg></section>
+</section>
+</section>
+<section style="display: inline-block;vertical-align: top;width: auto;flex: 0 0 auto;align-self: stretch;min-width: 10%;height: auto;background-color: rgb(254, 227, 229);box-shadow: rgb(0, 0, 0) 0px 0px 0px;">
+<section style="margin-right: 0%;margin-left: 0%;" powered-by="xiumi.us">
+<section style="color: rgb(84, 54, 54);padding-right: 10px;padding-left: 10px;text-align: justify;font-size: 17px;letter-spacing: 3px;">
+<p style="white-space: normal;"><strong>下面我们通过实例去演示一下吧</strong></p>
+</section>
+</section>
+</section>
+<section style="display: inline-block;vertical-align: top;width: auto;flex: 0 0 0%;align-self: stretch;height: auto;background-position: 0% 0%;background-repeat: repeat-y;background-size: 100%;background-attachment: scroll;background-image: url(&quot;https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92hfyIPqeicq6C3fSCnHhn1Jj672JsvL2XYkOyb0jHyGooQqYtKcJVia4g/640?wx_fmt=png&quot;);">
+<section style="" powered-by="xiumi.us">
+<section style="display: inline-block;width: 5px;height: 10px;vertical-align: top;overflow: hidden;"><svg viewbox="0 0 1 1" style="float:left;line-height:0;width:0;vertical-align:top;"></svg></section>
+</section>
+</section>
+</section>
+<section style="margin: 10px 0%;text-align: left;justify-content: flex-start;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: auto;vertical-align: top;border-left: 5px solid rgb(242, 203, 203);border-bottom-left-radius: 0px;padding-left: 9px;min-width: 10%;flex: 0 0 auto;height: auto;align-self: flex-start;">
+<section style="margin: 2px 0%;" powered-by="xiumi.us">
+<section style="color: rgb(110, 75, 36);line-height: 1.3;text-align: justify;letter-spacing: 1px;">
+<p style="white-space: normal;"><strong>这里数据我们使用ggplot内置数据集diamonds</strong></p>
+</section>
+</section>
+</section>
+</section>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">library(ggsci)</span></code><code><span class="code-snippet_outer">library(ggplot2)</span></code><code><span class="code-snippet_outer">library(gridExtra)</span></code><code><span class="code-snippet_outer">data(diamonds) #ggplot2内置数据集，砖石相关信息</span></code><code><span class="code-snippet_outer">head(diamonds)</span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" class="rich_pages wxw-img" data-ratio="0.31278890600924497" data-s="300,640" src="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2024/06/12_kHCsm1mmPvZDdzO2EvlFia2DlssXug.png?w=640" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92xrYe1YCCBGcHDEz65hqklxs78kHCsm1mmPvZDdzO2EvlFia2DlssXug/640?wx_fmt=png'" data-type="png" data-w="649" style="vertical-align: middle;width: 100%;"  data-recalc-dims="1" /></section>
+</section>
+<section style="margin: 10px 0%;text-align: left;justify-content: flex-start;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: auto;vertical-align: top;border-left: 5px solid rgb(242, 203, 203);border-bottom-left-radius: 0px;padding-left: 9px;min-width: 10%;flex: 0 0 auto;height: auto;align-self: flex-start;">
+<section style="margin: 2px 0%;" powered-by="xiumi.us">
+<section style="color: rgb(110, 75, 36);line-height: 1.3;text-align: justify;letter-spacing: 1px;">
+<p style="white-space: normal;"><strong>我们先看一下ggplot默认的配色</strong></p>
+</section>
+</section>
+</section>
+</section>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">p1 &lt;- ggplot(subset(diamonds, carat &gt;= <span class="code-snippet__number">2.2</span>), aes(x = table, y = price, colour = cut)) +</span></code><code><span class="code-snippet_outer"> &nbsp;geom_point(alpha = <span class="code-snippet__number">0.7</span>) +</span></code><code><span class="code-snippet_outer"> &nbsp;geom_smooth(method = <span class="code-snippet__string">"loess"</span>, alpha = <span class="code-snippet__number">0.05</span>, linewidth = <span class="code-snippet__number">1</span>, span = <span class="code-snippet__number">1</span>) +</span></code><code><span class="code-snippet_outer"> &nbsp;theme_bw()</span></code><code><span class="code-snippet_outer">p1</span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" class="rich_pages wxw-img" data-ratio="0.9787556904400607" data-s="300,640" src="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2024/06/13_brRWhTZrItrpzjUus0nJ9FxCULSCuQ.png?w=640" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92jMyvibW7kPeRW4EV9s05aeQSiaibrRWhTZrItrpzjUus0nJ9FxCULSCuQ/640?wx_fmt=png'" data-type="png" data-w="659" style="vertical-align: middle;width: 100%;"  data-recalc-dims="1" /></section>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">p2 &lt;- ggplot(subset(diamonds, carat &gt; <span class="code-snippet__number">2.2</span> &amp; depth &gt; <span class="code-snippet__number">55</span> &amp; depth &lt; <span class="code-snippet__number">70</span>), aes(x = depth, fill = cut)) +</span></code><code><span class="code-snippet_outer"> &nbsp;geom_histogram(colour = <span class="code-snippet__string">"black"</span>, binwidth = <span class="code-snippet__number">1</span>, position = <span class="code-snippet__string">"dodge"</span>) +</span></code><code><span class="code-snippet_outer"> &nbsp;theme_bw()</span></code><code><span class="code-snippet_outer">p2</span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" class="rich_pages wxw-img" data-ratio="1.007716049382716" data-s="300,640" src="图片/生信果_2023-09-07_「转」听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！/14_VibsvHhF1S2VfmUSLrT3tViajn2FAg.png" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92s7Ufee4JeJ5zM3Bd7gX4XKQCESVibsvHhF1S2VfmUSLrT3tViajn2FAg/640?wx_fmt=png'" data-type="png" data-w="648" style="vertical-align: middle;width: 100%;"  /></section>
+</section>
+<section style="font-size: 15px;line-height: 1.8;letter-spacing: 1px;" powered-by="xiumi.us">
+<p style="white-space: normal;">小图觉得还是很好看的</p>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<section style="margin: 10px 0%;text-align: left;justify-content: flex-start;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: auto;vertical-align: top;border-left: 5px solid rgb(242, 203, 203);border-bottom-left-radius: 0px;padding-left: 9px;min-width: 10%;flex: 0 0 auto;height: auto;align-self: flex-start;">
+<section style="margin: 2px 0%;" powered-by="xiumi.us">
+<section style="color: rgb(110, 75, 36);line-height: 1.3;text-align: justify;letter-spacing: 1px;">
+<p style="white-space: normal;"><strong>我们试着将Nature风格配色方案放进去试试</strong></p>
+</section>
+</section>
+</section>
+</section>
+<section style="font-size: 15px;line-height: 1.8;letter-spacing: 1px;" powered-by="xiumi.us">
+<p style="white-space: normal;">直接在原图后面添加<strong>scale_color_npg()</strong>和<strong>scale_fill_npg()</strong>函数就可以。</p>
+</section>
+<section class="code-snippet__fix code-snippet__js">
+<ul class="code-snippet__line-index code-snippet__js">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<pre class="code-snippet__js" data-lang="c"><code><span class="code-snippet_outer">p1_npg &lt;- p1 + scale_color_npg()</span></code><code><span class="code-snippet_outer">p2_npg &lt;- p2 + scale_fill_npg()</span></code><code><span class="code-snippet_outer">p1_npg</span></code><code><span class="code-snippet_outer">p2_npg</span></code></pre>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" class="rich_pages wxw-img" data-ratio="1.0139103554868625" data-s="300,640" src="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2024/06/15_ZFqIc9uS9Ibk4icrCC24gzEvvdMXkg.png?w=640" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92uuibLx0UQFZAiao1Hsf2icfTR6TrZFqIc9uS9Ibk4icrCC24gzEvvdMXkg/640?wx_fmt=png'" data-type="png" data-w="647" style="vertical-align: middle;width: 100%;"  data-recalc-dims="1" /></section>
+</section>
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;" powered-by="xiumi.us">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" class="rich_pages wxw-img" data-ratio="1.0045801526717557" data-s="300,640" src="图片/生信果_2023-09-07_「转」听说你还在困惑SCI配色问题？小图一文让你学会SCI顶刊的配色方案！！！/16_wgDU6LFbhAxhNLY9qKAqgPqXDJeSQA.png" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_png/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92x7Wc384fm1iahm3FibB3LZcXr1wgDU6LFbhAxhNLY9qKAqgPqXDJeSQA/640?wx_fmt=png'" data-type="png" data-w="655" style="vertical-align: middle;width: 100%;"  /></section>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<section style="text-align: left;justify-content: flex-start;display: flex;flex-flow: row;margin-bottom: 10px;" powered-by="xiumi.us">
+<section style="display: inline-block;width: 100%;vertical-align: top;align-self: flex-start;flex: 0 0 auto;border-style: solid;border-width: 1px;border-color: rgb(176, 176, 176);padding: 7px;">
+<section style="justify-content: flex-start;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: 100%;vertical-align: top;align-self: flex-start;flex: 0 0 auto;background-color: rgba(249, 238, 237, 0.5);padding: 18px;">
+<section style="" powered-by="xiumi.us">
+<section style="text-align: justify;font-size: 14px;letter-spacing: 2px;">
+<p style="white-space: normal;">其它的方案小图就不一一展示了，原理和上述一样，小伙伴自行去学习一下，非常的简单，有没有心动呢，快去动手试试吧，要记住多多理解代码的意义这样才能绘制漂亮的图片！</p>
+<p style="white-space: normal;"><br  /></p>
+</section>
+</section>
+<section style="text-align: justify;font-size: 14px;" powered-by="xiumi.us">
+<p style="white-space: normal;">欢迎使用：云生信平台 ( http://www.biocloudservice.com/home.html)</p>
+</section>
+<section style="transform: scale(0.5);transform-origin: center center;margin-top: -65px;margin-bottom: -65px;" powered-by="xiumi.us">
+<section style="text-align: center;margin-top: 10px;margin-bottom: 10px;line-height: 0;">
+<section style="vertical-align: middle;display: inline-block;line-height: 0;"><img decoding="async" class="rich_pages wxw-img" data-ratio="1" data-s="300,640" src="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2024/06/17_0DKCAmXiauUBvRADAPOXKN065ZWVgg.jpg?w=640" onerror="this.src='https://mmbiz.qpic.cn/sz_mmbiz_jpg/2wJ7bWfS0QuT9KJmzophrib2ecM5JQN92BLclKqUqMDrqk1a3mrRkMIic2U0DKCAmXiauUBvRADAPOXKN065ZWVgg/640?wx_fmt=jpeg'" data-type="jpeg" data-w="258" style="vertical-align: middle;width: 100%;"  data-recalc-dims="1" /></section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section style="min-height: 40px;margin: 10px 0%;" powered-by="xiumi.us">
+<section style="width: 100%;margin-right: auto;margin-bottom: -10px;margin-left: auto;">
+<table width="100%">
+<tbody>
+<tr opera-tn-ra-comp="_$.pages:0.layers:0.comps:66.classicTable1:0" powered-by="xiumi.us">
+<td colspan="1" rowspan="1" opera-tn-ra-cell="_$.pages:0.layers:0.comps:66.classicTable1:0.td@@0" style="border-color: rgb(62, 62, 62);border-style: none;background-color: rgb(249, 174, 165);padding: 10px 0px;" width="96.3700%">
+<section style="line-height: 1;text-align: center;font-size: 17px;color: rgb(255, 255, 255);letter-spacing: 5px;" powered-by="xiumi.us">
+<p><strong>往期推荐</strong></p>
+</section>
+</td>
+</tr>
+<tr opera-tn-ra-comp="_$.pages:0.layers:0.comps:66.classicTable1:1" powered-by="xiumi.us">
+<td colspan="1" rowspan="1" opera-tn-ra-cell="_$.pages:0.layers:0.comps:66.classicTable1:1.td@@0" style="border-top: 0px none rgb(62, 62, 62);border-right: 0px none rgb(62, 62, 62);border-left: 0px none rgb(62, 62, 62);border-bottom-color: rgb(202, 198, 198);border-bottom-style: dashed;background-color: rgb(247, 247, 247);padding-right: 5px;padding-left: 5px;" width="96.3700%">
+<section style="text-align: center;justify-content: center;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: 100%;vertical-align: middle;border-width: 0px;align-self: center;flex: 0 0 auto;">
+<p powered-by="xiumi.us"><a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzkxODUxNDgzNA==&amp;mid=2247484661&amp;idx=1&amp;sn=fa0e39d049807f077744c75d770dd455&amp;chksm=c1b17908f6c6f01ea48a583e8dc3753f0a45ded44072b6aa96a0cb1677a6e357bb1cb7b72994&amp;scene=21#wechat_redirect" textvalue="热图绘制神器-ComplexHeatmap包！还不快跟小图去学习？" linktype="text" imgurl="" imgdata="null" data-itemshowtype="0" tab="innerlink" data-linktype="2" rel="noopener">热图绘制神器-ComplexHeatmap包！还不快跟小图去学习？</a></p>
+</section>
+</section>
+</td>
+</tr>
+<tr opera-tn-ra-comp="_$.pages:0.layers:0.comps:66.classicTable1:2" powered-by="xiumi.us">
+<td colspan="1" rowspan="1" opera-tn-ra-cell="_$.pages:0.layers:0.comps:66.classicTable1:2.td@@0" style="border-top: 0px none rgb(62, 62, 62);border-right: 0px none rgb(62, 62, 62);border-left: 0px none rgb(62, 62, 62);border-bottom-color: rgb(202, 198, 198);border-bottom-style: dashed;background-color: rgb(247, 247, 247);padding-right: 5px;padding-left: 5px;" width="96.3700%">
+<section style="text-align: center;justify-content: center;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: 100%;vertical-align: middle;border-width: 0px;align-self: center;flex: 0 0 auto;">
+<p powered-by="xiumi.us"><a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzkxODUxNDgzNA==&amp;mid=2247484629&amp;idx=1&amp;sn=909136874229078985a52e2f5869635a&amp;chksm=c1b17928f6c6f03e0e7f6820cd46c10c629bbd7ef86f539862fe23452bfa0f99a1a5289e7715&amp;scene=21#wechat_redirect" textvalue="小图一文带你学会网络图节点绘制-ggraph包使用！" linktype="text" imgurl="" imgdata="null" data-itemshowtype="0" tab="innerlink" data-linktype="2" rel="noopener">小图一文带你学会网络图节点绘制-ggraph包使用！</a></p>
+</section>
+</section>
+</td>
+</tr>
+<tr opera-tn-ra-comp="_$.pages:0.layers:0.comps:66.classicTable1:3" powered-by="xiumi.us">
+<td colspan="1" rowspan="1" opera-tn-ra-cell="_$.pages:0.layers:0.comps:66.classicTable1:3.td@@0" style="border-top: 0px none rgb(62, 62, 62);border-right: 0px none rgb(62, 62, 62);border-left: 0px none rgb(62, 62, 62);border-bottom-color: rgb(202, 198, 198);border-bottom-style: dashed;background-color: rgb(247, 247, 247);padding-right: 5px;padding-left: 5px;" width="96.3700%">
+<section style="text-align: center;justify-content: center;display: flex;flex-flow: row;" powered-by="xiumi.us">
+<section style="display: inline-block;width: 100%;vertical-align: middle;border-width: 0px;align-self: center;flex: 0 0 auto;">
+<p powered-by="xiumi.us"><a target="_blank" href="http://mp.weixin.qq.com/s?__biz=MzkxODUxNDgzNA==&amp;mid=2247484606&amp;idx=1&amp;sn=eb86b467cc91343a98b894be91dffdd0&amp;chksm=c1b17943f6c6f055c48826c08d32dc1d80f711ac62c3c3127515581ee2f4eed7643b08d6d9b8&amp;scene=21#wechat_redirect" textvalue="小图教你学习ComploexHeatmap包-热图中图例的设置！！" linktype="text" imgurl="" imgdata="null" data-itemshowtype="0" tab="innerlink" data-linktype="2" rel="noopener">小图教你学习ComploexHeatmap包-热图中图例的设置！！</a></p>
+</section>
+</section>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<p style="white-space: normal;" powered-by="xiumi.us"><br  /></p>
+<p style="white-space: normal;" powered-by="xiumi.us">👇点击阅读原文进入网址</p>
+</section>
+<p style="display: none;margin-bottom: 24px;"><mp-style-type data-value="3"></mp-style-type></p>
+<div class="msg_source_url"><a href="http://www.biocloudservice.com/home.html" target="_blank" rel="noopener">阅读原文</a></div>
+<p></content></p>
+<div class="msg_source_url"><a href="http://www.biocloudservice.com/home.html" target="_blank" rel="noopener">阅读原文</a></div>
+</div>
+<p></body><br />
+</html></p>
+        </div>
+
+          </article>
+
+</div>
+
+
+
+
+<div class="ifoot info">
+
+
+
+    
+
+
+    
+
+
+</div>
+
+
+
+
+</div>                                                
+	<nav class="navigation post-navigation" aria-label="文章">
+		<h2 class="screen-reader-text">文章导航</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="http://www.biocloudservice.com/wordpress/?p=58208" rel="prev">全村人的希望：多组学孟德尔随机化整合分析实战:从数据处理到生物学解释,揭示氧化应激与肠道菌群的奥秘!</a></div><div class="nav-next"><a href="http://www.biocloudservice.com/wordpress/?p=58244" rel="next">【五月狂欢】服务器拼团大作战，抢先享特惠！</a></div></div>
+	</nav>                        
+<div id="comments" class="comments-area">
+
+	
+</div><!-- #comments -->
+
+                    </div><!-- /.end of deatil-content -->
+
+                    
+
+<div class="related-posts">
+              
+        <h2 class="main-title">推荐阅读</h2>          
+        <div class="post-holder">
+                            <div class="news-snippet">
+
+                           
+
+                    <div class="summary">
+                        <h5 class="news-title">
+                            <a href="http://www.biocloudservice.com/wordpress/?p=64508" rel="bookmark">
+                                生信人用 Codex 的进阶版：别再只开交互窗口了                            </a>
+                        </h5>                                
+
+                        <div class="info">
+                            <ul class="list-inline">
+                                                                <li><i class="icon-calendar"></i> <a
+                                    href="http://www.biocloudservice.com/wordpress/?m=20260425">2026-04-25</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                                                    <div class="ifoot info">
+                                <a href="http://www.biocloudservice.com/wordpress/?p=64508" rel="bookmark" title=""
+                                    class="readmore">Read More </a>
+                                                            </div>
+                        
+                    </div>
+                </div>
+                            <div class="news-snippet">
+
+                           
+
+                    <div class="summary">
+                        <h5 class="news-title">
+                            <a href="http://www.biocloudservice.com/wordpress/?p=64488" rel="bookmark">
+                                做生信的人，最后都会想找一个省事一点的平台                            </a>
+                        </h5>                                
+
+                        <div class="info">
+                            <ul class="list-inline">
+                                                                <li><i class="icon-calendar"></i> <a
+                                    href="http://www.biocloudservice.com/wordpress/?m=20260423">2026-04-23</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                                                    <div class="ifoot info">
+                                <a href="http://www.biocloudservice.com/wordpress/?p=64488" rel="bookmark" title=""
+                                    class="readmore">Read More </a>
+                                                            </div>
+                        
+                    </div>
+                </div>
+                            <div class="news-snippet">
+
+                           
+
+                    <div class="summary">
+                        <h5 class="news-title">
+                            <a href="http://www.biocloudservice.com/wordpress/?p=64504" rel="bookmark">
+                                做生信，用 Codex 别只会一句“帮我分析”：这些命令更省时间                            </a>
+                        </h5>                                
+
+                        <div class="info">
+                            <ul class="list-inline">
+                                                                <li><i class="icon-calendar"></i> <a
+                                    href="http://www.biocloudservice.com/wordpress/?m=20260423">2026-04-23</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                                                    <div class="ifoot info">
+                                <a href="http://www.biocloudservice.com/wordpress/?p=64504" rel="bookmark" title=""
+                                    class="readmore">Read More </a>
+                                                            </div>
+                        
+                    </div>
+                </div>
+                                </div>
+    </div>                </section> <!-- /.end of section -->
+
+                <div class="sidebar">
+<aside id="secondary" class="widget-area">
+	<section id="block-27" class="widget widget_block widget_search"><form role="search" method="get" action="http://www.biocloudservice.com/wordpress/" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search"><label for="wp-block-search__input-1" class="wp-block-search__label" >搜索</label><div class="wp-block-search__inside-wrapper " ><input type="search" id="wp-block-search__input-1" class="wp-block-search__input" name="s" value="" placeholder=""  required /><button type="submit" class="wp-block-search__button wp-element-button"  >搜索</button></div></form></section><section id="woocommerce_products-5" class="widget woocommerce widget_products"><h4 class="widget-title">产品</h4><ul class="product_list_widget"><li>
+	
+	<a href="http://www.biocloudservice.com/wordpress/?product=rstudio%e8%b4%a6%e5%8f%b7%e4%ba%a7%e5%93%81%e6%8f%8f%e8%bf%b0">
+		<img width="300" height="300" src="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/woocommerce-placeholder.png?resize=300%2C300" class="woocommerce-placeholder wp-post-image" alt="占位" decoding="async" loading="lazy" srcset="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/woocommerce-placeholder.png?w=1200 1200w, https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/woocommerce-placeholder.png?resize=300%2C300 300w, https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/woocommerce-placeholder.png?resize=100%2C100 100w, https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/woocommerce-placeholder.png?resize=600%2C600 600w, https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/woocommerce-placeholder.png?resize=1024%2C1024 1024w, https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/woocommerce-placeholder.png?resize=150%2C150 150w, https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/woocommerce-placeholder.png?resize=768%2C768 768w" sizes="(max-width: 300px) 100vw, 300px" />		<span class="product-title">Rstudio账号产品描述</span>
+	</a>
+
+				
+	
+	</li>
+<li>
+	
+	<a href="http://www.biocloudservice.com/wordpress/?product=%e6%a0%b9%e6%8d%ae%e8%82%bf%e7%98%a4%e7%aa%81%e5%8f%98%e8%b4%9f%e8%8d%b7tmb%e8%bf%9b%e8%a1%8ckm%e7%94%9f%e5%ad%98%e5%88%86%e6%9e%90%e5%af%bb%e6%89%be%e6%9c%80%e4%bd%b3%e7%9a%84cutoff8">
+		<img width="300" height="300" src="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/02/图片-1-5.png?resize=300%2C300" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/02/图片-1-5.png?resize=300%2C300 300w, https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/02/图片-1-5.png?resize=100%2C100 100w, https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/02/图片-1-5.png?resize=150%2C150 150w, https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/02/图片-1-5.png?zoom=2&amp;resize=300%2C300 600w" sizes="(max-width: 300px) 100vw, 300px" />		<span class="product-title">根据肿瘤突变负荷TMB进行KM生存分析寻找最佳的cutoff(8)</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&yen;</span>0.01</bdi></span>
+	</li>
+<li>
+	
+	<a href="http://www.biocloudservice.com/wordpress/?product=dalex%e5%8c%85%e7%94%a8%e4%ba%8e%e6%8e%a2%e7%b4%a2%e3%80%81%e8%a7%a3%e9%87%8a%e5%92%8c%e8%af%84%e4%bc%b0%e6%a8%a1%e5%9e%8b%ef%bc%9b%e5%88%86%e6%9e%90%e4%b8%8d%e5%90%8c%e7%89%b9%e5%be%81%e5%8f%98">
+		<img width="300" height="300" src="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/02/图片-2-4.png?resize=300%2C300" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/02/图片-2-4.png?resize=300%2C300 300w, https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/02/图片-2-4.png?resize=100%2C100 100w, https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/02/图片-2-4.png?resize=150%2C150 150w, https://i0.wp.com/www.biocloudservice.com/wordpress/wp-content/uploads/2023/02/图片-2-4.png?zoom=2&amp;resize=300%2C300 600w" sizes="(max-width: 300px) 100vw, 300px" />		<span class="product-title">DALEX包用于探索、解释和评估模型；分析不同特征变量对响应变量的影响(7)</span>
+	</a>
+
+				
+	<del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&yen;</span>6.80</bdi></span></del> <ins><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&yen;</span>0.01</bdi></span></ins>
+	</li>
+</ul></section><section id="block-20" class="widget widget_block widget_recent_entries"><ul class="wp-block-latest-posts__list wp-block-latest-posts"><li><a class="wp-block-latest-posts__post-title" href="http://www.biocloudservice.com/wordpress/?p=64508">生信人用 Codex 的进阶版：别再只开交互窗口了</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="http://www.biocloudservice.com/wordpress/?p=64488">做生信的人，最后都会想找一个省事一点的平台</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="http://www.biocloudservice.com/wordpress/?p=64504">做生信，用 Codex 别只会一句“帮我分析”：这些命令更省时间</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="http://www.biocloudservice.com/wordpress/?p=64486">如果你也被生信环境和代码折磨过，可能会需要这个网站</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="http://www.biocloudservice.com/wordpress/?p=62022">Linux 常用命令</a></li>
+</ul></section><section id="block-34" class="widget widget_block"><div data-test='contact-form' id='contact-form-widget-block-34' class='wp-block-jetpack-contact-form-container '>
+<form action='/wordpress/?p=58223%2Cmurl%3Ahttp%3A%2F%2Fwww.biocloudservice.com%2Fwordpress%2Fwp-content%2Fuploads%2F2024%2F06%2F10_ALm2k3icvaaTibu1gKjoIWXnla3S2Q.png#contact-form-widget-block-34' method='post' class='contact-form commentsblock wp-block-jetpack-contact-form'>
+<script>
+			( function () {
+				const contact_forms = document.getElementsByClassName('contact-form');
+
+				for ( const form of contact_forms ) {
+					form.onsubmit = function() {
+						const buttons = form.getElementsByTagName('button');
+
+						for( const button of buttons ) {
+							button.setAttribute('disabled', true);
+						}
+					}
+				}
+			} )();
+		</script>
+<div class="wp-block-jetpack-contact-form" style="padding-top:16px;padding-right:16px;padding-bottom:16px;padding-left:16px">
+<div style="" class='grunion-field-name-wrap grunion-field-wrap'  >
+<label
+				for='gwidget-block-34'
+				class='grunion-field-label name'>显示名称<span>（必填）</span></label>
+<input
+					type='text'
+					name='gwidget-block-34'
+					id='gwidget-block-34'
+					value=''
+					class='name  grunion-field' 
+					required aria-required='true' />
+	</div>
+
+
+
+<div style="" class='grunion-field-email-wrap grunion-field-wrap'  >
+<label
+				for='gwidget-block-34-1'
+				class='grunion-field-label email'>电子邮箱地址<span>（必填）</span></label>
+<input
+					type='email'
+					name='gwidget-block-34-1'
+					id='gwidget-block-34-1'
+					value=''
+					class='email  grunion-field' 
+					required aria-required='true' />
+	</div>
+
+
+
+<div style="" class='grunion-field-textarea-wrap grunion-field-wrap'  >
+<label
+				for='contact-form-comment-gwidget-block-34-2'
+				class='grunion-field-label textarea'>邮件</label>
+<textarea
+		                style=''
+		                name='gwidget-block-34-2'
+		                id='contact-form-comment-gwidget-block-34-2'
+		                rows='20' class='textarea  grunion-field'  ></textarea>
+	</div>
+
+
+<div class="wp-block-jetpack-button wp-block-button" style=""><button class="wp-block-button__link" style="" data-id-attr="placeholder" type="submit">联系我们</button></div></div>
+		<input type='hidden' name='contact-form-id' value='widget-block-34' />
+		<input type='hidden' name='action' value='grunion-contact-form' />
+		<input type='hidden' name='contact-form-hash' value='9423eac5f735565336d80e32d370e15dbbdeb451' />
+</form>
+</div></section><section id="block-38" class="widget widget_block">	<div class="wp-block-jetpack-subscriptions__supports-newline wp-block-jetpack-subscriptions">
+		<div class="jetpack_subscription_widget">
+			<div class="wp-block-jetpack-subscriptions__container">
+				<form
+					action="#"
+					method="post"
+					accept-charset="utf-8"
+					data-blog="217114748"
+					data-post_access_level="everybody"
+					id="subscribe-blog-1"
+				>
+					<p id="subscribe-email">
+						<label id="jetpack-subscribe-label"
+							class="screen-reader-text"
+							for="subscribe-field-1">
+							输入您的电子邮件…						</label>
+						<input type="email" name="email" required="required"
+															class="no-border-radius  required"
+																						style="font-size: 16px;padding: 15px 23px 15px 23px;border-radius: 0px;border-width: 1px;"
+														value=""
+							id="subscribe-field-1"
+							placeholder="输入您的电子邮件…"
+						/>
+					</p>
+
+					<p id="subscribe-submit"
+											>
+						<input type="hidden" name="action" value="subscribe"/>
+						<input type="hidden" name="blog_id" value="217114748"/>
+						<input type="hidden" name="source" value="http://www.biocloudservice.com/wordpress/?p=58223,murl:http://www.biocloudservice.com/wordpress/wp-content/uploads/2024/06/10_ALm2k3icvaaTibu1gKjoIWXnla3S2Q.png"/>
+						<input type="hidden" name="sub-type" value="subscribe-block"/>
+						<input type="hidden" name="redirect_fragment" value="subscribe-blog-1"/>
+												<button type="submit"
+															class="wp-block-button__link no-border-radius"
+																						style="font-size: 16px;padding: 15px 23px 15px 23px;margin: 0px; margin-left: 10px;border-radius: 0px;border-width: 1px;"
+														name="jetpack_subscriptions_widget"
+						>
+							订阅						</button>
+					</p>
+				</form>
+
+							</div>
+		</div>
+	</div>
+	</section></aside><!-- #secondary -->
+</div>
+
+        </div>
+    </div>
+</div>
+
+    
+
+
+
+	<footer id="colophon" class="site-footer">
+
+		<div class="container">
+
+			
+
+
+
+	<!-- social links -->
+	<div class="social-links">
+		<ul class="list-group list-group-horizontal list-inline">
+
+			
+			
+			
+			
+			
+			
+			
+		</ul>
+	</div>
+	<!-- social links -->
+
+			<div class="site-info">
+									<a rel="nofollow" href="https://wordpress.org/">
+						Proudly powered by <b>WordPress</b>					</a>
+					<span class="sep"> | </span>
+						Theme: Safari by <a href=https://graphthemes.com class="footer-brand" rel="nofollow"><b>GraphThemes</b></a>.								<div class="copyright">云生信学生物信息</div>
+			</div><!-- .site-info -->
+		</div>
+	</footer><!-- #colophon -->
+
+
+<a class="scroll-to-top" href="javascript:void(0)">
+<svg id="Layer_1"  version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g><g id="Icon-Chevron-Left" transform="translate(237.000000, 335.000000)"><polyline class="st0" id="Fill-35" points="-191.3,-296.9 -193.3,-294.9 -205,-306.6 -216.7,-294.9 -218.7,-296.9 -205,-310.6      -191.3,-296.9    "/></g></g></svg>
+</a>
+
+	<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<style id='jetpack-block-button-inline-css'>
+.amp-wp-article .wp-block-jetpack-button{color:#fff}.wp-block-jetpack-button:not(.is-style-outline) button{border:none}
+</style>
+<style id='jetpack-block-subscriptions-inline-css'>
+.is-style-compact .wp-block-button__link,.is-style-compact .wp-block-jetpack-subscriptions__button{border-bottom-left-radius:0!important;border-top-left-radius:0!important;margin-left:0!important}.is-style-compact .components-text-control__input,.is-style-compact p#subscribe-email input[type=email]{border-bottom-right-radius:0!important;border-top-right-radius:0!important}.is-style-compact:not(.wp-block-jetpack-subscriptions__use-newline) .components-text-control__input{border-right-width:0!important}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form-container{display:flex;flex-direction:column}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form{align-items:flex-start;display:flex}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__textfield .components-text-control__input,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form input[type=email],.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__textfield .components-text-control__input,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form input[type=email]{box-sizing:border-box;line-height:1.3;min-width:auto!important;white-space:nowrap!important}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form input[type=email]::placeholder,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form input[type=email]::placeholder{color:currentColor;opacity:.5}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form button{border-color:transparent;border-style:solid}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__textfield,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form p#subscribe-email,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__textfield,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form p#subscribe-email{background:transparent;flex-grow:1}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__textfield .components-base-control__field,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__textfield .components-text-control__input,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form .wp-block-jetpack-subscriptions__textfield input[type=email],.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form p#subscribe-email .components-base-control__field,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form p#subscribe-email .components-text-control__input,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form p#subscribe-email input[type=email],.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__textfield .components-base-control__field,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__textfield .components-text-control__input,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form .wp-block-jetpack-subscriptions__textfield input[type=email],.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form p#subscribe-email .components-base-control__field,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form p#subscribe-email .components-text-control__input,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form p#subscribe-email input[type=email]{margin:0;width:100%}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form p#subscribe-email,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline .wp-block-jetpack-subscriptions__form p#subscribe-submit,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form p#subscribe-email,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline form p#subscribe-submit{margin:0}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline.wp-block-jetpack-subscriptions__show-subs .wp-block-jetpack-subscriptions__subscount{font-size:16px;margin:8px 0;text-align:right}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline.wp-block-jetpack-subscriptions__use-newline .wp-block-jetpack-subscriptions__form,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline.wp-block-jetpack-subscriptions__use-newline form{display:block}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline.wp-block-jetpack-subscriptions__use-newline .wp-block-jetpack-subscriptions__button,.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline.wp-block-jetpack-subscriptions__use-newline button{display:inline-block;max-width:100%}.wp-block-jetpack-subscriptions.wp-block-jetpack-subscriptions__supports-newline.wp-block-jetpack-subscriptions__use-newline .wp-block-jetpack-subscriptions__subscount{text-align:left}.jetpack-memberships-modal #TB_title{display:none}#TB_window.jetpack-memberships-modal{background-color:transparent;background-image:url(https://s0.wp.com/i/loading/dark-200.gif);background-position:center 150px;background-repeat:no-repeat;background-size:50px;border:none;bottom:0;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;height:100%;left:0;margin:0!important;right:0;top:0;width:100%!important}.jetpack-memberships-modal #TB_iframeContent{bottom:0;height:100%!important;left:0;margin:0!important;position:absolute;right:0;top:0;width:100%!important}BODY.modal-open{overflow:hidden}
+</style>
+<link rel='stylesheet' id='thickbox-css' href='https://c0.wp.com/c/6.2/wp-includes/js/thickbox/thickbox.css' media='all' />
+<script src='http://www.biocloudservice.com/wordpress/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-image-cdn/dist/image-cdn.js?minify=false&#038;ver=132249e245926ae3e188' id='jetpack-photon-js'></script>
+<script src='https://c0.wp.com/p/woocommerce/7.1.2/assets/js/jquery-blockui/jquery.blockUI.min.js' id='jquery-blockui-js'></script>
+<script id='wc-add-to-cart-js-extra'>
+var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/wordpress\/?wc-ajax=%%endpoint%%","i18n_view_cart":"\u67e5\u770b\u8d2d\u7269\u8f66","cart_url":"http:\/\/www.biocloudservice.com\/wordpress\/?page_id=133","is_cart":"","cart_redirect_after_add":"yes"};
+</script>
+<script src='https://c0.wp.com/p/woocommerce/7.1.2/assets/js/frontend/add-to-cart.min.js' id='wc-add-to-cart-js'></script>
+<script src='https://c0.wp.com/p/woocommerce/7.1.2/assets/js/js-cookie/js.cookie.min.js' id='js-cookie-js'></script>
+<script id='woocommerce-js-extra'>
+var woocommerce_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/wordpress\/?wc-ajax=%%endpoint%%"};
+</script>
+<script src='https://c0.wp.com/p/woocommerce/7.1.2/assets/js/frontend/woocommerce.min.js' id='woocommerce-js'></script>
+<script id='wc-cart-fragments-js-extra'>
+var wc_cart_fragments_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/wordpress\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_df0cd97518b4e042388afebb5f73ed79","fragment_name":"wc_fragments_df0cd97518b4e042388afebb5f73ed79","request_timeout":"5000"};
+</script>
+<script src='https://c0.wp.com/p/woocommerce/7.1.2/assets/js/frontend/cart-fragments.min.js' id='wc-cart-fragments-js'></script>
+<script id='wc-cart-fragments-js-after'>
+		jQuery( 'body' ).bind( 'wc_fragments_refreshed', function() {
+			var jetpackLazyImagesLoadEvent;
+			try {
+				jetpackLazyImagesLoadEvent = new Event( 'jetpack-lazy-images-load', {
+					bubbles: true,
+					cancelable: true
+				} );
+			} catch ( e ) {
+				jetpackLazyImagesLoadEvent = document.createEvent( 'Event' )
+				jetpackLazyImagesLoadEvent.initEvent( 'jetpack-lazy-images-load', true, true );
+			}
+			jQuery( 'body' ).get( 0 ).dispatchEvent( jetpackLazyImagesLoadEvent );
+		} );
+		
+</script>
+<script src='http://www.biocloudservice.com/wordpress/wp-content/themes/safari-blog/js/navigation.js?ver=1.0.2' id='safari-navigation-js'></script>
+<script src='http://www.biocloudservice.com/wordpress/wp-content/themes/safari-blog/js/scripts.js?ver=SAFARI_BLOG_VERSION' id='safari-script-js'></script>
+<script src='http://www.biocloudservice.com/wordpress/wp-content/plugins/quadmenu/assets/frontend/pscrollbar/perfect-scrollbar.jquery.min.js?ver=2.3.5' id='pscrollbar-js'></script>
+<script src='http://www.biocloudservice.com/wordpress/wp-content/plugins/quadmenu/assets/frontend/owlcarousel/owl.carousel.min.js?ver=2.3.5' id='owlcarousel-js'></script>
+<script src='https://c0.wp.com/c/6.2/wp-includes/js/hoverIntent.min.js' id='hoverIntent-js'></script>
+<script id='quadmenu-js-extra'>
+var quadmenu = {"ajaxurl":"http:\/\/www.biocloudservice.com\/wordpress\/wp-admin\/admin-ajax.php","gutter":"30"};
+</script>
+<script src='http://www.biocloudservice.com/wordpress/wp-content/plugins/quadmenu/assets/frontend/js/quadmenu.min.js?ver=2.3.5' id='quadmenu-js'></script>
+<script defer src='https://stats.wp.com/e-202624.js' id='jetpack-stats-js'></script>
+<script id='jetpack-stats-js-after'>
+_stq = window._stq || [];
+_stq.push([ "view", {v:'ext',blog:'217114748',post:'58223',tz:'8',srv:'www.biocloudservice.com',j:'1:12.4.1'} ]);
+_stq.push([ "clickTrackerInit", "217114748", "58223" ]);
+</script>
+<script src='https://c0.wp.com/c/6.2/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js' id='wp-polyfill-inert-js'></script>
+<script src='https://c0.wp.com/c/6.2/wp-includes/js/dist/vendor/regenerator-runtime.min.js' id='regenerator-runtime-js'></script>
+<script src='https://c0.wp.com/c/6.2/wp-includes/js/dist/vendor/wp-polyfill.min.js' id='wp-polyfill-js'></script>
+<script src='https://c0.wp.com/c/6.2/wp-includes/js/dist/hooks.min.js' id='wp-hooks-js'></script>
+<script src='https://c0.wp.com/c/6.2/wp-includes/js/dist/i18n.min.js' id='wp-i18n-js'></script>
+<script id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script src='http://www.biocloudservice.com/wordpress/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-forms/dist/blocks/view.js?minify=false&#038;ver=3c1dafb8321ff5c9a4a9' id='jp-forms-view-js'></script>
+<script id='thickbox-js-extra'>
+var thickboxL10n = {"next":"\u4e0b\u4e00\u9875 >","prev":"< \u4e0a\u4e00\u9875","image":"\u56fe\u7247","of":"\/","close":"\u5173\u95ed","noiframes":"\u8fd9\u4e2a\u529f\u80fd\u9700\u8981iframe\u7684\u652f\u6301\u3002\u60a8\u53ef\u80fd\u7981\u6b62\u4e86iframe\u7684\u663e\u793a\uff0c\u6216\u60a8\u7684\u6d4f\u89c8\u5668\u4e0d\u652f\u6301\u6b64\u529f\u80fd\u3002","loadingAnimation":"http:\/\/www.biocloudservice.com\/wordpress\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+</script>
+<script src='https://c0.wp.com/c/6.2/wp-includes/js/thickbox/thickbox.js' id='thickbox-js'></script>
+<script src='https://c0.wp.com/c/6.2/wp-includes/js/dist/dom-ready.min.js' id='wp-dom-ready-js'></script>
+<script id='jetpack-block-subscriptions-js-extra'>
+var Jetpack_Block_Assets_Base_Url = {"url":"http:\/\/www.biocloudservice.com\/wordpress\/wp-content\/plugins\/jetpack\/_inc\/blocks\/"};
+</script>
+<script src='http://www.biocloudservice.com/wordpress/wp-content/plugins/jetpack/_inc/blocks/subscriptions/view.js?minify=false&#038;ver=12.4.1' id='jetpack-block-subscriptions-js'></script>
+
+</body>
+</html>

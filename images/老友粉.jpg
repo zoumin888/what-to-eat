@@ -1,0 +1,251 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="renderer" content="webkit" />
+    <title>江苏省老字号企业协会</title>
+    <link rel="stylesheet" type="text/css" href="../../Scripts/layui-v2.6.4/layui/css/layui.css" media="all" />
+    <script type="text/javascript">
+        var t = new Date().getTime();
+        document.writeln('<link rel="stylesheet" type="text/css" href="../../Content/css/jslzh.global.css?t=' + t + '" />');
+        document.writeln('<link rel="stylesheet" type="text/css" href="../../Content/css/jslzh.second.css?t=' + t + '" />');
+    </script>
+    <script type="text/javascript" src="../../Scripts/jQuery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/lzh.common.js"></script>
+</head>
+<body>
+    <div class="lzh-top">
+        <img alt="" src="../Content/images/lzh-body-bg.png" class="lzh-top__bg" />
+        <div class="lzh-top__text clearfix">
+            <img alt="江苏省老字号企业协会" src="../../Content/images/lzh-top-title.png" class="fl" />
+            <img alt="会员之家 行业代表 政府助手" src="../../Content/images/lzh-top-sutitle.png" class="fr" />
+        </div>
+    </div>
+
+    <div class="lzh-container">
+
+
+
+<div class="nav-menu">
+    <a href="/">首页</a>
+                    <a href="/Home/NewsList?type=8">图片新闻</a>
+                    <a href="/Home/NewsList?type=1">政策资讯</a>
+                    <a href="/Home/NewsList?type=2">关于协会</a>
+                    <a href="/Home/NewsList?type=3">会员介绍</a>
+                    <a href="/Home/ProductList?type=4&subtype=23">产品展示</a>
+                    <a href="/Home/NewsList?type=5">文化集萃</a>
+                    <a href="/Home/NewsList?type=6">文化论坛</a>
+                    <a href="/Home/About?type=7" class="noborder">联系我们</a>
+</div>
+
+
+        <div class="second-body">
+            <div class="second-content">
+
+    <div class="left-menu">
+        <div class="left-menu-title">
+            会员介绍
+        </div>
+
+            <div class="left-menu-list">
+                <a href=/Home/NewsList?type=3&subtype=19>理事单位介绍</a><a href=/Home/NewsList?type=3&subtype=20>会员单位介绍</a><a href=/Home/NewsList?type=3&subtype=21>传承人风采</a><a href=/Home/NewsList?type=3&subtype=22>经典案例介绍</a>
+            </div>
+    </div>
+
+                <div class="right-list">
+
+    <div class="lzh-breadcrumb">
+        当前位置：<a href="/">首页</a>&nbsp;&gt;&nbsp;
+    </div>
+
+
+                    
+
+
+<div class="company-view clearfix">
+    <div class="company-about">
+        <div class="company-logo-box">
+            <img alt="" src="" />
+        </div>
+        <div class="company-info">
+            <h4 class="company-info__name"></h4>
+            <p class="company-info__cell" data-label="单位类型">
+
+                无效类型
+            </p>
+            <p class="company-info__cell" data-label="单位地址"></p>
+            <p class="company-info__cell" data-label=" 联系人"></p>
+            <p class="company-info__cell" data-label=" 联系电话"></p>
+            <p class="company-info__cell" data-label="公司主页"></p>
+        </div>
+        <div class="company-split"></div>
+        <div class="company-desc">
+            
+        </div>
+    </div>
+    <div class="company-products">
+        <h4 class="company-products-header">相关产品</h4>
+        <i class="company-product-arrow company-product-arrow__top disabled"></i>
+        <div class="company-products-box"></div>
+        <i class="company-product-arrow company-product-arrow__bottom"></i>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var pager = (function () {
+            var defaults = {
+                pageIndex: 1,
+                pageSize: 5,
+                totalPage: 0
+            }
+
+            return {
+                init: function (total) {
+                    if (/^\d+$/.test(total)) {
+                        defaults.totalPage = Math.ceil(total / defaults.pageSize);
+                    }
+                },
+                getPageIndex: function (pageNum) {
+                    if (/^[123456789](\d+)?$/.test(pageNum)) {
+                        defaults.pageIndex = pageNum;
+                    }
+                    if (pageNum === 'prev' && defaults.pageIndex > 1) {
+                        defaults.pageIndex = defaults.pageIndex - 1;
+                    }
+                    if (pageNum === 'next' && defaults.pageIndex < defaults.totalPage) {
+                        defaults.pageIndex = defaults.pageIndex + 1;
+                    }
+                    return defaults.pageIndex;
+                },
+                pageSize: function () {
+                    return defaults.pageSize;
+                },
+                totalPage: function () {
+                    return defaults.totalPage;
+                }
+            }
+        }());
+
+        loadProducts(1);
+        $(document).on('click', '.company-product-arrow__top:not(.disabled)', function () {
+            loadProducts(pager.getPageIndex('prev'));
+        });
+        $(document).on('click', '.company-product-arrow__bottom:not(.disabled)', function () {
+            loadProducts(pager.getPageIndex('next'));
+        });
+
+        function loadProducts(pageNum) {
+            var $box = $('.company-products-box'),
+                source = event.target || event.srcElement,
+                cssText = 'height: 24px; margin-top: 20px; line-height: 24px; font-size: 13px; text-align: center; color: #999;';
+
+            $.ajax({
+                type: 'POST',
+                url: '/Home/GetCompanyProducts',
+                dataType: 'json',
+                data: {
+                    id: getQueryString('id'),
+                    pageIndex: pageNum,
+                    pageSize: pager.pageSize()
+                },
+                success: function (response) {
+                    $box.find('.loading').remove();
+                    if (response.total > 0) {
+                        var strHtml = '';
+                        for (var i = 0; i < response.data.length; i++) {
+                            strHtml += '<a href="ProductView?id=' + $.trim(response.data[i]['ProductGuid']) + '" class="company-products-item">\
+                                            <img alt="" src="' + $.trim(response.data[i]['ProductPic']) + '" />\
+                                        </a>';
+                        }
+                        $box.html(strHtml);
+                        pager.init(response.total);
+
+                        if ($(source).hasClass('company-product-arrow')) { //点击上下箭头分页
+                            if (pageNum === 1) {
+                                $('.company-product-arrow__top').addClass('disabled');
+                                $('.company-product-arrow__bottom').removeClass('disabled');
+                            }
+                            if (pageNum > 1 && pageNum < pager.totalPage()) {
+                                $('.company-product-arrow__top').removeClass('disabled');
+                                $('.company-product-arrow__bottom').removeClass('disabled');
+                            }
+                            if (pageNum === pager.totalPage()) {
+                                $('.company-product-arrow__top').removeClass('disabled');
+                                $('.company-product-arrow__bottom').addClass('disabled');
+                            }
+                        } else { //document对象，表示首次调用
+                            if (response.total <= 5) {
+                                $('.company-product-arrow__top').addClass('disabled');
+                                $('.company-product-arrow__bottom').addClass('disabled');
+                            } else {
+                                $('.company-product-arrow__top').addClass('disabled');
+                                $('.company-product-arrow__bottom').removeClass('disabled');
+                            }
+                        }
+                    } else {
+                        $('.company-product-arrow').addClass('disabled');
+                        $box.append('<div class="loading" style="' + cssText + '">暂无相关产品</div>');
+                    }
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    console.log(xhr);
+                    $('.company-product-arrow').addClass('disabled');
+                    $box.find('.loading').remove();
+                    $box.append('<div class="loading" style="' + cssText + '">数据获取异常</div>');
+                }
+            });
+        }
+    });
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="footer-divider" />
+    <div class="footer-content">
+        <p>协会地址：江苏省南京市中华路50号2806室</p>
+        <p>江苏省老字号企业协会版权所有，对违反版权者保留一切追索权利</p>
+        <p>网站备案：<a href="https://beian.miit.gov.cn/" target="_blank" rel = "noopener noreferrer">苏ICP备2021018515号</a></p>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //顶部导航菜单栏样式处理
+            var $navMenuItems = $('.nav-menu').children('a'),
+                type = $.trim(getQueryString('type'));
+
+            $navMenuItems.each(function () {
+                var $this = $(this);
+                if (type && $this.attr('href').indexOf('?type=' + type) > -1) {
+                    $this.addClass('active');
+                }
+            });
+
+            //二级栏目页左侧高度计算和样式处理
+            var $leftMenu = $('.left-menu'),
+                tW = $leftMenu.children('.left-menu-title').outerHeight(true),
+                lW = $leftMenu.children('.left-menu-list').outerHeight(true),
+                subtype = $.trim(getQueryString('subtype'));
+
+            $('.second-content').css('min-height', (tW + lW) + 'px')
+            if (subtype) {
+                var $leftMenuItems = $leftMenu.children('.left-menu-list').children('a');
+                $leftMenuItems.each(function () {
+                    var $this = $(this);
+                    if ($this.attr('href').indexOf('subtype=' + subtype) > -1) {
+                        $this.addClass('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

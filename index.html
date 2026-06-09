@@ -97,13 +97,20 @@ body::before{
 .dish-image-wrap .bg-grad{
   position:absolute;inset:0;z-index:0;
 }
+.dish-food-img{
+  position:absolute;inset:0;z-index:1;
+  width:100%;height:100%;object-fit:cover;
+  opacity:0;transition:opacity .5s;
+}
+.dish-food-img.loaded{opacity:1}
 .dish-image-name{
-  position:relative;z-index:1;
+  position:relative;z-index:2;
   font-size:36px;font-weight:800;color:#fff;
   text-shadow:0 2px 12px rgba(0,0,0,0.5),0 0 40px rgba(0,0,0,0.2);
   letter-spacing:6px;
-  animation:namePop .5s cubic-bezier(.16,1,.3,1);
+  transition:opacity .3s;
 }
+.dish-image-name.hide{opacity:0}
 @keyframes namePop{from{transform:scale(0.5);opacity:0}to{transform:scale(1);opacity:1}}
 .dish-body{padding:20px}
 .dish-header{
@@ -198,6 +205,7 @@ body::before{
   <div class="dish-card" id="dishCard">
     <div class="dish-image-wrap" id="dishImageWrap">
       <div class="bg-grad" id="dishBgGrad"></div>
+      <img class="dish-food-img" id="dishFoodImg" src="" alt="" onerror="this.classList.remove('loaded')">
       <div class="dish-image-name" id="dishImageName"></div>
     </div>
     <div class="dish-body">
@@ -321,6 +329,10 @@ const dishes=[
 {name:"凉拌藕片",cuisine:"凉拌",difficulty:"简单",time:"10分钟",ingredients:["莲藕1节","蒜","干辣椒","醋","生抽","糖","花椒油"],steps:["莲藕切薄片焯水1分钟","过凉水沥干","蒜末干辣椒段用热油浇香","加醋生抽糖花椒油调汁","倒入藕片拌匀","装盘"]},
 {name:"白切猪手",cuisine:"凉拌",difficulty:"中等",time:"90分钟",ingredients:["猪手1只","姜","葱","料酒","沙姜粉","生抽","花生油"],steps:["猪手去毛洗净焯水","加姜葱料酒煮1小时至软烂","捞出过冰水","斩块摆盘","蘸料：沙姜粉+生抽+热花生油","蘸食"]},
 ];
+
+const dishImages={
+  "酸笋炒牛肉":"images/酸笋炒牛肉.jpg","柠檬鸭":"images/柠檬鸭.jpg","酸豆角炒肉末":"images/酸豆角炒肉末.jpg","螺蛳粉":"images/螺蛳粉.jpg","啤酒鱼":"images/啤酒鱼.jpg","荔浦芋扣肉":"images/荔浦芋扣肉.jpg","横县鱼生":"images/横县鱼生.jpg","老友粉":"images/老友粉.jpg","白果炖老鸭":"images/白果炖老鸭.jpg","钦州大蚝":"images/钦州大蚝.jpg","回锅肉":"images/回锅肉.jpg","麻婆豆腐":"images/麻婆豆腐.jpg","水煮牛肉":"images/水煮牛肉.jpg","宫保鸡丁":"images/宫保鸡丁.jpg","鱼香肉丝":"images/鱼香肉丝.jpg","辣子鸡":"images/辣子鸡.jpg","口水鸡":"images/口水鸡.jpg","毛血旺":"images/毛血旺.jpg","酸菜鱼":"images/酸菜鱼.jpg","粉蒸肉":"images/粉蒸肉.jpg","夫妻肺片":"images/夫妻肺片.jpg","蒜泥白肉":"images/蒜泥白肉.jpg","干煸肥肠":"images/干煸肥肠.jpg","蚂蚁上树":"images/蚂蚁上树.jpg","辣椒炒肉":"images/辣椒炒肉.jpg","小炒黄牛肉":"images/小炒黄牛肉.jpg","剁椒鱼头":"images/剁椒鱼头.jpg","干锅花菜":"images/干锅花菜.jpg","湘西外婆菜":"images/湘西外婆菜.jpg","口味虾":"images/口味虾.jpg","湖南红烧肉":"images/湖南红烧肉.jpg","金钱蛋":"images/金钱蛋.jpg","豉油鸡":"images/豉油鸡.jpg","梅菜扣肉":"images/梅菜扣肉.jpg","白切鸡":"images/白切鸡.jpg","蒜蓉粉丝蒸虾":"images/蒜蓉粉丝蒸虾.jpg","蚝油生菜":"images/蚝油生菜.jpg","香菇滑鸡":"images/香菇滑鸡.jpg","菠萝咕噜肉":"images/菠萝咕噜肉.jpg","煲仔饭":"images/煲仔饭.jpg","清蒸鲈鱼":"images/清蒸鲈鱼.jpg","叉烧":"images/叉烧.jpg","可乐鸡翅":"images/可乐鸡翅.jpg","番茄炒蛋":"images/番茄炒蛋.jpg","红烧排骨":"images/红烧排骨.jpg","糖醋里脊":"images/糖醋里脊.jpg","蒜苔炒肉丝":"images/蒜苔炒肉丝.jpg","土豆炖牛肉":"images/土豆炖牛肉.jpg","黄焖鸡":"images/黄焖鸡.jpg","酸汤肥牛":"images/酸汤肥牛.jpg","葱油拌面":"images/葱油拌面.jpg","红烧肉":"images/红烧肉.jpg","青椒肉丝":"images/青椒肉丝.jpg","木须肉":"images/木须肉.jpg","地三鲜":"images/地三鲜.jpg","干炸丸子":"images/干炸丸子.jpg","锅包肉":"images/锅包肉.jpg","汽锅鸡":"images/汽锅鸡.jpg","过桥米线":"images/过桥米线.jpg","贵州酸汤鱼":"images/贵州酸汤鱼.jpg","洋芋焖饭":"images/洋芋焖饭.jpg","折耳根炒腊肉":"images/折耳根炒腊肉.jpg","东北锅包肉":"images/东北锅包肉.jpg","小鸡炖蘑菇":"images/小鸡炖蘑菇.jpg","猪肉炖粉条":"images/猪肉炖粉条.jpg","溜肉段":"images/溜肉段.jpg","杀猪菜":"images/杀猪菜.jpg","糖醋鲤鱼":"images/糖醋鲤鱼.jpg","九转大肠":"images/九转大肠.jpg","葱烧海参":"images/葱烧海参.jpg","油焖大虾":"images/油焖大虾.jpg","四喜丸子":"images/四喜丸子.jpg","臭鳜鱼":"images/臭鳜鱼.jpg","毛豆腐":"images/毛豆腐.jpg","大盘鸡":"images/大盘鸡.jpg","羊肉泡馍":"images/羊肉泡馍.jpg","手抓羊肉":"images/手抓羊肉.jpg","biangbiang面":"images/biangbiang面.jpg","东坡肉":"images/东坡肉.jpg","西湖醋鱼":"images/西湖醋鱼.jpg","龙井虾仁":"images/龙井虾仁.jpg","红烧狮子头":"images/红烧狮子头.jpg","糖醋排骨":"images/糖醋排骨.jpg","南京盐水鸭":"images/南京盐水鸭.jpg","凉拌木耳":"images/凉拌木耳.jpg","凉拌口水鸡":"images/凉拌口水鸡.jpg","凉拌黄瓜":"images/凉拌黄瓜.jpg","凉拌皮蛋豆腐":"images/凉拌皮蛋豆腐.jpg","凉拌蒜泥白肉":"images/凉拌蒜泥白肉.jpg","凉拌牛肉":"images/凉拌牛肉.jpg","酸辣凤爪":"images/酸辣凤爪.jpg","凉拌夫妻肺片":"images/凉拌夫妻肺片.jpg","凉拌藕片":"images/凉拌藕片.jpg","白切猪手":"images/白切猪手.jpg"
+};
 
 const dishVisuals={
   "酸笋炒牛肉":{grad:"linear-gradient(135deg,#ff6b35,#f7931e)"},
@@ -455,7 +467,16 @@ function renderDish(){
   const card=document.getElementById("dishCard"),d=currentDish;
   const vis=dishVisuals[d.name]||{grad:"linear-gradient(135deg,#667eea,#764ba2)"};
   document.getElementById("dishBgGrad").style.background=vis.grad;
-  document.getElementById("dishImageName").textContent=d.name;
+  const img=document.getElementById("dishFoodImg");
+  const nameEl=document.getElementById("dishImageName");
+  nameEl.textContent=d.name;nameEl.classList.remove("hide");
+  img.classList.remove("loaded");
+  const imgPath=dishImages[d.name];
+  if(imgPath){
+    img.src=imgPath;
+    img.onload=function(){img.classList.add("loaded");nameEl.classList.add("hide")};
+    img.onerror=function(){img.classList.remove("loaded");nameEl.classList.remove("hide")};
+  }else{img.src="";img.classList.remove("loaded")}
   document.getElementById("dishName").textContent=d.name;
   document.getElementById("tags").innerHTML=
     `<span class="tag tag-cuisine">${d.cuisine}</span>`+
